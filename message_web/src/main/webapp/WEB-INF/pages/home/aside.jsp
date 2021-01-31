@@ -19,7 +19,7 @@
         <ul class="sidebar-menu">
             <li class="header">菜单</li>
 
-            <%--
+            <%----%>
             <c:forEach items="${sessionScope.modules}" var="item">
                 <c:if test="${item.ctype==0}">
                     <li class="treeview">
@@ -41,9 +41,9 @@
                     </li>
                 </c:if>
             </c:forEach>
---%>
 
-         <%--       --%>
+
+         <%--
          <li class="treeview">
                <a href="#">
                    <i class="fa fa-cube"></i> <span>Saas管理</span>
@@ -192,7 +192,7 @@
                      </a>
                  </li>
              </ul>
-         </li>
+         </li>--%>
 
        </ul>
 

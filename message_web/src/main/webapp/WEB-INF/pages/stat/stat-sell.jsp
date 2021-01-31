@@ -48,7 +48,6 @@
             amounts[i] = obj.amount;
         }
 
-
         //1.初始化echarts实例(定义图形展示的位置)
         var myChart = echarts.init(document.getElementById('main'));
         //2.配置

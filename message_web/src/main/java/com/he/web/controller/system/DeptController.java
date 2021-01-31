@@ -1,10 +1,10 @@
 package com.he.web.controller.system;
 
-import com.alibaba.dubbo.config.annotation.Reference;
-import com.github.pagehelper.PageInfo;
 import com.he.domain.system.Dept;
 import com.he.service.system.DeptService;
 import com.he.web.controller.BaseController;
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;

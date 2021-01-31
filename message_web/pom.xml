@@ -14,11 +14,11 @@
       <groupId>com.he</groupId>  
       <artifactId>message_interface</artifactId>  
       <version>1.0-SNAPSHOT</version> 
-    </dependency>  
-    <dependency> 
-      <groupId>com.he</groupId>  
-      <artifactId>message_service</artifactId>  
-      <version>1.0-SNAPSHOT</version> 
-    </dependency> 
+    </dependency>
+    <dependency>
+      <groupId>com.he</groupId>
+      <artifactId>message_commons</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies> 
 </project>

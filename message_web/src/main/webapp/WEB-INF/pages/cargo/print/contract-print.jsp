@@ -19,60 +19,60 @@
 </head>
 <body>
 <div id="frameContent" class="content-wrapper" style="margin-left:0px;">
-<section class="content-header">
-    <h1>
-        货运管理
-        <small>购销合同月统计</small>
-    </h1>
-    <ol class="breadcrumb">
-        <li><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
-    </ol>
-</section>
-<!-- 内容头部 /-->
+    <section class="content-header">
+        <h1>
+            货运管理
+            <small>购销合同月统计</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
+        </ol>
+    </section>
+    <!-- 内容头部 /-->
 
-<!-- 正文区域 -->
-<section class="content">
-    <div class="box box-primary" style="height: 200px;">
-        <div class="box-header with-border">
-            <h3 class="box-title">购销合同月统计（出货表）</h3>
-        </div>
-        <!-- /.box-header -->
-        <!-- form start -->
-        <form role="form" action="${ctx}/cargo/contract/printExcel.do">
-            <div class="input-group input-group-sm" >
-                <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                </div>
-                <input type="text" name="inputDate" class="form-control pull-right" id="datepicker">
-                <span class="input-group-btn">
+    <!-- 正文区域 -->
+    <section class="content">
+        <div class="box box-primary" style="height: 200px;">
+            <div class="box-header with-border">
+                <h3 class="box-title">购销合同月统计（出货表）</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" action="${ctx}/cargo/contract/printExcel.do">
+                <div class="input-group input-group-sm" >
+                    <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" name="inputDate" class="form-control pull-right" id="datepicker">
+                    <span class="input-group-btn">
                     <button type="submit"   class="btn btn-info btn-flat">原生POI</button>
                 </span>
-            </div>
-        </form>
-        <form role="form" action="${ctx}/cargo/contract/printEasyExcel.do">
-            <div class="input-group input-group-sm" >
-                <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
                 </div>
-                <input type="text" name="inputDate" class="form-control pull-right" id="datepicker1">
-                <span class="input-group-btn">
+            </form>
+            <form role="form" action="${ctx}/cargo/contract/printEasyExcel.do">
+                <div class="input-group input-group-sm" >
+                    <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" name="inputDate" class="form-control pull-right" id="datepicker1">
+                    <span class="input-group-btn">
                     <button type="submit"   class="btn btn-info btn-flat">EasyExcel下载</button>
                 </span>
-            </div>
-        </form>
-        <form role="form" action="${ctx}/cargo/contract/printTemplate.do">
-            <div class="input-group input-group-sm" >
-                <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
                 </div>
-                <input type="text" name="inputDate" class="form-control pull-right" id="datepicker2">
-                <span class="input-group-btn">
+            </form>
+            <form role="form" action="${ctx}/cargo/contract/printTemplate.do">
+                <div class="input-group input-group-sm" >
+                    <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" name="inputDate" class="form-control pull-right" id="datepicker2">
+                    <span class="input-group-btn">
                     <button type="submit"   class="btn btn-info btn-flat">EasyExcel的模板打印</button>
                 </span>
-            </div>
-        </form>
-    </div>
-</section>
+                </div>
+            </form>
+        </div>
+    </section>
 </div>
 </body>
 <script src="../../plugins/datepicker/bootstrap-datepicker.js"></script>

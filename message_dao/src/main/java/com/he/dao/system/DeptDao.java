@@ -1,6 +1,5 @@
 package com.he.dao.system;
 
-
 import com.he.domain.system.Dept;
 
 import java.util.List;

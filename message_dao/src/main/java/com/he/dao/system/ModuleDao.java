@@ -1,4 +1,5 @@
 package com.he.dao.system;
+
 import com.he.domain.system.Module;
 
 import java.util.List;
@@ -21,4 +22,8 @@ public interface ModuleDao {
 
     //查询全部
     List<Module> findAll();
+
+    public abstract List<Module> findByBelong(int i);
+
+    public abstract List<Module> findByUserId(String id);
 }

@@ -1,16 +1,13 @@
 package com.he.web.controller;
 
+
+
 import com.he.domain.system.User;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-/**
- * @Author: heboxuan
- * @Date: Created in 14:25 2021/1/28
- */
 
 public class BaseController {
 
@@ -22,6 +19,7 @@ public class BaseController {
 
     @Autowired
     protected HttpSession session;
+
 
     /**
      * 1、模拟当前登录用户所属的企业id

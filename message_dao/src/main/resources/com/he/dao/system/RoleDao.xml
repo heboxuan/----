@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.itcast.dao.system.RoleDao">
+<mapper namespace="com.he.dao.system.RoleDao">
     <resultMap id="BaseResultMap" type="com.he.domain.system.Role">
         <id column="role_id" property="id"/>
         <result column="name" property="name"/>
@@ -22,16 +22,29 @@
         delete from pe_role where role_id = #{id}
     </delete>
 
-    <insert id="save" parameterType="cn.itcast.domain.system.Role">
+    <insert id="save" parameterType="com.he.domain.system.Role">
         insert into pe_role (role_id, name, remark, order_no,company_id, company_name)
         values (#{id}, #{name}, #{remark}, #{orderNo}, #{companyId}, #{companyName})
     </insert>
 
-    <update id="update" parameterType="cn.itcast.domain.system.Role">
+    <update id="update" parameterType="com.he.domain.system.Role">
         update pe_role
         set name = #{name},
           remark = #{remark},
           order_no = #{orderNo}
         where role_id = #{id}
     </update>
+
+    <select id="findModulesByRoleId" resultType="String">
+        select module_id from pe_role_module where role_id=#{roleId}
+    </select>
+
+    <delete id="deleteRoleModule">
+        delete from pe_role_module where role_id=#{roleId}
+    </delete>
+
+    <insert id="saveRoleModule">
+        insert into pe_role_module(role_id,module_id)
+        values (#{roleId},#{moduleId})
+    </insert>
 </mapper>

@@ -2,6 +2,7 @@ package com.he.dao.system;
 
 import com.he.domain.system.Role;
 import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 
@@ -21,4 +22,10 @@ public interface RoleDao {
 
 	//更新
     int update(Role role);
+
+    public abstract List<String> findModulesByRoleId(String roleId);
+
+    public abstract void deleteRoleModule(String roleId);
+
+    public abstract void saveRoleModule(@Param("roleId") String roleId, @Param("moduleId") String moduleId);
 }

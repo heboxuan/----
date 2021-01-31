@@ -6,6 +6,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="../../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="../../../plugins/echarts/echarts.min.js"></script>
 </head>
 <body>
 <div id="frameContent" class="content-wrapper" style="margin-left:0px;">
@@ -22,8 +24,6 @@
     </section>
 </div>
 </body>
-<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
-<script src="../../plugins/echarts/echarts.min.js"></script>
 <script type="text/javascript">
 
     $.get("/stat/findFactoryData.do",function(data){
