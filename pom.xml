@@ -15,6 +15,7 @@
         <module>message_dao</module>
         <module>message_domain</module>
         <module>message_commons</module>
+        <module>message_email</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->

@@ -1,6 +1,7 @@
 package com.he.web.controller.system;
 
 import com.he.common.utils.Encrypt;
+import com.he.common.utils.MailUtil;
 import com.he.domain.system.Dept;
 import com.he.domain.system.Role;
 import com.he.domain.system.User;
@@ -8,7 +9,7 @@ import com.he.service.system.DeptService;
 import com.he.service.system.RoleService;
 import com.he.service.system.UserService;
 import com.he.web.controller.BaseController;
-//import com.he.web.utils.MessageProducer;
+import com.he.web.utils.MessageProducer;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,8 +32,8 @@ public class UserController extends BaseController {
     @Reference
     private RoleService roleService;
 
-    //@Autowired
-    //private MessageProducer messageProducer;
+    @Autowired
+    private MessageProducer messageProducer;
 
 
     @RequestMapping("/list")
@@ -107,14 +108,14 @@ public class UserController extends BaseController {
             String subject = "欢迎使用Saas-Export系统";
             String content = "尊敬的用户您好,欢迎使用Saas-Export系统。您的访问地址是 http://127.0.0.1:8088 , 登录用户名："+
                     user.getEmail()+", 登录密码" + password;
-//            MailUtil.sendMsg(to,subject,content);
+           // MailUtil.sendMsg(to,subject,content);
 
             Map<String,String> map = new HashMap<>();
             map.put("to", to);
             map.put("subject", subject);
             map.put("content", content);
 
-            //messageProducer.send("user.insert", map);
+            messageProducer.send("user.insert", map);
 
         }else {
             //2.2 有id，更新
