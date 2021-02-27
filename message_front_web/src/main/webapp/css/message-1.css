@@ -1,0 +1,175 @@
+/*标题*/
+body{
+    background:#F8F6F9;
+}
+
+.message_title{
+    font-size: 20px;
+    color:#CE263F;
+    font-weight: bold;
+    text-align: center;
+    margin:0 0 10px;
+}
+.message_box{
+    border:1px solid #e1e1e1;
+    width: 1200px;
+    font-size: 16px;
+}
+/*表单样式*/
+select{
+    /*width:54vw;*/
+    font-size:16px;
+    color:#919191;
+    padding: 5px;
+    border:#e1e1e1 1px solid;
+    /*margin-left:10px;*/
+}
+textarea{
+    /*width:1024px;*/
+    margin-left:10px;
+    font-size:16px;
+    color:#919191;
+    padding: 5px;
+    border:#e1e1e1 1px solid;
+}
+/*留言信息表*/
+.message_box tr{
+    width:100%;
+    display: inline-block;
+}
+.message_box tr td{
+    height:55px;
+    background: #F8F6F9;
+    padding:5px 5px;
+}
+.message_box tr td:first-child{
+    background: #D83240;
+    text-align: center;
+    width: 100px;
+    color:#fff;
+}
+.message_box tr.event_adress .truename_default,.message_box tr.event_adress select{
+    width: 500px;
+}
+.addbtn_img{
+    display: inline-block;
+    padding:10px 20px;
+    background: #D83240;
+    color:#fff;
+    margin-right: 10px;
+}
+.see_btn i{
+    margin-left: 10px;
+    display: inline-block;
+    background: #fff;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #000;
+    margin-right:5px;
+}
+.can_see{
+    background: red;
+}
+.bottom1{
+    margin:0 auto;
+}
+.submit{
+    background: #D83240;
+    color:white;
+    display:inline-block;  
+    margin:0 auto;
+    text-align:center;
+    cursor: pointer;
+    width: 40%;
+    margin-bottom: 50px;
+    border:none;
+}
+.coordinate{
+    text-align: center;
+    font-size: 16px;
+    color:#919191;
+    margin-bottom:20px;
+}
+.truename_default{
+    border:#d2d2d2 1px solid;
+    width: 350px;
+    height: 40px;
+    margin-left:10px;
+    padding-left:5px;
+}
+.replaceTel{
+   color:#d73240;
+   margin-left:10px;
+}
+.textmessage{
+    margin:20px 10px 0 10px;
+    overflow-y:auto;
+    resize:none;
+    width:1004px;
+    padding:10px;
+    font-size: 14px;
+}
+.selectmargin,.titlemessage{
+    height: 30px;
+    border:#d2d2d2 1px solid;
+    
+}
+.titlemessage{
+    font-size:16px;
+    color:#919191;
+    width:1014px!important;
+    margin-left:10px;
+    font-size:16px;
+    color:#919191;
+    padding: 5px;
+    border:#e1e1e1 1px solid;
+}
+.bottom1{
+    text-align: center;
+    margin-top:70px;
+    font-size: 18px;
+}
+.verification{
+    color:#333;
+    /*width: 30%;*/
+    height: 30px;
+    margin:10px 20px 10px 0;
+}
+.management{
+    font-size:16px;
+    color:#CE263F!important;
+    text-decoration: none;
+}
+.takecare{
+    margin:20px 0;
+}
+.code{
+    width: 100px;
+    height:40px;
+}
+.changecode{
+    margin-left:10px;
+    text-decoration: none;
+}
+.codecolor{
+    color:#CE263F;
+}
+.message_Bwtitle{
+    font-size: 20px;
+    color:#000000;
+    font-weight: bold;
+    text-align: left;
+    margin:10px auto;
+}
+#codeImg{
+    margin-left:7px;
+}
+#domainId{
+    height:40px;
+    padding-right:10px;
+}
+.textarea_img_happend{
+    padding:5px;
+    width:1014px;
+}
+

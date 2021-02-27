@@ -1,0 +1,1223 @@
+@charset "utf-8";
+/* CSS Document */
+body{ padding:0; margin:0;  font:normal 12px/200% "微软雅黑"; color:#000000;text-align:center;}
+h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td{margin:0;padding:0;}
+div{margin:0 auto;text-align:left;font:normal 12px/200% "微软雅黑";}
+li{text-align:left;font:normal 12px/200% "微软雅黑";}
+a:link,a:visited{color:#000000; text-decoration:none;}
+a:hover{color:#000000; text-decoration:underline;}
+img{ border:none;}
+ol,ul,li{list-style:none;}
+em,i{ font-style:normal;} 
+/*clear*/
+.clearfix:before,.clearfix:after {content:"";display:table;}
+.clearfix:after{clear:both;overflow:hidden;}
+.clearfix{zoom:1;}
+/*other*/
+h1,h2,h3,h4,h5,h6{ text-align:left;font:normal 12px/200% "微软雅黑";}
+.mt10{ margin-top:10px;}
+.mb10{ margin-bottom:10px;}
+.m10{ margin:10px auto;}
+.w1200{ width:1200px;}
+.list_14 li{ background:url("../img/dot.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/dot.gif*/ no-repeat 0 12px; padding-left:12px;font-size:14px;}
+.list_12 li{ background:url("../img/dot.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/dot.gif*/ no-repeat 0 12px; padding-left:12px;}
+.fl{ float:left;}
+.fr{ float:right;}
+.grey1,.grey1 a:link,.grey1 a:visited,.grey1 a:hover{ color:#6e757f;}
+.grey2,.grey2 a:link,.grey2 a:visited,.grey2 a:hover{ color:#7a7a7a;}
+.grey3,.grey3 a:link,.grey3 a:visited,.grey3 a:hover{ color:#9b9a9a;}
+.white,.white a:link,.white a:visited,.white a:hover{ color:#fff;}
+.red,.red a:link,.red a:visited,.red a:hover{ color:#d73240;}
+.blue,.blue a:link,.blue a:visited,.blue a:hover{ color:#1d70b6;}
+/*nav*/
+.nav01{ background:#eef1f6; height:40px; line-height:40px;}
+.nav01 a{ padding:0 20px;}
+.nav01 img{ vertical-align:middle; margin:12px -10px 12px 12px;}
+.nav01 .fr{ line-height:40px;}
+
+.nav02{ padding:18px 0;}
+.nav02 .fl{ width:300px; padding:10px 0; padding:5px 0;}
+.nav02 .fl img{ width:275px; height: 60px;}
+.nav02 .fr{ width:725px;}
+
+.nav03{ background:#d73240; height:56px;}
+.nav03 .fl{ width:900px; height:56px; overflow:hidden;}
+.nav03 .fl ul li{ font: normal 18px/56px "微软雅黑"; text-align:center; height:54px; padding:0 19px; float:left;}
+.nav03 .fl ul li:hover{ background:#bf1e2d; border:#e36e6b 1px solid;}
+.nav03 .fr{ width:300px;}
+.nav03 .fr p{ float:right;}
+
+
+#topbanner{position: relative;height:56px;float:right;}
+#topbanner .inner{width: 66px;position: relative;height:56px;background: #efefef;}
+
+#topbanner .inner .n1 { width:68px;cursor: pointer;text-align: center; position: relative;  line-height: 40px; height:56px; }
+#topbanner .inner .n1.active {  background: #efefef;  z-index: 99;}
+
+
+#topbanner .inner .n1 .search {  position: absolute; left: -295px; top: 0px; z-index: 99; width: 280px; height: 46px; background: #efefef;  padding: 5px 10px; display: none;}
+#topbanner .inner .n1 .search input { width: 280px; height: 30px; line-height:30px; text-indent: 10px; position: absolute; top:14px;}
+#topbanner .inner .n1 .search input[type=submit] { cursor: pointer; position: absolute; right: -60px; top: 0px; width: 66px; height: 56px;
+background: #efefef url("../img/icon04.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon04.gif*/ 1px 0 no-repeat; border:none;}
+
+
+/*p1*/
+.p1_con{ margin:25px auto 0;}
+.p1_left{ width:740px;}
+.p1_right{ width:400px; padding-right:10px;}
+.p1_left .hot{ margin-left:10px; font-size:16px; background:#d83240; padding:4px 16px; font-weight: normal;}
+.p1_left h1{ margin-left:10px; text-align:center; padding:30px 0; margin-bottom:20px; line-height:160%; font-size:26px; border-bottom:#e9e9e9 1px solid;}
+.p1_left .hot_news{height:130px; background:url("../img/p1_01.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/p1_01.png*/ top right no-repeat;}
+.p1_left .hot_news li{ float:left; font-size:16px; line-height:140%; width:340px; height:40px; padding:9px 10px; margin:0 0 10px 10px;}
+.p1_left .pic_list{ margin:20px auto;}
+.p1_left .pic_list li{ float:left; margin:10px 5px 0 15px; width:165px; font-size:14px; line-height:160%;}
+.p1_left .pic_list li img{ display:block; margin-bottom:5px;}
+
+
+#box{width:400px;height:280px;position:relative; margin-bottom:24px;}
+#box ul li{display:none;text-align:center;position:absolute;height:46px;line-height:46px;}
+#box ul li img{display:block;}
+#box ul li span{position:absolute;top:234px;left:8px;font-size:14px;z-index:3;}
+#box ul li a{color:#fff;}
+#box ul li div{background: url("../img/icon11.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon11.png*/;height:46px; width:100%;position:absolute;top:234px;z-index:1;}
+#box ol{position:absolute;top:248px;right:5px;z-index:1;}
+#box ol li.active{display:block;background:#d1182a;}
+#box ol li{width:22px;height:15px;line-height:15px;float:left;cursor:pointer;text-align:center;font-size:14px;color:#fff;}
+
+.p1_right .box_liuyan{ background:url("../img/p1_02.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/p1_02.gif*/ top left no-repeat; height:145px;}
+.p1_right .box_liuyan dt{ width:199px;}
+.p1_right .box_liuyan dd{ width:199px}
+.p1_right .box_liuyan dl b{ font-size:16px; text-align: center; display:block; line-height:42px; height:42px;}
+.p1_right .box_liuyan dl p{ padding:30px 20px 0 25px; font-size:14px; line-height:160%; color:#a5a5a5;}
+.p1_right .box_liuyan dl p em{ width:75px; display:block; float:left;}
+.p1_right .box_liuyan dl p i{ display:block; width:60px; float:left; color:#7a7a7a;}
+
+/*p2*/
+.p2_con{ margin:5px auto 25px;}
+.p2_left{ width:740px; padding-left:10px;}
+.p2_right{ width:400px; padding-right:10px;}
+
+.p2_left .banner{ margin:10px auto;}
+ 
+.p2_left .box_huodong{ height:40px; background:#efefef; margin-bottom:20px;}
+.p2_left .box_huodong b{ background:#36485e; height:40px; width:60px; text-align:center; float:left; font-size:16px; line-height:40px;}
+.p2_left .box_huodong p{ height:40px; float:left; font-size:14px; line-height:40px; padding-left:10px;}
+.p2_left .box_huodong p a{ padding:0 10px;}
+
+.p2_left .title{ border-bottom:#e9e9e9 1px solid;}
+.p2_left .title li{ float:left; text-align:center; width:132px; height:44px;font: normal 18px/44px \5FAE\8F6F\96C5\9ED1;}
+.p2_left .title li.t01{ border-bottom:#d73240 2px solid;}
+.headingNews{}
+.hdNews{ margin:15px auto; border-bottom:#efefef 1px solid; padding-bottom:15px;}
+.hdNews p{ display:block; clear:both; margin:5px 0 0; position:relative;}
+.hdNews p img{ display:block; float:left; margin-right:30px; margin-top:10px;}
+.hdNews p strong{font: bold 20px/200% \5FAE\8F6F\96C5\9ED1; display: block;}
+.hdNews p em{ display:block;line-height:180%; font-size:14px; padding:5px 0 10px;}
+.hdNews p i{ display:block; float:left; background:url("../img/icon06.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon06.gif*/ 0 6px no-repeat; padding-left:18px; height:40px; width:200px;}
+.hdNews p span.red{ position:absolute; background:#d73240; z-index:10; top:20px; left:0; padding:1px 15px;}
+.hdNews p span.grey{ position:absolute; background:#a3a3a3; z-index:10; top:20px; left:0; padding:1px 15px;}
+
+.page_n{ text-align:center; margin:20px auto; font-size:14px; /*background:#d73240; width:150px;*/ height:34px; line-height:34px;}
+
+.p2_right h2{ background:url("../img/icon09.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon09.gif*/ no-repeat; height:40px;}
+.p2_right h2 em{ float:left; background:#d73240; font-size:16px; text-align:center; display:block; width:150px; height:40px; line-height:40px;}
+.p2_right h2 i{ float:right; font-size:14px; line-height:40px; padding-right:10px;}
+.p2_right h2 span{ background:url("../img/icon05.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon05.gif*/ no-repeat; width:65px; height:36px; line-height:36px; float:right; margin:2px; padding-left:15px;}
+
+.p2_right .list_01{ margin:15px auto;}
+.p2_right .list_01 li{ background:url("../img/icon07.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon07.gif*/ 0 6px no-repeat; padding-left:20px; margin:7px 0;}
+.p2_right .list_01 li b{ display:block; font-size:15px;}
+.p2_right .list_01 li em{ display:block;}
+.p2_right .list_01 li em img{ vertical-align:middle; margin-left:20px; margin-right:5px;}
+
+.p2_right .box_renwu{ border-bottom:#e9e9e9 1px solid; padding:20px 0;}
+.p2_right .box_renwu dt{ float:left; width:100px;}
+.p2_right .box_renwu dt em{ background:url("../img/icon10.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon10.png*/; margin-top:-25px; line-height:25px; text-align:center; position:relative; z-index:10; display:block;}
+.p2_right .box_renwu dd{ width:280px; float:right;}
+.p2_right .box_renwu dd b{ font-size:16px; font-weight:normal; margin-bottom:5px; display:block;}
+.p2_right .list_12{ margin:20px auto;}
+.p2_right .pic_box{ margin:10px auto;}
+.p2_right .pic_box img{ margin:10px auto;}
+
+.p2_right .list_02{ margin:10px auto;}
+.p2_right .list_02 dt{ background:#e9e9e9; text-align:center; width:60px; height:26px; text-align:center; line-height:26px; float:left; margin-top:5px;}
+.p2_right .list_02 dd{ font-size:14px; line-height:160%; float:right; width:320px;}
+
+.bottom_copyright1{ background:#2f4359; padding:35px 0; margin-top:45px;}
+.bottom_copyright1 .left{ width:560px;}
+.bottom_copyright1 .right{ width:120px; text-align:center; padding-top:20px; color:#f0f4f8;}
+.bottom_copyright1 .right img{ display:block; margin-bottom:8px;}
+.bottom_copyright1 .fl p{ font-size:14px; color:#b3bcc7; line-height:200%; padding:25px 0 0;}
+.bottom_copyright1 .fl p a:link,.bottom_copyright1 .fl p a:visited,.bottom_copyright1 .fl p a:hover{ color:#b3bcc7;}
+.bottom_copyright1 .fl ul{ margin:25px 0 0;}
+.bottom_copyright1 .fl ul li{ float:left; width:170px;font-size:14px; color:#b3bcc7; line-height:200%;}
+.bottom_copyright1 .fl ul li a:link,.bottom_copyright1 .fl ul li a:visited,.bottom_copyright1 .fl ul li a:hover{color:#b3bcc7;}
+.bottom_copyright1 .fl h2{ height:37px; line-height:37px; font-size:18px; color:#f0f4f8;}
+.bottom_copyright2{ background:#243344; height:48px;}
+.bottom_copyright2 .fl{ color:#727a83; line-height:48px;}
+.bottom_copyright2 .fr select{ width:170px; height:22px; margin:15px 0 0 0; text-align:right;}
+
+
+/*text*/
+.text_content{}
+.text_left_box{ width:740px; padding-left:20px;}
+.text_right_box{ width:400px; padding-top:66px;}
+.text_left_box .path{ margin:20px auto; font-size:14px; color:#d73240;}
+.text_left_box .path a:link,.text_left_box .path a:visited,.text_left_box .path a:hover{ color:#d73240; padding:0 5px;}
+.text_left_box .title_h1{ font-size:28px; line-height:140%; margin:20px 0;}
+.text_left_box .title_h2{ border-bottom:#d4d4d4 1px solid; height:40px; padding-bottom:8px;}
+.text_left_box .title_h2 .source{ float:left; font-size:14px; line-height:40px;}
+.text_left_box .title_h2 .size{ float:right; height:40px; position:relative; z-index:10; padding-top:10px;}
+.text_left_box .title_h2 .size i{cursor:pointer; display:block; height:30px; line-height:30px; width:56px; text-align:center; position:relative; z-index:11; font-size:14px;}
+.text_left_box .title_h2 .size ul{ display:none; background:#fff; height:125px; margin-top:-30px; padding-top:30px;}
+.text_left_box .title_h2 .size ul li{ color:#5facc6; border-top:#e8e8e8 1px solid; text-align:center; margin:0 5px; height:30px; line-height:30px;}
+.text_left_box .title_h2 .size ul li a:link,.text_left_box .title_h2 .size ul li a:visited,.text_left_box .title_h2 .size ul li a:hover{ color:#5facc6;}
+.text_left_box .title_h2 .size ul li.t01{ font-size:16px;}
+.text_left_box .title_h2 .size ul li.t02{ font-size:14px;}
+.text_left_box .title_h2 .size ul li.t03{ font-size:12px;}
+.text_left_box .title_h2 .size ul li.t04{ font-size:10px;}
+.text_left_box .title_h2 .size:hover ul{ display:block; border:#cacaca 1px solid; width:56px;}
+
+.text_left_box .text_box{font-size:16px;}
+.text_left_box .text_box p{ line-height:220%; text-indent:2em; margin:22px 0;}
+.text_left_box .text_box strong{ display:block; text-indent:2em;}
+.text_left_box .text_box p em{ text-align:right; display:block; padding-right:20px;}
+.text_left_box .keyword{ color:#b12b2b; height:55px;}
+.text_left_box .keyword b{ border:#c95e68 1px solid; border-radius:20px; font-size:16px; padding:8px 15px; margin:0 8px;}
+.text_left_box .keyword a:link,.text_left_box .keyword a:visited,.text_left_box .keyword a:hover{ color:#b12b2b}
+.text_left_box .share{ border-bottom:#d4d4d4 1px solid; border-top:#d4d4d4 1px solid; padding:15px 0; text-align:right; padding-right:10px;}
+.text_left_box .title_h3{ font-size:18px; height:75px; line-height:86px; overflow:hidden;}
+.text_left_box .xg_box01{}
+.text_left_box .xg_box01 ul{}
+.text_left_box .xg_box01 ul li{ margin:0 auto 20px;}
+.text_left_box .xg_box01 ul li b{ font-size:24px; display:block; line-height:140%; margin:0 auto 8px; font-weight:normal;}
+.text_left_box .xg_box01 ul li p{ font-size:14px; margin:10px 0;}
+.text_left_box .xg_box01 ul li span{ display:block; background:url("../img/icon06.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon06.gif*/ 0 6px no-repeat; padding-left:15px;}
+.text_left_box .xg_box01 ul li span a{ padding:0 8px;}
+.text_left_box .banner{ margin:30px auto 0;}
+.text_left_box .xg_box02{}
+.text_left_box .xg_box02 li{ font-size:14px; float:left; width:50%;}
+
+
+.text_right_box h2{ background:url("../img/icon09.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon09.gif*/ no-repeat; height:40px;}
+.text_right_box h2 em{ float:left; background:#d73240; font-size:16px; text-align:center; display:block; width:150px; height:40px; line-height:40px;}
+.text_right_box h2 span{ float:left; background:#e6830e; font-size:16px; text-align:center; display:block; width:150px; height:40px; line-height:40px;}
+
+.text_right_box .box01{ padding:20px 0;}
+.text_right_box .box01 em{ float:left; font-size:14px; background:#eef1f6; padding:8px 15px; margin:0 8px 8px 0;}
+
+.text_right_box .box02{ margin:15px auto; width:400px;}
+.text_right_box .box02 li{ background:url("../img/icon07.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon07.gif*/ 0 8px no-repeat; padding-left:20px; margin:7px 0; float:left; width:380px;}
+.text_right_box .box02 li b{ display:block; font-size:15px; font-weight:normal;}
+.text_right_box .box02 li p{ display:block;}
+.text_right_box .box02 li em{float:left;}
+.text_right_box .box02 li i{ float:right;}
+.text_right_box .box03{ background:#36485e; height:38px; line-height:38px; font-size:14px; text-align:center; margin:10px auto 30px;}
+.red,.red a:link,.red a:visited,.red a:hover{ color:#d73240;}
+.text_right_box .box04 img{ margin-bottom:30px;}
+.text_right_box .box05{ margin:10px 0;}
+.text_right_box .box05 li{ float:left; margin:10px;}
+.text_right_box .box05 li img{ display:block;}
+.text_right_box .box05 li em{ position:relative; z-index:10; background:url("../img/icon10.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon10.png*/; display:block; height:34px; line-height:34px; text-align:center; margin-top:-34px;}
+.text_right_box .box06{ margin:10px auto 20px;}
+.text_right_box .box06 li{ background:url("../img/icon07.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon07.gif*/ 0 8px no-repeat; padding-left:20px; font-size:14px;}
+.text_right_box .box07{ text-align:center; font-size:14px; margin:20px auto;}
+.text_right_box .box07 img{ display:block; margin:5px auto;}
+
+/*地区*/
+.path_2j{ font-size:14px; line-height:50px; height:50px;}
+.district_box01{ font-size:14px; border-bottom:#e1e1e1 1px solid; line-height:240%; border-top:#e1e1e1 1px solid; padding:15px 0;}
+.district_box01 a{ padding:4px 10px; color:#3d3d3d; margin:0 7px 0 6px;}
+.district_box01 a:hover{ color:#fff; background:#bf1e2d;}
+.district_box02{ margin:20px auto; height:35px;}
+.district_box02 strong{ font-size:30px; float:left; line-height:35px; font-weight:normal; padding-right:20px; padding-left:20px;}
+.district_box02 p{ font-size:14px; color:#090909; line-height:50px;}
+.district_box02 .fl{ width:900px;}
+.district_box02 .fr{ font-size:14px; padding-top:15px;}
+.district_box02 .fr img{ vertical-align:middle; margin-right:10px;}
+.district_box03{ background:url("../img/line01.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/line01.gif*/;}
+.district_box03 .fl{ width:500px; padding:35px 0 35px 30px;}
+.district_box03 .fr{ width:500px; padding:35px 30px 35px 0;}
+.district_box03 dl{ width:490px;}
+.district_box03 dl dt{ float:left; width:360px;}
+.district_box03 dl dt h2{ font-size:14px; color:#2f2f2f; margin-bottom:10px;}
+.district_box03 dl dt h2 b{ font-size:24px; color:#000; font-weight:normal; margin-right:8px;}
+.district_box03 dl dt p{ font-size:14px;color:#2f2f2f;}
+.district_box03 dl dd{ float:right; padding-top:20px; width:120px;}
+.district_box03 dl a,.district_box03 dl a:hover{ color:#2f2f2f;}
+
+.district_box04 ul{ margin-left:-25px;}
+.district_box04 li{ border:#d5d5d5 1px solid; width:166px; height:75px; float:left; margin:30px 0 0 27px; padding:15px 20px 10px 30px;}
+.district_box04 li b{ display:block; font-size:16px; color:#212121; font-weight:normal;}
+.district_box04 li b a{color:#212121;}
+.district_box04 li p{ font-size:14px;}
+.district_box04 div{ padding:20px 0; text-align:right;}
+/*liuyan*/
+.liuyan_box01{}
+.liuyan_box01 .box01{ font-size:14px; padding:30px 0 25px;}
+.liuyan_box01 .box01 select{ height:33px; vertical-align:middle; margin-left:10px; margin-right:10px; background:#f5f5f5; border:#d5d5d5 1px solid; color:#6e6e6e; padding:0 10px; line-height:33px;}
+.liuyan_box01 .box01 select option{ height:33px; line-height:33px;}
+.liuyan_box01 .box02 { padding:15px; background:#eef1f6;}
+.liuyan_box01 .box02 .t01{ background:#e8e8e8;}
+.liuyan_box01 .box02 .t01 input,.liuyan_box01 .box02 .t01 select{ border:#d5d5d5 1px solid; vertical-align:middle; background:#fff; height:31px; line-height:31px;}
+.liuyan_box01 .box02 .t01 input{ width:910px; color:#939393; text-indent:1em;}
+.liuyan_box01 .box02 .t01 select{ width:117px; height:33px; margin-left:12px;}
+.liuyan_box01 .box02 .t02{ padding:10px 0 0; height:122px; overflow:hidden;}/*20161229*/
+.liuyan_box01 .box02 .t02 textarea{ color:#939393; width:1148px; height:100px; padding:10px;border:#d5d5d5 1px solid;}
+.liuyan_box01 .box02 .t03{ font-size:14px; height:36px; line-height:36px; font-size:14px;}
+.liuyan_box01 .box02 .t03 img,.liuyan_box01 .box02 .t03 input{ vertical-align:middle; margin-right:5px;}
+.liuyan_box01 .box02 .t03 img{ margin-right:12px;}
+.liuyan_box01 .box02 .t04{ height:38px; padding:20px 0;}
+.liuyan_box01 .box02 .t04 em{ font-size:14px; color:#5e5e5e;}
+.liuyan_box01 .box02 .t04 em input{ vertical-align:middle; margin-left:12px; margin-right:12px; background:#fff; width:115px; height:30px; border:#d5d5d5 1px solid; color:#9c9c9c; padding-left:5px; line-height:30px;}
+.liuyan_box01 .box02 .t04 i input{ width:160px; height:38px; background:#ce1c00; color:#fff; line-height:38px; font-size:16px; text-align:center; border:none;}
+
+.liuyan_box01 .box02 .t05{clear:both; height:64px; padding-bottom:15px; padding-top:15px; background:#fff; border:#d5d5d5 1px solid; border-top:none;}/*20161229*/
+.liuyan_box01 .box02 .t05 em{ float:left; padding-left:20px; margin-right:25px; font-size:18px; color:#e29760; line-height:64px;}/*20161229*/
+.liuyan_box01 .box02 .t05 div{width:65px; height:64px; background:url("../img/add_attchment.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/add_attchment.png*/; cursor:pointer; float:left; margin-right:20px;}/*20161229*/
+.liuyan_box01 .box02 .t05 i{ padding-top:10px; float:left;}/*20161229*/
+
+
+
+.liuyan_box02{}
+.liuyan_box02 .title{ border-bottom:#939393 1px solid; height:50px; margin:30px auto 10px;}
+.liuyan_box02 .title li{ background:#e9e9e9; padding:0 20px; float:left; text-align:center; font-size:16px; height:50px; line-height:50px; margin-right:1px;}
+.liuyan_box02 .title li.t01{ background:#bf1e2d; color:#fff;}
+.liuyan_box02 .list_box{}
+.liuyan_box02 .list_box li{ border-bottom:#b7b7b7 1px solid; padding:15px 0; margin:15px auto;}
+.liuyan_box02 .list_box li h2{ float:left; width:100%; padding-bottom:10px;}
+.liuyan_box02 .list_box li h2 i{ float:right; background:url("../img/icon19.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon19.png*/; width:110px; height:29px; text-align:center; line-height:29px; font-size:14px;}
+.liuyan_box02 .list_box li h2 b{ font-size:24px; float:left; font-weight:normal;}
+.liuyan_box02 .list_box li h2 b em{ font-size:16px; color:#999; display:inline; padding-left:12px;}
+.liuyan_box02 .list_box li p{ font-size:16px; line-height:200%;}
+.liuyan_box02 .list_box li em{ display:block; text-align:right; padding:15px 0 0;}
+.liuyan_box02 .list_box li em img{ vertical-align: middle; margin:10px 5px 10px 15px;}
+
+.liuyan_box02 .list_box h3{ width:100%;}
+.liuyan_box02 .list_box h3 span{ float:left; display:block; height:36px; line-height:36px; font-size:14px; margin:15px 10px 20px 0;}
+.liuyan_box02 .list_box h3 span img{ vertical-align:middle; margin-right:15px; float:left;}
+.liuyan_box02 .list_box h3 em{ display:inline-block; border:#acacac 1px solid; padding:4px 12px; float:left; margin-left:12px; margin-top:15px;} 
+
+
+/*20161226-ph*/
+/*topsearchbar*/
+.topsearchbar{ position:relative;}
+.rank-btn{height:31px;width: 100px;cursor: pointer; font-size:14px;}
+
+/*rank_panel*/
+#rank_panel{position: absolute;	top:39px; right:0;width: 300px;border:1px solid #d5d5d5;	background: #fff;	box-shadow: 1px 2px 3px 1px #cacaca;}
+#rank_panel .tab-ctns{padding: 10px;}
+
+/*tab*/
+.tab{ font-size:14px;}
+.tab .tab-tags{	overflow: hidden;}
+.tab .tab-tags ul{	width: 500px;height: 32px;background: #eaeaea;border-bottom: 1px solid #bfbfbf;}
+.tab .tab-tags ul li{ font-size:14px;float: left;position: relative;	width: 100px;height: 32px;}
+.tab .tab-tags ul li a{	display: block;	margin: 1px 0 1px -1px;	position: relative;	width: 100px;height: 30px;line-height: 30px;border-left: 1px solid #bfbfbf;	background: #eaeaea;text-align: center;}
+.tab .tab-tags ul li a.active,.tab .tab-tags ul li a:hover{	position: absolute;	bottom: -1px;background: #fff;margin: 0 0 0 -1px;line-height: 32px;height: 32px}
+
+
+/*icon*/
+.icon,.btn{display: inline-block;}
+.i-num{	height: 20px;width: 20px;line-height: 20px;	background:#d73240;color: #fff;font-size: 12px;font-family: arial;	text-align: center;}
+.i-gray-num{background: gray;}
+.i-up,.i-down,.i-hold{height: 20px;width: 20px;}
+
+/*table*/
+
+.tab-box table{	width: 100%;}
+.tab-box table thead td{background: #f1f1f1; font-size:14px;}
+.tab-box table tbody td{border-bottom: 1px dashed #ccc;}
+.tab-box table td{	padding:10px 0;	text-align: center;	color: #000; font-size:14px;}
+.tab-box table .gray td,.tab-box table .readed td{background: none;color: #999;}
+
+/*xiangqing*/
+.liuyan_box03{}
+.liuyan_box03{ padding:15px 0; margin:15px auto;}
+.liuyan_box03 h2{ float:left; width:100%; padding-bottom:10px;}
+.liuyan_box03 i{ float:right; background:url("../img/icon19.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon19.png*/; width:110px; height:29px; text-align:center; line-height:29px; font-size:14px;}
+.liuyan_box03 h2 b{ font-size:24px; float:left; font-weight:normal;}
+.liuyan_box03 h2 b em{ font-size:16px; display:inline; padding-left:12px;}
+.liuyan_box03 h3{ width:100%;}
+.liuyan_box03 h3 span{ float:left; display:block; height:36px; line-height:36px; font-size:14px; margin:15px 10px 20px 0;}
+.liuyan_box03 h3 span img{ vertical-align:middle; margin-right:15px; float:left;}
+.liuyan_box03 h3 em{ display:inline-block; border:#acacac 1px solid; padding:4px 12px; float:left; margin-left:12px; margin-top:15px;} 
+.liuyan_box03  p{ font-size:16px; line-height:200%;}
+.liuyan_box03 .pic{ padding:20px 0;}
+.liuyan_box03 .pic img{ margin-right:25px;}
+
+.liuyan_box03  .size{width:100%; float:right; text-align:right; height:40px; position:relative; z-index:10; margin-top:-50px;}
+.liuyan_box03  .size b{cursor:pointer; display:block; height:30px; line-height:30px; width:56px; text-align:center; position:relative; z-index:11; font-size:14px; float:right;}
+.liuyan_box03  .size ul{ display:none; background:#fff; height:125px; position:absolute; top:30px; right:0;}
+.liuyan_box03  .size ul li{ color:#5facc6; border-bottom:#e8e8e8 1px solid; text-align:center; margin:0 5px; height:30px; line-height:30px;}
+.liuyan_box03  .size ul li a:link,.liuyan_box03 .title_h2 .size ul li a:visited,.liuyan_box03 .title_h2 .size ul li a:hover{ color:#5facc6;}
+.liuyan_box03  .size ul li.t01{ font-size:16px;}
+.liuyan_box03  .size ul li.t02{ font-size:14px;}
+.liuyan_box03  .size ul li.t03{ font-size:12px;}
+.liuyan_box03  .size ul li.t04{ font-size:10px;}
+.liuyan_box03  .size:hover ul{ display:block; border:#cacaca 1px solid; width:56px;}
+
+
+.liuyan_box04{}
+.liuyan_box04 ul{}
+.liuyan_box04 ul li{ padding:15px 0; background:#f6f8fa; margin-bottom:2px;}
+.liuyan_box04 ul li p{ padding:20px 20px 20px 30px; font-size:16px; line-height:200%;}
+.liuyan_box04 ul li h2{ width:100%; height:32px;}
+.liuyan_box04 ul li h2 i{ float:left; font-size:16px; background:url("../img/icon21.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon21.png*/ no-repeat; width:144px; height:32px; line-height:32px; display:block; text-align:center;}
+.liuyan_box04 ul li h2 em{ float:right; line-height:32px; padding-right:20px; font-size:12px;}
+.liuyan_box04 ul li h3{ width:100%; height:32px;}
+.liuyan_box04 ul li h3 i{ float:left; font-size:16px; width:144px; height:32px; line-height:32px; display:block; text-align:center;}
+.liuyan_box04 ul li h3 em{ float:right; line-height:32px; padding-right:20px; font-size:12px;}
+
+
+.liuyan_box05{ margin:20px auto;}
+.liuyan_box05 ul li{ padding:15px 0; background:#f6f8fa; margin-bottom:2px;}
+.liuyan_box05 ul li p{ padding:20px 20px 20px 30px; font-size:16px; line-height:200%;}
+.liuyan_box05 ul li h3{ width:100%; height:32px;}
+.liuyan_box05 ul li h3 i{ float:left; font-size:16px; width:144px; height:32px; line-height:32px; display:block; text-align:center;}
+.liuyan_box05 ul li h3 em{ float:right; line-height:32px; padding-right:20px; font-size:12px;}
+.liuyan_box05 ul li h4{ width:100%; height:32px;}
+.liuyan_box05 ul li h4 span{float:left; font-size:16px;  line-height:32px; display:block; padding-left:30px;}
+.liuyan_box05 ul li h4 i{ font-size:16px; line-height:32px;  text-align:center; padding-left:15px;}
+.liuyan_box05 ul li h4 em{ float:right; line-height:32px; padding-right:20px; font-size:12px;}
+
+
+
+.liuyan_box06{}
+.liuyan_box06 .box02 { padding:15px; background:#eef1f6;}
+.liuyan_box06 .box02 .t01{ font-size:14px;}
+.liuyan_box06 .box02 .t01 .input01{ border:#d5d5d5 1px solid; vertical-align:middle; background:#fff; height:31px; line-height:31px; width:300px; color:#939393; text-indent:1em; margin-left:0;}
+.liuyan_box06 .box02 .t01 input{ vertical-align:middle; margin-left:15px; margin-right:5px;}
+
+.liuyan_box06 .box02 .t02{ padding:10px 0;}
+.liuyan_box06 .box02 .t02 textarea{ color:#939393; width:1148px; height:100px; padding:10px;border:#d5d5d5 1px solid;}
+.liuyan_box06 .box02 .t03{ font-size:14px; height:36px; line-height:36px; font-size:14px; padding-bottom:20px;}
+.liuyan_box06 .box02 .t03 img,.liuyan_box01 .box02 .t03 input{ vertical-align:middle; margin-right:5px;}
+.liuyan_box06 .box02 .t03 img{ margin-right:12px;}
+.liuyan_box06 .box02 .t03 i input{ width:160px; height:38px; background:#ce1c00; color:#fff; line-height:38px; font-size:16px; text-align:center; border:none;}
+
+.liuyan_box06 .title{ border-bottom:#b7b7b7 1px solid; height:50px; margin:30px auto 0;}
+.liuyan_box06 .title em{ float:left;font-size:16px; height:50px; line-height:50px; padding:0 30px; text-align:center;  background:#bf1e2d; color:#fff;}
+.liuyan_box06 .title span{ display:block; text-align:right; padding:5px 0 0px;}
+.liuyan_box06 .title span img{ vertical-align: middle; margin:10px 5px 10px 15px;}
+
+.liuyan_box07{ font-size:14px; line-height:200%; padding:30px 0px; border-bottom:#b2b2b2 1px solid;}
+
+
+.liuyan_box08{ padding:20px 0 0;}
+.liuyan_box08 h2{ font-size:24px; line-height:220%;}
+.liuyan_box08 ul{ background:url("../img/line02.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/line02.gif*/ top left repeat-y;}
+.liuyan_box08 ul li{ font-size:16px; width:50%; float:left; line-height:220%;}
+
+
+/*20161229*/
+.liuyan_box02 .more{text-align:center; font-size:18px; padding:5px 0; border:#eee 1px solid; width:200px; color:#666; background:#f8f8f8; cursor:pointer}
+
+/*201702指数*/
+.zhishu_con01{ margin:10px auto 40px;}
+.zhishu_con01 h2{ background:#d73240; height:60px;}
+.zhishu_con01 h2 b{ float:left; font:bold 24px/60px "微软雅黑"; padding:0 30px;}
+.zhishu_con01 h2 i{ float:left; font: normal 18px/50px "微软雅黑"; padding:0 20px; margin-left:3px; height:50px; background:#ae0d18; margin-top:10px; color:#fff;}
+.zhishu_con01 h2 i.t01{ color:#d73240; background:#fff;}
+.zhishu_con01 div{ text-align:center;border:#e0e0e0 1px solid; border-top:none; width:1198px;}
+
+.zhishu_con02{}
+.zhishu_con02 .box h2{ font:bold 20px/60px "微软雅黑"; text-align:center;}
+.zhishu_con02 .box{ width:568px;border:#e0e0e0 1px solid; border-top:none;}
+.zhishu_con02 .fl h2{ background:#ff573b;}
+.zhishu_con02 .fr h2{ background:#ff983c;}
+.zhishu_con02 .box h3{ border-bottom:#e0e0e0 1px solid; height:50px; background:#e0e0e0;}
+.zhishu_con02 .box h3 i{ text-align:center; font-size:14px;  background:#ececec;height:50px; display:block; line-height:50px; float:left; width:188px; margin-left:1px;}
+.zhishu_con02 .box h3 i.t01{ background:#fff;}
+.zhishu_con02 .box ol{ background:url("../img/line03.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/line03.gif*/ top center no-repeat; width:568px;}
+.zhishu_con02 .box ol li{ height:47px; line-height:47px; font-size:14px; padding-left:60px;}
+.zhishu_con02 .box ol li i{ padding:0 20px; width:160px; display:block; float:left;}
+.zhishu_con02 .box ol li em{ padding:0 20px; width:140px; display:block; float:left;}
+.zhishu_con02 .box ol li span{ padding:0 20px; width:80px; display:block; float:left;}
+
+.zhishu_con02b{ margin:15px auto;}
+.zhishu_con02b div{ width:570px; background:url("../img/zs02.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/zs02.gif*/ center repeat-x; text-align:center;}
+.zhishu_con02b div em{ background:#fff; padding:0 20px; color:#666;}
+
+.zhishu_con03{ margin:30px auto;}
+.zhishu_con03 h2{ background:url("../img/zs01.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/zs01.gif*/ center no-repeat; height:28px;}
+.zhishu_con03 h2 b{ float:left; font:normal 24px/28px "微软雅黑"; padding-left:30px;}
+.zhishu_con03 h2 i{ float:right; padding-right:20px;}
+.zhishu_con03 .box{ margin:30px auto;}
+.zhishu_con03 .fl{ width:455px; padding-left:20px;}
+.zhishu_con03 .fr{ width:650px; padding-right:20px;}
+.zhishu_con03 .fr b{ font:bold 20px/140% "微软雅黑"; display:block; border-bottom:#f3f3f3 1px solid; padding:10px 0 20px; margin-bottom:15px;}
+.zhishu_con03 .fr p{ font-size:14px; text-indent:2em; line-height:200%;}
+
+.zhishu_con04{}
+.zhishu_con04 h2{ background:url("../img/zs03.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/zs03.gif*/ center no-repeat; height:28px;}
+.zhishu_con04 h2 b{ float:left; font:normal 24px/28px "微软雅黑"; padding-left:30px;}
+.zhishu_con04 h2 i{ float:right; padding-right:20px;}
+.zhishu_con04 div{ padding:20px 0 0 80px;}
+.zhishu_con04 ul{ margin:20px 50px; width:400px; float:left; border-bottom:#f3f3f3 1px solid; padding-bottom:20px;}
+.zhishu_con04 ul li{ float:left; background:url("../img/dot02.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/dot02.gif*/ 0 14px no-repeat; padding-left:12px; line-height:220%; font-size:14px;}
+/*201702反馈*/
+.fk_con{}
+.fk_con h2{ font:bold 20px/60px "微软雅黑"; background:#e9e9e9; padding:0 15px;}
+.fk_con .fl{ border:#e0e0e0 1px solid; width:570px;}
+.fk_con .fr{ border:#e0e0e0 1px solid; width:570px;}
+.fk_con .fl ul{ margin:30px; border-bottom:#e0e0e0 1px dashed; padding-bottom:28px;}
+.fk_con .fl ul li{background:url("../img/dot02.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/dot02.gif*/ 0 14px no-repeat;  padding-left:12px; line-height:220%; font-size:14px;}
+.fk_con .fr ul li{ border-bottom:#dfdfdf 1px solid; padding:20px 20px 10px;}
+.fk_con .fr ul li h3{ display:block; clear:both; margin:0;}
+.fk_con .fr ul li h3 span{ float:left; font-size:14px;}
+.fk_con .fr ul li h3 span em{ margin-right:10px;}
+.fk_con .fr ul li h3 i{ float:right; font-size:12px; color:#9f9f9f;}
+.fk_con .fr ul li p{ font-size:14px; display:block; clear:both; padding:15px 0;}
+.fk_con .fr ul li p span{ display:block; text-align:right;}
+
+.page_n2{ text-align:center; padding:20px 0; text-align:center;}
+
+/*发帖成功*/
+.message_succeed{ margin:80px auto; width:590px;}
+.message_succeed .box01{ text-align:center; padding-bottom:40px;}
+.message_succeed .box01 p{ display:block; text-align:center;}
+.message_succeed .box01 p img{ display:block; margin:0 auto 20px;}
+.message_succeed .box01 b{ display:block; font-size:20px; text-align:center; padding:10px 0;}
+.message_succeed .box01 span{ font-size:14px; text-align:center; display:block; padding:10px 0;}
+.message_succeed .box01 em{ font-size:16px; display:block; text-align:center; padding:10px 0;}
+.message_succeed .box01 em a{ padding:0 15px;}
+.message_succeed .box02{ padding:30px 30px;border:#f0f0f0 3px solid;}
+.message_succeed .box02 b{ display:block; font-size:18px; margin-bottom:30px;}
+.message_succeed .box02 div{ padding-bottom:30px;}
+.message_succeed .box02 div .t01{ vertical-align:middle; margin-right:8px; border:#eee 1px solid; width:380px; height:38px; line-height:38px; font-size:14px; padding:0 5px; color:#a7a7a7;}
+.message_succeed .box02 div .t02{ vertical-align:middle; text-align:center; color:#fff; font-weight:bold; font-size:18px; background:#ff8a18; border:none; width:90px; height:40px; line-height:40px;}
+.message_succeed .box02 dl{}
+.message_succeed .box02 dl dt{ float:left; width:145px; text-align:center;}
+.message_succeed .box02 dl dt img{ display:block; margin:0 auto;}
+.message_succeed .box02 dl dd{ float:left; font-size:14px;}
+
+/*我要留言*/
+.liuyan_box0_notice{}
+.liuyan_box0_notice p{ line-height:240%; padding:30px;}
+.liuyan_box0_notice p input{ vertical-align:middle; margin-right:4px;}
+.liuyan_box0_notice ul{}
+.liuyan_box0_notice ul li{ padding:10px 0; text-align:center;}
+.liuyan_box0_notice ul li .input01{ vertical-align:middle; width:142px; height:33px; color:#999; padding:0 5px; line-height:35px; margin-right:5px;}
+.liuyan_box0_notice ul li img{ vertical-align:middle;}
+.liuyan_box0_notice ul li .input02{ font-size:18px; width:256px; height:58px; border:none; line-height:58px; text-align:center; border-radius:5px; vertical-align:middle; background:#d73240; color:#fff; font-family:"微软雅黑";}
+.icon_wo_fj{ font-size:14px; background:#e1e1e1; border-radius:5px; padding:6px 12px; margin-right:8px;}
+
+/*---------------------------------B-20170317--------------------------------*/
+.lujing{ height:60px; line-height:60px; overflow:hidden;}
+.xiugai_con{ padding-bottom:50px;}
+.xiugai_con .title{ border-bottom:#f2f2f2 4px solid; height:55px; line-height:55px;}
+.xiugai_con .title em{ font-size:14px; float:left;}
+.xiugai_con .title em b{ font-size:18px; font-weight:normal;}
+.xiugai_con .title em span{ padding-right:5px;}
+.xiugai_con .title em img{ vertical-align:middle; margin-right:5px; margin-left:10px;}
+.xiugai_con .title i{ font-size:14px; float:right;}
+.xiugai_con .title i a{ padding:0 10px;}
+.xiugai_con .form_box{ width:800px; margin:80px 0 0 310px;}
+.xiugai_con .form_box dt{ width:100px; text-align:right; font-size:16px; float:left; height:42px; line-height:40px; margin-bottom:30px;}
+.xiugai_con .form_box dd{ float:right; width:690px; margin-bottom:30px; height:42px;}
+.xiugai_con .form_box dd i{ font-size:14px; color:#909090;}
+.xiugai_con .form_box dd input{ height:40px; width:274px; line-height:40px; vertical-align:middle; border:#e0e0e0 1px solid; margin-right:8px;}
+.xiugai_con .box02{ display:block; text-align:center; padding:40px 0; font-size:14px; color:#909090;}
+.xiugai_con .input01{ text-align:center;}
+.xiugai_con .input01 input{ font-size:18px; width:256px; height:58px; border:none; line-height:58px; text-align:center; border-radius:5px; vertical-align:middle; background:#d73240; color:#fff; font-family:"微软雅黑"; margin:0 auto;}
+.xiugai_con .form_box2{ margin-left:390px;}
+
+.jigou_con{ padding-bottom:30px;}
+.jigou_con .fl{ width:740px; padding-left:10px;}
+.jigou_con .fr{ width:400px;}
+.jigou_con .fl h2{ clear:both; margin:0 auto 20px;}
+.jigou_con .fl h2 b{ line-height:54px; padding:12px 50px;font-size:18px; background:#d73240; font-weight:bold;}
+.jigou_con .fl ul{ margin-bottom:40px;}
+.jigou_con .fl ul li{ font-size:16px; background:url("../img/dot.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/dot.gif*/ 0 22px no-repeat; line-height:280%; padding-left:15px;}
+.jigou_con .fl dl{ margin:30px auto;}
+.jigou_con .fl dl dt{ float:left; width:265px;}
+.jigou_con .fl dl dd{ float:right; width:450px; font-size:14px;}
+.jigou_con .fl dl dd b{ display:block; font-size:18px; margin-bottom:14px;}
+.jigou_con .fl dl dd em{ display:block; text-align:right;}
+.jigou_con .fr .pic01{ padding-top:80px; padding-bottom:20px;}
+.jigou_con .fr .pic01 img{ display:block; margin-bottom:30px;}
+.jigou_con .fr h3{ background:url("../img/line04.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/line04.png*/ center repeat-x; text-align:center;}
+.jigou_con .fr h3 b{ background:#fff; font-size:18px; background:#fff; padding:0 10px; margin:0 auto;}
+.jigou_con .fr .pic02{ margin:30px auto;}
+.jigou_con .fr .pic02 li{ float:left; margin:0 10px; text-align:center;}
+.jigou_con .fr .pic02 li img{ display:block;}
+
+.yonghu_con{}
+.yonghu_con h3{ padding:0 0 20px;}
+.yonghu_con h3 em{ font-size:18px;}
+.yonghu_con h3 i{ font-size:14px; padding-left:15px;}
+.yonghu_con h3 img{ vertical-align:middle; margin-right:6px;}
+.yonghu_con ul{}
+.yonghu_con li{ padding:25px; border:#e8e8e8 1px solid; margin:20px auto;}
+.yonghu_con li strong{ display:block; font-size:16px; padding:10px 0;}
+.yonghu_con li p{ line-height:240%; font-size:14px; padding:15px 0;}
+.yonghu_con .page,.yonghu02_con .page{ text-align:right;}
+.yonghu_con .page a,.yonghu02_con .page a{ padding:0 6px;}
+
+.yonghu02_con{}
+.yonghu02_con .fl{ width:165px;}
+.yonghu02_con .fr{ width:960px;}
+.yonghu02_con .fl ul li{ position:relative; height:54px; width:165px; background:#ebebeb; margin-bottom:10px; font-size:18px; text-align:center; line-height:54px;}
+.yonghu02_con .fl ul li.t01{ background:#d73240;}
+.yonghu02_con .fl ul li em{ position:absolute; top:-5px; right:-5px; background:url("../img/icon27.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon27.png*/ no-repeat; width:23px; height:23px; display:block; line-height:23px; text-align:center; font-size:14px;}
+.yonghu02_con .fr ul{}
+.yonghu02_con .fr ul li{ border:#e8e8e8 1px solid; margin:0 0 25px; padding-bottom:30px;}
+.yonghu02_con .fr ul li h2{ background:#f0f0f0; height:42px; line-height:42px; overflow:hidden;}
+.yonghu02_con .fr ul li h2 em{ float:left; font-size:16px; padding-left:20px;}
+.yonghu02_con .fr ul li h2 i{ font-size:14px; padding-left:10px;}
+.yonghu02_con .fr ul li h2 span{ float:right; font-size:14px; padding-right:10px;}
+.yonghu02_con .fr ul li p{ padding:25px; font-size:14px;}
+.yonghu02_con .fr ul li h3{ padding-left:25px;}
+.yonghu02_con .fr ul li h3 b{border:#e8e8e8 1px solid; padding:7px 15px; margin:0 10px 0 0; font-weight:normal; font-size:14px;}
+
+
+
+
+/*-----------------------C-20170327---------------------------------------*/
+/*C-登录*/
+.denglu_con{ padding-bottom:50px;}
+.denglu_con .form_box{ width:310px; margin:50px auto 0;}
+.denglu_con .form_box li{ float:left; width:300px; margin-bottom:15px;}
+.denglu_con .form_box li i{ font-size:14px; color:#909090; display:block; text-align:right; padding-top:5px;}
+.denglu_con .form_box li input{ height:40px; width:300px; line-height:40px; vertical-align:middle; border:#e0e0e0 1px solid; padding:0 5px;}
+.denglu_con .form_box li.t01 input{ width:195px;}
+.denglu_con .form_box li.t01 i{ display:inline-block; float:right; padding-top:3px;}
+.denglu_con .box02{ display:block; text-align:center; padding:40px 0; font-size:14px; color:#909090;}
+.denglu_con .input01{ text-align:center;}
+.denglu_con .input01 input{ font-size:18px; width:300px; height:50px; border:none; line-height:50px; text-align:center; border-radius:5px; vertical-align:middle; background:#d73240; color:#fff; font-family:"微软雅黑"; margin:0 auto;}
+.denglu_con .box02{ width:600px; text-align:center; margin:10px auto;}
+.denglu_con .box03{ width:310px; margin:20px auto 0;}
+
+/*C-注册*/
+.zhuce_con01{}
+.zhuce_con01 span{ display:block; text-align:center; padding-top:20px;}
+.zhuce_con01 span img{ margin:40px auto 20px;}
+.zhuce_con01 h1{ font-size:60px; text-align:center;}
+.zhuce_con01 h2{ text-align:center; margin-bottom:50px;}
+
+.zhuce_title01{ width:670px; margin:20px auto;}
+.zhuce_title01 li{ float:left; width:50%; text-align:center; height:48px; line-height:48px; background:#f2f2f2; font-size:18px;}
+.zhuce_title01 li.t01{ background:#ff8400; color:#fff;}
+.zhuce_title01 h2{ text-align:center; font-size:14px; margin:30px auto;}
+.zhuce_con02{ width:670px;}
+.zhuce_con02 dt{ font-size:16px; width:115px;float:left; text-align:right; height:88px; line-height:42px;}
+.zhuce_con02 dd{ float:right; width:550px; height:88px;}
+.zhuce_con02 dd input{ height:40px; line-height:40px; vertical-align:middle; border:#e0e0e0 1px solid;}
+.zhuce_con02 dd .t01{ width:100px; margin-right:10px;}
+.zhuce_con02 dd .t02{ width:280px;}
+.zhuce_con02 dd .t03{ width:140px; border-radius:5px; background:#fff; margin-left:10px;}
+.zhuce_con02 dd img{ vertical-align:middle;}
+.zhuce_con02 dd i{ display:block;}
+.zhuce_con02 .t04{ height:88px;}
+.zhuce_con03{ border-top:#e0e0e0 1px solid; text-align:center; margin:20px auto; line-height:80px; color:#999;}
+
+.zhuce_con04{ text-align:center;}
+.zhuce_con04 input{ font-size:18px; width:300px; height:50px; border:none; line-height:50px; text-align:center; border-radius:5px; vertical-align:middle; background:#d73240; color:#fff; font-family:"微软雅黑"; margin:0 auto;}
+
+.piclist2j_con01{ border:#e0e0e0 1px solid;}
+.piclist2j_con01 h2{ height:60px; line-height:60px; background:#e9e9e9; font-size:20px; padding-left:20px; font-weight:bold;}
+.piclist2j_con01 ul{}
+.piclist2j_con01 ul li{ text-align:center; float:left; margin:30px 25px; font-size:14px;}
+.piclist2j_con01 ul li img{ display:block; margin-bottom:5px;}
+.piclist2j_con01 p{ text-align:center; font-size:14px; margin:25px auto;}
+.piclist2j_con01 p a{ padding:0 10px;}
+
+.list2j_con01{border:#e0e0e0 1px solid;}
+.list2j_con01 h2{height:60px; line-height:60px; background:#e9e9e9; font-size:20px; padding-left:20px; font-weight:bold;}
+.list2j_con01 div{ background:url("../img/line05.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/line05.gif*/ repeat-y; padding:10px 0 0 80px; margin:30px auto;}
+.list2j_con01 ul{ margin:20px 50px; width:400px; float:left; border-bottom:#eeeeee 1px dashed; padding-bottom:20px;}
+.list2j_con01 ul li{ float:left; background:url("../img/dot02.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/dot02.gif*/ 0 14px no-repeat; padding-left:12px; line-height:220%; font-size:14px;}
+.list2j_con01 p{ text-align:center; font-size:14px; margin:25px auto 35px;}
+.list2j_con01 p a{ padding:0 10px;}
+/*聚焦*/
+.p1_con_jujiao{ margin:10px auto 20px; background:url("../img/icon31.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon31.png*/ top left no-repeat #f0f0f0; padding:40px 40px 30px; width:1120px;}
+.p1_con_jujiao .p1_left{ width:540px;}
+.p1_con_jujiao .p1_right{ width:520px; padding-right:30px;}
+.p1_con_jujiao .p1_right h1{ font:bold 28px/120% "微软雅黑"; margin-bottom:15px;}
+.p1_con_jujiao .p1_right p{ font-size:14px;}
+#box2{width:540px;height:310px;position:relative;}
+#box2 ul li{display:none;text-align:center;position:absolute;height:46px;line-height:46px;}
+#box2 ul li img{display:block;}
+#box2 ul li span{position:absolute;top:264px;left:8px;font-size:14px;z-index:3;}
+#box2 ul li a{color:#fff;}
+#box2 ul li div{background: url("../img/icon11.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon11.png*/;height:46px; width:100%;position:absolute;top:264px;z-index:1;}
+#box2 ol{position:absolute;top:280px;right:5px;z-index:1;}
+#box2 ol li.active{display:block;background:#d1182a;}
+#box2 ol li{width:22px;height:15px;line-height:15px;float:left;cursor:pointer;text-align:center;font-size:14px;color:#fff;}
+
+
+.p2_con_jujiao{ margin:5px auto 25px;}
+.p2_con_jujiao .fl{ width:750px;}
+.p2_con_jujiao .fr{ width:400px;}
+
+.hdNews p span.org{ position:absolute; background:#ff834d; z-index:10; top:20px; left:0; padding:1px 15px; color:#fff;}
+
+.p2_con_jujiao .fr h2{ border:none; border-bottom:#d73240 1px solid; height:40px;}
+.p2_con_jujiao .fr h2 em{ float:left; background:#d73240; font-size:16px; text-align:center; display:block; width:130px; height:40px; line-height:40px;}
+
+
+.p2_con_jujiao .fr .kw{ padding:10px 0; margin-bottom:10px;}
+.p2_con_jujiao .fr .kw em{ background:#f0f0f0; float:left; padding:4px 12px; margin:5px 6px;}
+.p2_con_jujiao .fr ol{ background:url("../img/icon29.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon29.gif*/ 0 6px no-repeat; margin:20px;}
+.p2_con_jujiao .fr ol li{ font-size:14px; height:32px; line-height:32px; padding-left:30px;}
+
+.p2_con_jujiao .fr .pic{ text-align:center; margin:20px auto;}
+.p2_con_jujiao .fr .pic img{ display:block; margin:16px auto;}
+.p2_con_jujiao .fr .list01{ padding-top:15px;}
+.p2_con_jujiao .fr .list01 li{ padding-left:30px; background:url("../img/icon30.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon30.gif*/ 10px 6px no-repeat; padding-left:30px; margin:8px 0; float:left;}
+.p2_con_jujiao .fr .list01 li p{ font-size:16px; display:block;}
+.p2_con_jujiao .fr .list01 li h6{ padding:10px 0;}
+.p2_con_jujiao .fr .list01 li h6 em{ float:left;}
+.p2_con_jujiao .fr .list01 li h6 i{ float:right;}
+
+
+/*20161226 by guan*/
+.fx{ display:inline-block; width:330px; height:44px; float:right;}
+
+.hdNews p span.red {
+    position: absolute;
+    background: #d73240;
+    z-index: 10;
+    top: 20px;
+    left: 0;
+    padding: 0px 0px;
+	color:#fff;
+	display:none;
+}
+.hdNews p span.red a{
+	color:#fff;
+}
+
+.p1_left .hot_news li{ line-height:42px;}
+.p2_right .list_02 dd { line-height:36px;}
+
+#box ul li span {
+	text-align:center;
+	width:100%;
+	left:0px;
+}
+#box ol {
+    top: 219px;
+    right: 0px;
+	display: none;
+}
+#box ol li {
+	background:#CCC;
+	opacity:.95
+}
+#box ol li.active {
+	opacity:1
+}
+#box .prev1{ background:url("../img/left2.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/left2.png*/;width:50px;height:50px; position:absolute;top:90px;left:0; cursor:pointer; opacity:.75}
+#box .next1{ background:url("../img/right2.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/right2.png*/;width:50px;height:50px;position:absolute;top:90px;right:0px; cursor:pointer; opacity:.75}
+
+.text_left_box .text_box{ margin-top:22px;}
+
+.zdfy{ width:98%; height:auto; overflow:hidden; margin:0 auto 10px auto;word-wrap: break-word; word-break: normal; text-align:center;}
+.zdfy a:link,.zdfy a:visited,.zdfy a:hover{ margin:0 3px;font-size:14px;}
+
+.p2_con{ margin:20px auto 25px;}
+
+
+.page_n{ text-align:center; padding:20px 0;}
+.page_n a{ border:#dddad2 1px solid; background:#f7f6f3; padding:10px 15px; margin:0 5px;}
+.page_n a:hover{ background:#cc3333; color:#fff; text-decoration:none;}
+
+.hdNews p i { width: 500px;}
+.hdNews p i a{ padding:0 5px;}
+
+.text_left_box .xg_box01 ul li a{ text-decoration:none;}
+
+.hdNews p i{ display:none;}
+
+.p1_left h1 {
+    margin-left: 10px;
+    text-align: center;
+    padding: 10px 0 5px;
+    margin-bottom: 0px;
+    line-height: 160%;
+    font-size: 26px;
+    border-bottom: none;
+}
+.p1_left p.zy {
+    text-align: center;
+    line-height: 180%;
+    font-size: 14px;
+    padding: 5px 0 10px;
+	margin-bottom: 20px;
+    border-bottom: #e9e9e9 1px solid;
+}
+#topbanner .inner .n1 .search input[type=submit] { background: #efefef url("../img/icon1.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon1.png*/ 19px 16px no-repeat;}
+
+.p1_left .hot_news{
+	height:100px;
+}
+.p1_left .hot_news li {
+    float: left;
+    font-size: 16px;
+    line-height: 40px;
+    width: 340px;
+    height: 40px;
+    padding: 0px 10px;
+    margin: 0 0 10px 10px;
+}
+
+.p1_left .pic_list{ margin:20px auto 10px;}
+
+.nav03 .fl ul li a{ text-decoration:none;}
+
+.bottom_copyright1 .right{ width:104px;}
+
+/*20170223*/
+#topbanner .inner .n1 {
+    height: 40px;
+	padding-top: 16px;
+}
+.fk_con div.fl{
+	height:1602px;
+}
+.fk_con div.fr{
+	height:1602px;
+}
+.zhishu_con01 div.box{
+	width:1198px;
+	border: 1px solid #d5d5d5;
+}
+/*.zhishu_con01 div.box iframe{
+	-moz-transform:scale(1.2);  
+	-webkit-transform:scale(1.2);  
+	-o-transform:scale(1.2);
+}*/
+
+#box {
+    height: 240px;
+    margin-bottom: 24px;
+}
+#box ul li div {
+    top: 194px;
+}
+#box ul li span {
+    top: 194px;
+}
+.fk_con div.fl{
+	height: auto;
+}
+.fk_con div.fr {
+    height: auto;
+}
+
+/**/
+@charset "UTF-8";
+
+.M-box,.M-box1,.M-box2,.M-box3{
+	position: relative;
+    text-align: center;
+  	zoom: 1;
+}
+.M-box:before,.M-box:after,.M-box1:before,.M-box1:after ,.M-box2:before,.M-box2:after ,.M-box3:before,.M-box3:after{
+    content:"";
+    display:table;
+}
+.M-box:after,.M-box1:after,.M-box2:after,.M-box3:after{
+	clear:both;
+	overflow:hidden;
+}
+.M-box span,.M-box1 span,.M-box2 span,.M-box3 span{
+	float: none;
+	display: inline-block;
+	margin:0 2px;
+	width: 30px;
+    height: 28px;
+    line-height: 28px;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+.M-box .active,.M-box1 .active,.M-box2 .active,.M-box3 .active{
+	float: none;
+	display: inline-block;
+	margin:0 2px;
+	width: 30px;
+    height: 28px;
+    line-height: 28px;
+    background: #d73240;
+    color: #fff;
+    font-size: 14px;
+    border: 1px solid #e91e63;
+}
+.M-box a,.M-box1 a,.M-box2 a,.M-box3 a{
+	float: none;
+	display: inline-block;
+	margin:0 2px;
+	width: 30px;
+    height: 28px;
+    line-height: 28px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+.M-box a:hover,.M-box1 a:hover,.M-box2 a:hover,.M-box3 a:hover{
+	color:#fff;
+    background: #d73240;
+}
+.M-box .next,.M-box .prev,.M-box1 .next,.M-box1 .prev{
+	font-family: "Simsun";
+    font-size: 14px;
+    font-weight: normal;
+}
+.now,.count{
+	padding:0 5px;
+	color:#f00;
+}
+.jump-ipt{
+    float: none;
+	display: inline-block;
+    margin:0 5px;
+    width: 30px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    outline: none;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+/*20170426*/
+.p1_left .hot_news {
+    height: 140px;
+    background: url("../img/p1_01.jpg")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/p1_01.jpg*/ top right no-repeat;
+}
+
+/*20170504*/
+.fk_con .fl ul {
+    margin: 30px 30px 10px 30px;
+	padding-bottom: 18px;
+}
+.page_n1{ text-align:center; padding:20px 0;}
+.page_n1 a{
+	display: inline-block;
+	padding: 0 11px;
+    margin: 0 0px;
+	width: auto;
+    height: 28px;
+    line-height: 28px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+.page_n1 a:hover{ background:#cc3333; color:#fff; text-decoration:none;}
+.page_n1 a.common_current_page{ background:#cc3333; color:#fff; text-decoration:none;}
+
+/*20170714*/
+.p1_right .box_liuyan{ width:400px; background:url("../img/p1_02.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/p1_02.gif*/ top left no-repeat; height:145px;}
+.p1_right .box_liuyan dt{ width:199px;}
+.p1_right .box_liuyan dd{ width:199px}
+.p1_right .box_liuyan dl b{ font-size:16px; text-align: center; display:block; line-height:42px; height:42px;}
+.p1_right .box_liuyan dl p{ padding:30px 20px 0 25px; font-size:14px; line-height:160%; color:#a5a5a5;}
+.p1_right .box_liuyan dl p em{ width:75px; display:block; float:left;}
+.p1_right .box_liuyan dl p i{ display:block; width:60px; float:left; color:#7a7a7a; text-align:center;}
+.p1_right .box_liuyan dt:hover{ background:url("../img/p1_03.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/p1_03.gif*/ top left no-repeat;}
+.p1_right .box_liuyan dd:hover{ background:url("../img/p1_04.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/p1_04.gif*/ top right no-repeat;}
+.p1_right .box_liuyan strong img{ vertical-align:middle; margin-right:5px;}
+
+.zhishu_con02 .box ol li i {
+    width: 120px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.zhishu_con02 .box ol li em {
+    width: 180px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/*20170720*/
+.p2_right .province{width:336px;height:138px;background:#efefef;display: none;z-index:99;right:0;position: absolute;top:40px;padding:20px 5px;color:#bbb;line-height:26px;}
+.p2_right .province em a{display: inline-block;margin:0 7px;color:#666;}
+.p2_right .province {  width: 335px;  height: 214px;  line-height: 30px;  font-size: 14px;  padding: 13px 15px;}
+.p2_right .province em a {  margin: 0 6px;  cursor: pointer;  width: 46px;  text-align: center;  font-size: 12px;  line-height: 30px;}
+.p2_right .province em a:hover {  text-decoration: underline;}
+.p2_right_df{ position:relative; height:630px;}
+.p2_right_df .list_01 li b{ font-weight:normal;}
+
+/*20170921*/
+.bottom_copyright1 .left {
+    width: 520px;
+}
+.bottom_copyright1 .center {
+    width: 350px;
+    padding-left: 10px;
+}
+.bottom_copyright1 .right {
+    width: 260px;
+}
+.bottom_copyright1 .right p {
+    float: left;
+    width: 120px;
+    text-align: center;
+}
+.bottom_copyright1 .right p img {
+    display: block;
+    margin-bottom: 8px;
+    margin: 0 auto;
+}
+/*20180201*/
+.p1_right .box_liuyan dl p em {
+    letter-spacing: -1px;
+}
+/*20181018*/
+.p1_up{ margin:20px auto; text-align:center;}
+.p1_up img{ width:100%; height:auto;}
+
+/*20190823*/
+.nav01 .fl span.wxh{
+	position: relative;
+}
+.nav01 .fl span.wxh i{
+	display: none;
+	position: absolute;
+	top: 17px;
+    left: 50%;
+    margin-left: -50px;
+}
+.nav01 .fl span.wxh i img{
+	width: 100px;
+	height: 100px;
+}
+.nav01 .fl span.wxh:hover i{
+	display: block;
+}
+
+.nav01 .fl span.xcx{
+	position: relative;
+}
+.nav01 .fl span.xcx i{
+	display: none;
+	position: absolute;
+	top: 17px;
+    left: 50%;
+    margin-left: -50px;
+}
+.nav01 .fl span.xcx i img{
+	width: 100px;
+	height: 100px;
+}
+.nav01 .fl span.xcx:hover i{
+	display: block;
+}
+
+.bottom_copyright1 .fl h2 i.icon{
+	width: 37px;
+    height: 37px;
+	display: inline-block;
+	background: url("../img/bottom_copyright_title_icon.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/bottom_copyright_title_icon.png*/ center center no-repeat;
+	margin-right: 10px;
+	vertical-align: middle
+}
+.bottom_copyright1 .fl ul li{
+	width: 150px;
+}
+.bottom_copyright1 .left {
+    width: 410px;
+}
+.bottom_copyright1 .center {
+    width: 520px;
+}
+
+
+/* MEDIA QUERIES Mobile phone
+---------------------------------------------------------------------- */	   
+	   
+@media (min-device-width:320px) and (max-width:689px),
+       (max-device-width:480px)
+	   {
+/*nav gonggong*/
+.w1200{ width:100%; max-width:480px; min-width:320px;}
+.nav01,.nav02 .fr,.path_2j,.fk_con div.fr,.bottom_copyright1,.nav03{ display:none;}
+
+.nav03{ background:none; height:112px;}
+.nav03 .fl{ background:#d73240; width:100%; height:112px; overflow:hidden; float:none;}
+.nav03 .fl ul li{ padding:0 20px; float:left;}
+.nav03 .fr{ height:56px; margin-top:-56px; width:100%; float:none;}
+#topbanner .inner .n1 .search input { width: 230px;}
+
+.bottom_copyright1{ background:#2f4359; padding:35px 0; margin-top:45px;}
+.bottom_copyright1 .left{ width:92%; float:none; padding-left:8%; padding-bottom:20px;}
+.bottom_copyright1 .center{ width:92%; padding-left:8%; float:none; padding-bottom:10px;}
+.bottom_copyright1 .right{ text-align:center; padding-top:20px; color:#f0f4f8; float:none;}
+
+.bottom_copyright2{ background:#243344; height:48px;}
+.bottom_copyright2 .fl{ color:#727a83; line-height:48px; float:none; text-align:center;}
+.bottom_copyright2 .fr select{ width:170px; height:22px; margin:15px 0 0 0; text-align:right;}	
+/*地区*/
+.district_box01 i{ display:none;}
+.district_box02{ margin:20px auto; width:100%; height:70px;}
+.district_box02 .fl{ width:96%; padding:0 2%;}
+.district_box02 .fl strong{ padding-left:0;}
+.district_box02 .fr{ font-size:14px; padding-top:0; margin-top:-40px;}
+
+.district_box03{ background:url("../img/line01.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/line01.gif*/; width:100%;}
+.district_box03 .fl{ width:96%; padding:20px 0; float:none;}
+.district_box03 .fr{ width:96%; padding:20px 0; float:none;}
+.district_box03 dl{ width:98%; padding-left:2%;}
+.district_box03 dl dt{ float:left; width:65%;}
+
+.district_box04 ul{ margin-left:0;}
+.district_box04 li{ border:#d5d5d5 1px solid; width:42%; height:75px; float:left; margin:3% 1%; padding:5% 2%;}
+.district_box04 li b{ display:block; font-size:16px; color:#212121; font-weight:normal;}
+.district_box04 li b a{color:#212121;}
+.district_box04 li p{ font-size:14px;}
+.district_box04 div{ padding:20px 0; text-align:right;}
+
+/*留言*/
+.liuyan_box01 .box01{ padding-left:5%; width:95%;}
+.liuyan_box01 .box01 select{line-height:33px; width:90%;}
+.liuyan_box01 .box02 .t01 input{ width:98%;}
+.liuyan_box01 .box02 .t02 textarea{ width:96%;}
+.liuyan_box03  .size{ display:none;}
+.liuyan_box06 .box02 .t02 textarea{width:96%; height:100px; padding:10px;border:#d5d5d5 1px solid;}
+.liuyan_box08 ul li{ width:93%; padding-left:5%; float:left; line-height:220%;}
+
+
+/*text*/
+.text_content{}
+.text_left_box{ width:96%; float:none; padding-left:2%;}
+.text_right_box{ width:96%; float:none; padding-top:20px;}
+.text_left_box .banner{ display:none;}
+.text_right_box .box05 li{ float:left; margin:10px 5px;}
+
+/*index*/
+.p1_left{ width:100%; float:none;}
+.p1_right{ width:100%; padding-right:0; float:none; margin-left:-20px;}
+
+.p1_left .hot_news{height:130px; background:none;}
+.p1_left .hot_news li{ float:left; background:#eee; font-size:16px; line-height:140%; width:90%; height:40px; padding:4% 3%; margin:0 0 10px 10px;}
+.p1_left .pic_list li{ float:left; margin:10px 5px 0 15px; width:42%; font-size:14px; line-height:160%;}
+.p1_left .pic_list li img{ display:block; margin-bottom:5px; width:100%; height:auto;}
+
+.p2_left{ width:100%; padding-left:0;}
+.p2_right{ width:100%; float:left; padding-right:0;}
+.p2_left .banner{ display:none;}
+
+.p2_left .box_huodong{ height:40px; background:#efefef; margin-bottom:20px;}
+.p2_left .box_huodong b{ background:#36485e; height:40px; width:20%; text-align:center; float:left; font-size:16px; line-height:40px;}
+.p2_left .box_huodong p{ height:auto; float:left; font-size:14px; width:80%; line-height:140%; padding-left:0;}
+
+.p2_left .title li{  width:33%;}
+.p2_left .title li.t01{ height:42px;}
+
+.hdNews p strong{ display:block;}
+.hdNews p img{ width:90%; height:auto; padding-left:5%;}
+.p2_rt_if{ display:none;}
+
+.p2_right .box_renwu{ border-bottom:#e9e9e9 1px solid; padding:20px 0;}
+.p2_right .box_renwu dt{ float:left; width:27%;}
+.p2_right .box_renwu dt img{ display:block; height:auto;}
+.p2_right .box_renwu dd{ width:70%; float:right;}
+
+/*反馈*/
+.fk_con .fl{ width:99%; float:none;}
+.fk_con .fr{  width:99%; float:none;}
+
+/*指数*/
+.zhishu_con01{ display:none;}
+
+.zhishu_con02 .box{ width:100%}
+.zhishu_con02 .box h3 i{ width:32%;}
+
+.zhishu_con02 .box ol{ background:url("../img/line03.gif")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/line03.gif*/ -30px 0 no-repeat; width:320px;}
+.zhishu_con02 .box ol li{ height:47px; line-height:47px; font-size:14px; padding-left:30px; overflow:hidden;}
+.zhishu_con02 .box ol li i{ padding:0 5px; width:100px; display:block; float:left;}
+.zhishu_con02 .box ol li em{ padding:0 5px; width:100px; display:block; float:left;}
+.zhishu_con02 .box ol li span{ padding:0 5px; width:60px; display:block; float:left;}
+
+.zhishu_con02b{ display:none;}
+
+.zhishu_con03 .fl{ width:90%; float:none; padding-left:5%;}
+.zhishu_con03 .fr{ width:90%; float:none; padding-right:5%;}
+.zhishu_con03 .fl img{ width:100%; height:auto;}
+
+
+.zhishu_con04 div{ padding:20px 0;}
+.zhishu_con04 ul{ margin:5%; width:90%;}
+
+/*jujiao*/
+.p1_con_jujiao{ margin:10px auto 20px; background:url("../img/icon31.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon31.png*/ top left no-repeat #f0f0f0; padding:40px 0; width:100%;}
+.p1_con_jujiao .p1_left{ width:100%;}
+.p1_con_jujiao .p1_right{ width:90%; padding:5%; float:none; margin:20px auto;}
+
+#box2{width:100%; max-width:480px; min-width:320px;height:260px;position:relative; margin:0 auto;}
+#box2 ul li{display:none;text-align:center;position:absolute;height:46px;line-height:46px;}
+#box2 ul li img{display:block; width:100%; height:auto; margin:0 auto;}
+#box2 ul li span{position:absolute;top:234px;left:5%;font-size:14px;z-index:3;}
+#box2 ul li a{color:#fff;}
+#box2 ul li div{background: url("../img/icon11.png")/*tpa=http://liuyan.people.com.cn/img/MAIN/2016/12/117070/../img/icon11.png*/;height:46px; width:100%;position:absolute;top:234px;z-index:1;}
+#box2 ol{position:absolute;top:250px;right:5%;z-index:1;}
+#box2 ol li.active{display:block;background:#d1182a;}
+#box2 ol li{width:22px;height:15px;line-height:15px;float:left;cursor:pointer;text-align:center;font-size:14px;color:#fff;}
+
+.p2_con_jujiao .fr { display:none;}
+
+.p2_con_jujiao .fl{ width:98%; float:none;}
+
+/*20170223 by guan*/
+.page_n {
+	width: auto;
+	background: none;
+}		   
+/*20170823*/
+.w1200{
+	overflow: hidden;
+}
+.nav03 {
+    height: 56px;
+}
+.nav03 .fl {
+    height: 56px;
+}
+.nav03 .fl ul li{
+	font-size:16px;	
+	padding: 0 12px;
+}
+.nav03 .fr {
+	display:none;
+}
+.p1_left .hot_news li {
+    height:24px;
+}
+.p1_left .pic_list li p{
+	height: 22px;
+	overflow: hidden;
+}
+.page_n a {
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+.p2_right .list_02 dt {
+	float: left;
+}
+.p2_right .list_02 dd {
+    width: 80%;
+	height: 26px;
+	float: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.bottom_copyright1 .left {
+    width: 97%;
+    padding-left: 3%;
+}
+.bottom_copyright1 .center {
+    width: 97%;
+    padding-left: 3%;
+}
+
+}
+
+
