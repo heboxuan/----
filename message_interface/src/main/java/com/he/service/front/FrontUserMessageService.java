@@ -1,0 +1,21 @@
+package com.he.service.front;
+
+import com.he.domain.front.FrontUserMessage;
+
+/**
+ * @Author: heboxuan
+ * @Date: Created in 15:34 2021/2/27
+ */
+public interface FrontUserMessageService {
+    public abstract void saveUserMessage(FrontUserMessage frontUserMessage);
+
+    public abstract boolean checkUsername(String username);
+
+    public abstract boolean checkUserPhone(String userPhone);
+
+    public abstract boolean checkEmail(String email);
+
+    public abstract boolean loginform(String email, String password);
+
+    public abstract FrontUserMessage findUserByEmail(String email);
+}

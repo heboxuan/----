@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!--nav-->
 <div class="clearfix nav01">
     <div class="w1200 grey1">
@@ -12,8 +13,16 @@
             <span class="xcx"><img src="${pageContext.request.contextPath}/img/icon-xcx.png" width="18" height="18" /><a href="#">小程序：领导留言板</a><i><img src="${pageContext.request.contextPath}/img/wx_lite.png" alt="小程序" /></i></span>
             <span><a target="_blank" href="${pageContext.request.contextPath}/help/help-1.jsp" >帮助中心</a></span></div>
         <div class="fr">
-            <a href="${pageContext.request.contextPath}/login.jsp" id="login-point" target="_blank">登录</a>|
-            <a href="${pageContext.request.contextPath}/regUser.jsp" target="_blank">注册</a>
+            <c:choose>
+                <c:when test="${not empty sessionScope.userInfo}">
+                    <a href="${pageContext.request.contextPath}/login.jsp" id="login-point" target="_blank">${sessionScope.userInfo.username},欢迎您</a>|
+                    <a href="${pageContext.request.contextPath}/frontUserMessage/logut.do">退出</a>
+                </c:when>
+                <c:otherwise>
+                    <a href="${pageContext.request.contextPath}/login.jsp" id="login-point" target="_blank">登录</a>|
+                    <a href="${pageContext.request.contextPath}/regUser.jsp" target="_blank">注册</a>
+                </c:otherwise>
+            </c:choose>
         </div>
     </div>
 </div>

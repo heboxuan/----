@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/jquery.webui-popover.css" />
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
 
-    <script src="static/common/js/thirdparty/jquery.min.js"  type="text/javascript"></script>
+    <script src="js/jquery-3.2.1.js"  type="text/javascript"></script>
     <script src="static/common/js/thirdparty/jquery.validate.min.js"  type="text/javascript"></script>
     <script src="static/common/js/thirdparty/jquery.form.js"  type="text/javascript"></script>
     <script src="static/common/js/thirdparty/jquery.webui-popover.js" type="text/javascript"></script>
@@ -35,38 +35,6 @@
     <script src="static/common/js/thirdparty/json2.js" type="text/javascript"></script>
     <script src="static/common/js/common.js" type="text/javascript"></script>
     <script src="static/common/js/tab.js"  type="text/javascript"></script>
-    <script type="text/javascript">
-        CONTEXT_PATH = "";
-        $(function() {
-            $("#login-point").on("click", function() {
-                $('#mask').show()
-                $('#login-box').show();
-            });
-            $('#login-box .btn').click(function() {
-                $('#mask').hide()
-                $('#login-box').hide();
-            });
-            $("#search_btn").click(function() {
-                var searchWord = $("#srchtxt").val();
-                if(searchWord == "" || Common.getByteLen(searchWord) < 4) {
-                    layer.alert("输入的关键词过短，必须多于2个中文汉字", {
-                        icon: 5
-                    });
-                    return false;
-                }
-            });
-            $("#topbanner .inner .n1").mouseover(function() {
-                $("#topbanner .inner .n1 .search").show();
-                $("#topbanner .inner .n1").addClass("active");
-
-            }).mouseout(function() {
-                $("#topbanner .inner .n1 .search").hide();
-                $("#topbanner .inner .n1").removeClass("active")
-            });
-
-            Common.loadAllAdvs();
-        });
-    </script>
 </head>
 
 <body>
@@ -83,28 +51,29 @@
 
 <div class="path_2j w1200 grey2">当前位置 ：领导留言板 > 用户中心</div>
 
-<form id="regForm" action="http://liuyan.people.com.cn/regUser" method="post">
+<form id="regForm" action="${pageContext.request.contextPath}/frontUserMessage/saveUserMessage.do" method="post">
     <input id="regType" name="regType" value="2" type="hidden" value="" />
     <div class="clearfix zhuce_con02">
         <dl class="clearfix">
             <dt>用户昵称：</dt>
             <dd>
-                <input id="userAddress" name="userAddress" type="text" class="t01" value="" />
-                <span id="userAddressCheck" style="color: red;font-size: 15px">123</span>
+                <input id="username" name="username" type="text" class="t01" value="" />
+                <span id="usernameCheck" style="color: red;font-size: 15px"></span>
             </dd>
             <dt class="t04">手机号码：</dt>
             <dd class="t04">
-                <input id="userPhone" name="userPhone" type="text" class="t02" value="" size="25" maxlength="11" />
-                <input name="发送验证短信" type="button" value="发送验证短信" class="t03" id="btn_getCode" />
+                <input id="userPhone" name="phone" type="text" class="t02" value="" size="25" maxlength="11" />
+                <span id="userPhoneCheck" style="color: red;font-size: 15px"></span>
             </dd>
             <dt>短信验证码：</dt>
             <dd>
                 <input id="userMessage" name="userMessage" type="text" class="t01" value="" maxlength="6" />
-                <span id="userName-error" style="color: red;font-size: 15px">123</span>
+                <input name="发送验证短信" type="button" value="发送验证短信" class="t03" id="btn_getCode" />
             </dd>
             <dt>邮箱：</dt>
             <dd>
-                <input id="email" name="email" type="text" class="t02" value="" size="25" maxlength="16" />
+                <input id="email" name="email" type="text" class="t02" />
+                <span id="emailCheck" style="color: red;font-size: 15px"></span>
             </dd>
             <dt>密码：</dt>
             <dd>
@@ -114,14 +83,81 @@
             <dt>确认密码：</dt>
             <dd>
                 <input id="password2" name="password2" type="password" class="t02" value="" size="25" />
-                <span id="passwordCheck" style="color: red;font-size: 15px">123</span>
+                <span id="passwordCheck" style="color: red;font-size: 15px"></span>
             </dd>
         </dl>
     </div>
 
     <div class=" clearfix zhuce_con04">
-        <input name="" id="submit_btn" type="submit" value="提交注册信息" />
+        <input id="submit_btn" type="submit" value="提交注册信息" disabled/>
     </div>
+    <script>
+        $("#username").blur(function () {
+            let username=$(this).val();
+            if (username=="") {
+                return;
+            }
+            let url="${pageContext.request.contextPath}/frontUserMessage/checkUsername.do";
+            let data="username="+username;
+            $.get(url,data,function (resp) {
+                if (resp) {
+                    $("#usernameCheck").html("可注册");
+                    $("#submit_btn").attr("disabled",false);
+                }else{
+                    $("#usernameCheck").html("已注册");
+                    $("#submit_btn").attr("disabled","disabled");
+                }
+            })
+        });
+        $("#userPhone").blur(function () {
+            let userPhone=$(this).val();
+            if (userPhone=="") {
+                return;
+            }
+            let url="${pageContext.request.contextPath}/frontUserMessage/checkUserPhone.do";
+            let data="userPhone="+userPhone;
+            $.get(url,data,function (resp) {
+                if (resp) {
+                    $("#userPhoneCheck").html("可注册");
+                    $("#submit_btn").attr("disabled",false);
+                }else{
+                    $("#userPhoneCheck").html("已注册");
+                    $("#submit_btn").attr("disabled","disabled");
+                }
+            })
+        });
+        $("#email").blur(function () {
+            let email=$(this).val();
+            if (email=="") {
+                return;
+            }
+            let url="${pageContext.request.contextPath}/frontUserMessage/checkEmail.do";
+            let data="email="+email;
+            $.get(url,data,function (resp) {
+                if (resp) {
+                    $("#emailCheck").html("可注册");
+                    $("#submit_btn").attr("disabled",false);
+                }else{
+                    $("#emailCheck").html("已注册");
+                    $("#submit_btn").attr("disabled","disabled");
+                }
+            })
+        });
+        $("#password2").blur(function () {
+            let password1=$("#password1").val();
+            if (password1=="") {
+                return;
+            }
+            let password2=$(this).val();
+            if (password1==password2) {
+                $("#passwordCheck").html("密码一致");
+                $("#submit_btn").attr("disabled",false);
+            }else{
+                $("#passwordCheck").html("密码不一致");
+                $("#submit_btn").attr("disabled","disabled");
+            }
+        });
+    </script>
 </form>
 <!--注册手机 end-->
 
