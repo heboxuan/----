@@ -9,4 +9,8 @@ import java.util.Map;
  */
 public interface FrontCityDao {
     public abstract Map<String, Object> totalMessageOne();
+
+    public abstract List<Map<String,Object>> totalMessageTwo();
+
+    public abstract Map<String, Object> totalMessageThree(Long id);
 }

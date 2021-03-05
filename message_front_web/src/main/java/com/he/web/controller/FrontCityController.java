@@ -28,7 +28,24 @@ public class FrontCityController {
     public String totalMessageOne() {
         //北京总留言与总回复数
         Map<String, Object> beijingTotal=frontCityService.totalMessageOne();
+        //北京各个区总留言与总回复数
+        List<Map<String,Object>> countyTotal=frontCityService.totalMessageTwo();
+        //北京市领导
+
+
         request.setAttribute("beijingTotal",beijingTotal);
+        request.setAttribute("countyTotal",countyTotal);
         return "forum/beijing";
     }
+
+    @GetMapping("/totalMessageTwo")
+    public String totalMessageTwo(Long id) {
+        //每个区详细总留言与总回复数
+        Map<String,Object> countyDetail=frontCityService.totalMessageThree(id);
+
+        request.setAttribute("countyDetail",countyDetail);
+        return "forum/county";
+    }
+
+
 }

@@ -5,7 +5,7 @@
         <div class="fl left">
             <h2><i class="icon"></i>一块帮老百姓办事的留言板</h2>
             <p>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱：leader@people.cn
+                邮箱：leader@people.cn
             </p>
         </div>
         <div class="fl center">

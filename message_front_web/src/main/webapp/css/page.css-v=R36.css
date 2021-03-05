@@ -767,7 +767,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 37px;
     height: 37px;
     display: inline-block;
-    background: url("../../img/bottom_copyright_title_icon.png")/*tpa=http://liuyan.people.com.cn/static/www/../img/bottom_copyright_title_icon.png*/ center center no-repeat;
+    background: url("../img/bottom_copyright_title_icon.png")/*tpa=http://liuyan.people.com.cn/static/www/../img/bottom_copyright_title_icon.png*/ center center no-repeat;
     margin-right: 10px;
     vertical-align: middle;
 }

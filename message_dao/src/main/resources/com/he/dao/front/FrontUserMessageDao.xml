@@ -5,8 +5,8 @@
 
 <mapper namespace="com.he.dao.front.FrontUserMessageDao">
     <insert id="saveUserMessage" parameterType="com.he.domain.front.FrontUserMessage">
-        INSERT INTO front_user_message ( username, phone, email, password1, password2 )
-        VALUES(#{username},#{phone},#{email},#{password1},#{password2})
+        INSERT INTO front_user_message ( username, phone, email, password1, password2,is_delete )
+        VALUES(#{username},#{phone},#{email},#{password1},#{password2},#{isDelete})
     </insert>
 
     <select id="checkUsername" parameterType="String" resultType="String">

@@ -21,4 +21,16 @@ public class FrontCityServiceImpl implements FrontCityService {
         Map<String, Object> beijingTotal=frontCityDao.totalMessageOne();
         return beijingTotal;
     }
+
+    @Override
+    public List<Map<String,Object>> totalMessageTwo() {
+        List<Map<String,Object>> countyTotal=frontCityDao.totalMessageTwo();
+        return countyTotal;
+    }
+
+    @Override
+    public Map<String, Object> totalMessageThree(Long id) {
+        Map<String, Object> countyDetail=frontCityDao.totalMessageThree(id);
+        return countyDetail;
+    }
 }

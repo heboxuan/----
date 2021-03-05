@@ -24,6 +24,7 @@ public class FrontUserMessageServiceImpl implements FrontUserMessageService {
         String salty = Encrypt.md5(password1, email);
         frontUserMessage.setPassword1(salty);
         frontUserMessage.setPassword2(salty);
+        frontUserMessage.setIsDelete("false");
         frontUserMessageDao.saveUserMessage(frontUserMessage);
     }
 

@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Language" content="utf-8" />
     <meta content="all" name="robots" />
     <title>
-        东城区 - 北京市 - 领导留言板 - 人民网
+        ${countyDetail.name} - 北京市 - 领导留言板 - 人民网
     </title>
     <meta name="keywords" content="领导留言板" />
     <meta name="description" content="领导留言板" />
@@ -35,38 +35,6 @@
     <script src="../static/common/js/thirdparty/json2.js"  type="text/javascript"></script>
     <script src="../static/common/js/common.js"  type="text/javascript"></script>
     <script src="../static/common/js/tab.js"  type="text/javascript"></script>
-    <script type="text/javascript">
-        CONTEXT_PATH = "";
-        $(function() {
-            $("#login-point").on("click", function() {
-                $('#mask').show()
-                $('#login-box').show();
-            });
-            $('#login-box .btn').click(function() {
-                $('#mask').hide()
-                $('#login-box').hide();
-            });
-            $("#search_btn").click(function() {
-                var searchWord = $("#srchtxt").val();
-                if(searchWord == "" || Common.getByteLen(searchWord) < 4) {
-                    layer.alert("输入的关键词过短，必须多于2个中文汉字", {
-                        icon: 5
-                    });
-                    return false;
-                }
-            });
-            $("#topbanner .inner .n1").mouseover(function() {
-                $("#topbanner .inner .n1 .search").show();
-                $("#topbanner .inner .n1").addClass("active");
-
-            }).mouseout(function() {
-                $("#topbanner .inner .n1 .search").hide();
-                $("#topbanner .inner .n1").removeClass("active")
-            });
-
-            Common.loadAllAdvs();
-        });
-    </script>
 </head>
 
 <body>
@@ -79,9 +47,7 @@
 
 <div class="path_2j w1200 grey2">
     当前位置 ：
-    <a href="../index.jsp" >领导留言板</a> > 地方领导 &gt;
-
-    <a href="list-fid=4.htm" >北京市</a> &gt; 东城区
+    <a href="../index.jsp" >领导留言板</a> > 地方领导 &gt;北京市 &gt; ${countyDetail.name}
 </div>
 <div class="index_content w1200">
     <script type="application/javascript">
@@ -93,8 +59,8 @@
     </script>
 
     <div class="clearfix district_box02 w1200">
-        <div class="fl"><strong>东城区</strong>
-            <p>历史留言总量: <i class="red">1811</i> 条　<span><br/></span>历史回复总量: <i class="red">1553</i> 条</p>
+        <div class="fl"><strong>${countyDetail.name}</strong>
+            <p>历史留言总量: <i class="red">${countyDetail.askNum}</i> 条　<span><br/></span>历史回复总量: <i class="red">${countyDetail.reNum}</i> 条</p>
         </div>
 
     </div>

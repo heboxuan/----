@@ -6,12 +6,36 @@
     <select id="totalMessageOne" resultType="map">
         SELECT
             id id,
-            NAME NAME,
+            NAME name,
             ask_num askNum,
             response_num reNum
         FROM
             front_city
         where
-            id=1
+            id=1 and is_delete="false"
+    </select>
+
+    <select id="totalMessageTwo" resultType="map">
+        SELECT
+            id id,
+            NAME name,
+            ask_num askNum,
+            response_num reNum
+        FROM
+            front_city
+        where
+            id!=1 and is_delete="false"
+    </select>
+
+    <select id="totalMessageThree" resultType="map" parameterType="Long">
+        SELECT
+            id id,
+            NAME name,
+            ask_num askNum,
+            response_num reNum
+        FROM
+            front_city
+        where
+            id=#{id} and is_delete="false"
     </select>
 </mapper>
