@@ -35,38 +35,6 @@
     <script src="../static/common/js/thirdparty/json2.js" type="text/javascript"></script>
     <script src="../static/common/js/common.js" type="text/javascript"></script>
     <script src="../static/common/js/tab.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        CONTEXT_PATH = "";
-        $(function() {
-            $("#login-point").on("click", function() {
-                $('#mask').show()
-                $('#login-box').show();
-            });
-            $('#login-box .btn').click(function() {
-                $('#mask').hide()
-                $('#login-box').hide();
-            });
-            $("#search_btn").click(function() {
-                var searchWord = $("#srchtxt").val();
-                if(searchWord == "" || Common.getByteLen(searchWord) < 4) {
-                    layer.alert("输入的关键词过短，必须多于2个中文汉字", {
-                        icon: 5
-                    });
-                    return false;
-                }
-            });
-            $("#topbanner .inner .n1").mouseover(function() {
-                $("#topbanner .inner .n1 .search").show();
-                $("#topbanner .inner .n1").addClass("active");
-
-            }).mouseout(function() {
-                $("#topbanner .inner .n1 .search").hide();
-                $("#topbanner .inner .n1").removeClass("active")
-            });
-
-            Common.loadAllAdvs();
-        });
-    </script>
 </head>
 
 <body>
@@ -92,35 +60,8 @@
 
     <div class="clearfix district_box02 w1200">
         <div class="fl"><strong>北京市</strong>
-            <p>历史留言总量: <i class="red">97652</i> 条　<span><br/></span>历史回复总量: <i class="red">82600</i> 条</p>
+            <p>历史留言总量: <i class="red">${beijingTotal.askNum}</i> 条　<span><br/></span>历史回复总量: <i class="red">${beijingTotal.reNum}</i> 条</p>
         </div>
-
-        <div class="fr">
-            <div class="topsearchbar">
-                <span class="btn rank-btn"><img src="../static/www/images/icon12.gif" tppabs="http://liuyan.people.com.cn/static/www/images/icon12.gif" width="21" height="21"/>排行榜</span>
-                <div id="rank_panel" style="display:none">
-                    <div class="tab">
-                        <div class="tab-tags">
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0);" class="active">留言排行</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">回复排行</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">回复率排行</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-ctns">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <div class="district_box03 w1200 clearfix">
@@ -128,24 +69,21 @@
         <div class="fl">
             <dl class="clearfix">
                 <dt>
-                    <h2><b><a href="javascript:if(confirm('http://ldzl.people.com.cn/dfzlk/frontpage/pageSelect539.htm  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://ldzl.people.com.cn/dfzlk/frontpage/pageSelect539.htm'" tppabs="http://ldzl.people.com.cn/dfzlk/frontpage/pageSelect539.htm" target="_blank" class="forumName" style="display: none;font-weight:bold;">北京市委书记蔡奇</a></b><a
-                            href="javascript:if(confirm('http://ldzl.people.com.cn/dfzlk/frontpage/pageSelect539.htm  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://ldzl.people.com.cn/dfzlk/frontpage/pageSelect539.htm'" tppabs="http://ldzl.people.com.cn/dfzlk/frontpage/pageSelect539.htm"
-                            target="_blank" style="color: #b12b2b">查看简历</a>
-
-
+                    <h2>
+                        <b><a href=""  target="_blank" class="forumName" style="display: block;font-weight:bold;">北京市委书记蔡奇</a></b>
                     </h2>
                 </dt>
 
                 <div style="width: 300px;margin-left:-10px;">
-                    <a href="../threads/list-fid=539.htm" tppabs="http://liuyan.people.com.cn/threads/list?fid=539" class="message_index">查看留言</a>
-                    <a href="needlogin-referer=http---liuyan.people.com.cn-threads-post-fid=539.htm" tppabs="http://liuyan.people.com.cn/threads/post?fid=539" class="message_index_color" onclick="javascript:return Threads.checkCount()">我要留言</a>
+                    <a href="../threads/list-fid=539.htm"  class="message_index">查看留言</a>
+                    <a href="needlogin-referer=http---liuyan.people.com.cn-threads-post-fid=539.htm"  class="message_index_color" onclick="javascript:return Threads.checkCount()">我要留言</a>
 
                 </div>
 
                 <p class="tack_message">
-                    <a href="../threads/list-fid=539.htm" tppabs="http://liuyan.people.com.cn/threads/list?fid=539" style="margin-top:25px;">年度总留言量: <i class="red">19658</i> 条 &nbsp;&nbsp;</a>
+                    <a href="../threads/list-fid=539.htm"  style="margin-top:25px;">年度总留言量: <i class="red">19658</i> 条 &nbsp;&nbsp;</a>
                     <span><br/></span>
-                    <a href="../threads/list-fid=539&state=4.htm" tppabs="http://liuyan.people.com.cn/threads/list?fid=539&state=4">年度公开回复量: <i class="red">18989</i> 条 &nbsp;&nbsp;</a>
+                    <a href="../threads/list-fid=539&state=4.htm" >年度公开回复量: <i class="red">18989</i> 条 &nbsp;&nbsp;</a>
                 </p>
             </dl>
         </div>
@@ -153,24 +91,20 @@
         <div class="fr">
             <dl class="clearfix">
                 <dt>
-                    <h2><b><a href="javascript:if(confirm('http://ldzl.people.com.cn/dfzlk/frontpage/pageSelect540.htm  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://ldzl.people.com.cn/dfzlk/frontpage/pageSelect540.htm'" tppabs="http://ldzl.people.com.cn/dfzlk/frontpage/pageSelect540.htm" target="_blank" class="forumName" style="display: none;font-weight:bold;">北京市市长陈吉宁</a></b><a
-                            href="javascript:if(confirm('http://ldzl.people.com.cn/dfzlk/frontpage/pageSelect540.htm  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://ldzl.people.com.cn/dfzlk/frontpage/pageSelect540.htm'" tppabs="http://ldzl.people.com.cn/dfzlk/frontpage/pageSelect540.htm"
-                            target="_blank" style="color: #b12b2b">查看简历</a>
-
-
+                    <h2>
+                        <b><a href=""  target="_blank" class="forumName" style="display: block;font-weight:bold;">北京市市长陈吉宁</a></b>
                     </h2>
                 </dt>
 
                 <div style="width: 300px;margin-left:-10px;">
-                    <a href="../threads/list-fid=540.htm" tppabs="http://liuyan.people.com.cn/threads/list?fid=540" class="message_index">查看留言</a>
-                    <a href="needlogin-referer=http---liuyan.people.com.cn-threads-post-fid=540.htm" tppabs="http://liuyan.people.com.cn/threads/post?fid=540" class="message_index_color" onclick="javascript:return Threads.checkCount()">我要留言</a>
-
+                    <a href="../threads/list-fid=540.htm"  class="message_index">查看留言</a>
+                    <a href="needlogin-referer=http---liuyan.people.com.cn-threads-post-fid=540.htm"  class="message_index_color" onclick="javascript:return Threads.checkCount()">我要留言</a>
                 </div>
 
                 <p class="tack_message">
-                    <a href="../threads/list-fid=540.htm" tppabs="http://liuyan.people.com.cn/threads/list?fid=540" style="margin-top:25px;">年度总留言量: <i class="red">5978</i> 条 &nbsp;&nbsp;</a>
+                    <a href="../threads/list-fid=540.htm"  style="margin-top:25px;">年度总留言量: <i class="red">5978</i> 条 &nbsp;&nbsp;</a>
                     <span><br/></span>
-                    <a href="../threads/list-fid=540&state=4.htm" tppabs="http://liuyan.people.com.cn/threads/list?fid=540&state=4">年度公开回复量: <i class="red">5786</i> 条 &nbsp;&nbsp;</a>
+                    <a href="../threads/list-fid=540&state=4.htm" >年度公开回复量: <i class="red">5786</i> 条 &nbsp;&nbsp;</a>
                 </p>
             </dl>
         </div>

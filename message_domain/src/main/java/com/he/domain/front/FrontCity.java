@@ -8,16 +8,15 @@ import java.io.Serializable;
 
 /**
  * @Author: heboxuan
- * @Date: Created in 15:30 2021/2/27
+ * @Date: Created in 20:14 2021/3/3
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FrontUserMessage implements Serializable {
+public class FrontCity implements Serializable {
     private Long id;
-    private String username;
-    private String phone;
-    private String email;
-    private String password1;
-    private String password2;
+    private String name;
+    private Long askNum;
+    private Long responseNum;
+
 }

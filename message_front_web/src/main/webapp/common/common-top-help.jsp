@@ -42,7 +42,7 @@
                     <a href="${pageContext.request.contextPath}/index.jsp" target="_blank">首页</a>
                 </li>
                 <li>
-                    <a href="${pageContext.request.contextPath}/forum/beijing.jsp" target="_blank">留言</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/totalMessageOne.do" target="_blank">留言</a>
                 </li>
                 <li>
                     <a href="javascript:if(confirm('http://leaders.people.com.cn/GB/178291/218130/434146/index.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://leaders.people.com.cn/GB/178291/218130/434146/index.html'" tppabs="http://leaders.people.com.cn/GB/178291/218130/434146/index.html" target="_blank">政企直通车</a>
