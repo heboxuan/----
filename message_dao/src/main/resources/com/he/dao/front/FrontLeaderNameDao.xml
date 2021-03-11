@@ -3,5 +3,23 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.he.dao.front.FrontLeaderNameDao">
+    <select id="totalMessageFour" resultType="map">
+        select leader_name leaderName from front_leader_name
+        where city_id=1 and is_mayor="false"
+    </select>
 
+    <select id="totalMessageFive" resultType="map">
+        select leader_name leaderName from front_leader_name
+        where city_id=1 and is_mayor="true"
+    </select>
+
+    <select id="totalMessageSix" resultType="map" parameterType="Long">
+        select leader_name leaderName from front_leader_name
+        where city_id=#{id} and is_mayor="false"
+    </select>
+
+    <select id="totalMessageSeven" resultType="map" parameterType="Long">
+        select leader_name leaderName from front_leader_name
+        where city_id=#{id} and is_mayor="true"
+    </select>
 </mapper>

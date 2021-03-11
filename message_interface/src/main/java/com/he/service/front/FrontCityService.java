@@ -14,4 +14,11 @@ public interface FrontCityService {
 
     public abstract Map<String, Object> totalMessageThree(Long id);
 
+    public abstract Map<String, Object> totalMessageFour();
+
+    public abstract Map<String, Object> totalMessageFive();
+
+    public abstract Map<String, Object> totalMessageSix(Long id);
+
+    public abstract Map<String, Object> totalMessageSeven(Long id);
 }

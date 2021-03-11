@@ -64,13 +64,13 @@
             <dl class="clearfix">
                 <dt>
                     <h2>
-                        <b><a class="forumName" style="display: block;font-weight:bold;">${beijingTotal.name}委书记蔡奇</a></b>
+                        <b><a class="forumName" style="display: block;font-weight:bold;">${beijingTotal.name}市委书记${beijingLeaderOne.leaderName}</a></b>
                     </h2>
                 </dt>
 
                 <div style="width: 300px;margin-left:-10px;">
                     <a href="../threads/list-fid=539.htm"  class="message_index">查看留言</a>
-                    <a href="needlogin-referer=http---liuyan.people.com.cn-threads-post-fid=539.htm"  class="message_index_color" onclick="javascript:return Threads.checkCount()">我要留言</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do"  class="message_index_color">我要留言</a>
 
                 </div>
 
@@ -86,13 +86,13 @@
             <dl class="clearfix">
                 <dt>
                     <h2>
-                        <b><a class="forumName" style="display: block;font-weight:bold;">${beijingTotal.name}市长陈吉宁</a></b>
+                        <b><a class="forumName" style="display: block;font-weight:bold;">${beijingTotal.name}市长${beijingLeaderTwo.leaderName}</a></b>
                     </h2>
                 </dt>
 
                 <div style="width: 300px;margin-left:-10px;">
                     <a href="../threads/list-fid=540.htm"  class="message_index">查看留言</a>
-                    <a href="needlogin-referer=http---liuyan.people.com.cn-threads-post-fid=540.htm"  class="message_index_color" onclick="javascript:return Threads.checkCount()">我要留言</a>
+                    <a href="needlogin-referer=http---liuyan.people.com.cn-threads-post-fid=540.htm"  class="message_index_color">我要留言</a>
                 </div>
 
                 <p class="tack_message">

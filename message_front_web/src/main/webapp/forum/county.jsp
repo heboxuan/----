@@ -47,7 +47,7 @@
 
 <div class="path_2j w1200 grey2">
     当前位置 ：
-    <a href="../index.jsp" >领导留言板</a> > 地方领导 &gt;北京市 &gt; ${countyDetail.name}
+    <a href="../index.jsp" >领导留言板</a> > 北京市 &gt; ${countyDetail.name}
 </div>
 <div class="index_content w1200">
     <script type="application/javascript">
@@ -70,7 +70,7 @@
         <div class="fl">
             <dl class="clearfix">
                 <dt>
-                    <h2><b><a href="" target="_blank" class="forumName" style="font-weight:bold;">东城区委书记夏林茂</a></b></h2>
+                    <h2><b><a href="" target="_blank" class="forumName" style="font-weight:bold;">${countyDetail.name}区委书记${countyLeaderOne.leaderName}</a></b></h2>
                 </dt>
 
                 <div style="width: 300px;margin-left:-10px;">
@@ -91,7 +91,7 @@
             <dl class="clearfix">
                 <dt>
                     <h2>
-                        <b><a href=""  target="_blank" class="forumName" style="font-weight:bold;">东城区区长金晖</a></b>
+                        <b><a href=""  target="_blank" class="forumName" style="font-weight:bold;">${countyDetail.name}区长${countyLeaderTwo.leaderName}</a></b>
                     </h2>
                 </dt>
 
