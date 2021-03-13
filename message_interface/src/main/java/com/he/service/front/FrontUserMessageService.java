@@ -18,4 +18,8 @@ public interface FrontUserMessageService {
     public abstract boolean loginform(String email, String password);
 
     public abstract FrontUserMessage findUserByEmail(String email);
+
+    public abstract boolean sendSms(String telephone, String smsCode);
+
+    public abstract FrontUserMessage loginByPhone(String telephone);
 }

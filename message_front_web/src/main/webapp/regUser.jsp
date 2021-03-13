@@ -67,8 +67,9 @@
             </dd>
             <dt>短信验证码：</dt>
             <dd>
-                <input id="userMessage" name="userMessage" type="text" class="t01" value="" maxlength="6" />
+                <input id="smsCode" name="userMessage" type="text" class="t01" value="" maxlength="6" />
                 <input name="发送验证短信" type="button" value="发送验证短信" class="t03" id="btn_getCode" />
+                <span id="smsCodeCheck" style="color: red;font-size: 15px"></span>
             </dd>
             <dt>邮箱：</dt>
             <dd>
@@ -156,6 +157,55 @@
                 $("#passwordCheck").html("密码不一致");
                 $("#submit_btn").attr("disabled","disabled");
             }
+        });
+        //添加点击事件
+        $("#btn_getCode").click(function () {
+            //获取用户输入的手机号
+            let telephone=$("#userPhone").val();
+            //发送异步请求
+            let url="${pageContext.request.contextPath}/frontUserMessage/sendSms.do";
+            let data="telephone="+telephone;
+            $.get(url, data, function (resp) {
+
+            });
+            //调用倒计时函数
+            countDown(this);
+        });
+        //倒计时功能 60秒
+        let num=10;
+        function countDown(obj) {
+            num--;
+            if (num==0) {
+                $(obj).prop("disabled",false);
+                $(obj).val("重新发送验证码");
+                num=10;
+            }else{
+                $(obj).prop("disabled",true);
+                $(obj).val(num+"秒后，可以发送手机验证码");
+                //一次性定时器，1秒调用一次
+                setTimeout(function () {
+                    //递归调用
+                    countDown(obj);
+                },1000);
+            }
+        }
+        $("#smsCode").blur(function () {
+            let smsCodeOne=$(this).val();
+            let userPhone=$("#userPhone").val();
+            if (smsCodeOne=="") {
+                return;
+            }
+            let url="${pageContext.request.contextPath}/frontUserMessage/checkSmsCode.do";
+            let data="smsCode="+smsCodeOne+"&userPhone="+userPhone;
+            $.get(url,data,function (resp) {
+                if (resp) {
+                    $("#smsCodeCheck").html("验证码正确");
+                    $("#submit_btn").attr("disabled",false);
+                }else{
+                    $("#smsCodeCheck").html("验证码错误");
+                    $("#submit_btn").attr("disabled","disabled");
+                }
+            })
         });
     </script>
 </form>

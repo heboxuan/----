@@ -1,7 +1,9 @@
 package com.he.service.front.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
 import com.he.common.utils.Encrypt;
+import com.he.common.utils.SmsUtils;
 import com.he.dao.front.FrontUserMessageDao;
 import com.he.domain.front.FrontUserMessage;
 import com.he.service.front.FrontUserMessageService;
@@ -71,6 +73,32 @@ public class FrontUserMessageServiceImpl implements FrontUserMessageService {
     @Override
     public FrontUserMessage findUserByEmail(String email) {
         FrontUserMessage userInfo=frontUserMessageDao.findUserByEmail(email);
+        return userInfo;
+    }
+
+    @Override
+    public boolean sendSms(String telephone, String smsCode) {
+        //指定签名
+        String sigName="fighting商城";
+        //指定模板
+        String templateCode="SMS_202810495";
+        //拼接验证码参数
+        String param="{\"code\":"+smsCode+"}";
+        try {
+            SendSmsResponse smsResponse = SmsUtils.sendSms(telephone, sigName, templateCode, param);
+            if (smsResponse.getCode().equals("OK")) {
+                //发送成功
+                return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public FrontUserMessage loginByPhone(String telephone) {
+        FrontUserMessage userInfo=frontUserMessageDao.loginByPhone(telephone);
         return userInfo;
     }
 }

@@ -27,47 +27,15 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/jquery.webui-popover.css" />
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
 
-    <script src="static/common/js/thirdparty/jquery.min.js"type="text/javascript"></script>
-    <script src="static/common/js/thirdparty/jquery.validate.min.js"type="text/javascript"></script>
-    <script src="static/common/js/thirdparty/jquery.form.js" type="text/javascript"></script>
-    <script src="static/common/js/thirdparty/jquery.webui-popover.js" type="text/javascript"></script>
-    <script src="static/common/js/thirdparty/layer/layer.js" type="text/javascript"></script>
-    <script src="static/common/js/thirdparty/tmpl.min.js"  type="text/javascript"></script>
-    <script src="static/common/js/thirdparty/json2.js"  type="text/javascript"></script>
-    <script src="static/common/js/common.js"  type="text/javascript"></script>
-    <script src="static/common/js/tab.js"  type="text/javascript"></script>
-    <script type="text/javascript">
-        CONTEXT_PATH = "";
-        $(function() {
-            $("#login-point").on("click", function() {
-                $('#mask').show()
-                $('#login-box').show();
-            });
-            $('#login-box .btn').click(function() {
-                $('#mask').hide()
-                $('#login-box').hide();
-            });
-            $("#search_btn").click(function() {
-                var searchWord = $("#srchtxt").val();
-                if(searchWord == "" || Common.getByteLen(searchWord) < 4) {
-                    layer.alert("输入的关键词过短，必须多于2个中文汉字", {
-                        icon: 5
-                    });
-                    return false;
-                }
-            });
-            $("#topbanner .inner .n1").mouseover(function() {
-                $("#topbanner .inner .n1 .search").show();
-                $("#topbanner .inner .n1").addClass("active");
-
-            }).mouseout(function() {
-                $("#topbanner .inner .n1 .search").hide();
-                $("#topbanner .inner .n1").removeClass("active")
-            });
-
-            Common.loadAllAdvs();
-        });
-    </script>
+    <script src="${pageContext.request.contextPath}/js/jquery-3.2.1.js"  type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/static/common/js/thirdparty/jquery.validate.min.js"type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/static/common/js/thirdparty/jquery.form.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/static/common/js/thirdparty/jquery.webui-popover.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/static/common/js/thirdparty/layer/layer.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/static/common/js/thirdparty/tmpl.min.js"  type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/static/common/js/thirdparty/json2.js"  type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/static/common/js/common.js"  type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/static/common/js/tab.js"  type="text/javascript"></script>
 </head>
 
 <body>
@@ -98,15 +66,14 @@
 </style>
 <div class="path_2j w1200 grey2">当前位置 ：领导留言板 > 用户中心</div>
 <div class="clearfix denglu_con w1200">
-    <form name="loginform" id="loginform" action="" method="post">
-        <input name="referer" type="hidden" value="">
-        <input name="loginType" type="hidden" value="2">
+    <form name="loginform" id="loginform" action="${pageContext.request.contextPath}/frontUserMessage/loginByPhone.do" method="post">
         <ul class="form_box clearfix">
-            <li><input name="userName" id="userName" type="text" placeholder="请输入手机号"><span class="notice"></span></li>
             <li>
-                <input name="verCode" id="verCode" type="text" class="ver-code" placeholder="请输入手机验证码" autocomplete="off" />
-                <span class="notice"></span>
-                <span class="ver-code-btn" id="verCodeBtn">获取验证码</span>
+                <input id="telephone" name="telephone" type="text" placeholder="请输入手机号" maxlength="11">
+            </li>
+            <li>
+                <input name="verCode" id="verCode" type="text" class="ver-code" placeholder="请输入手机验证码" style="width: 180px" />
+                <button class="ver-code-btn" id="verCodeBtn" style="border: none; width: 100px; color: black" >获取验证码</button>
             </li>
 
             <li>
@@ -118,89 +85,72 @@
     </form>
 </div>
 
-<script type="text/javascript">
-    $(function() {
-        User.initLoginPage();
+<script>
+    $("#telephone").blur(function () {
+        let userPhone=$(this).val();
+        if (userPhone=="") {
+            return;
+        }
+        let url="${pageContext.request.contextPath}/frontUserMessage/checkUserPhone.do";
+        let data="userPhone="+userPhone;
+        $.get(url,data,function (resp) {
+            if (!resp) {
+                $("#submit_btn").attr("disabled",false);
+            }else{
+                alert("无此手机号");
+                $("#submit_btn").attr("disabled","disabled");
+            }
+        })
+    });
 
-        $("#codeImg").click(function() {
-            var timestamp = (new Date()).valueOf();
-            $("#codeImg").attr("src", "/verifycode/rand4?timestamp=" + timestamp);
-        });
+    //添加点击事件
+    $("#verCodeBtn").click(function () {
+        //获取用户输入的手机号
+        let telephone=$("#telephone").val();
+        //发送异步请求
+        let url="${pageContext.request.contextPath}/frontUserMessage/sendSms.do";
+        let data="telephone="+telephone;
+        $.get(url, data, function (resp) {
 
-        var isVerCode = true;
-        $('#verCodeBtn').click(function() {
-            var phone = $(" #userName ").val();
-            if(!phone) {
-                $('#userName').focus();
-                layer.tips('请输入的手机号码', '#userName', {
-                    time: 5000,
-                    tips: [1, '#FF6666']
-                });
-                return false;
-            }
-            if(!(/^1[3456789]\d{9}$/.test(phone))) {
-                $('#userName').focus();
-                layer.tips('输入的手机号码有误，请重新填写', '#userName', {
-                    time: 5000,
-                    tips: [1, '#FF6666']
-                });
-                return false;
-            }
-            if(!isVerCode) {
-                return;
-            }
-            isVerCode = false;
-            $.ajax({
-                url: CONTEXT_PATH + "/login/phoneVerifyCode",
-                type: "post",
-                data: {
-                    "phone": phone
-                },
-                success: function(data) {
-                    console.info(data);
-                    data = JSON.parse(data);
-                    var count = 120;
-                    if(data.result == "success") {
-                        const countDown = setInterval(() => {
-                            if(count === 0) {
-                                isVerCode = true;
-                                $('#verCodeBtn').text('重新获取验证码').removeAttr('disabled');
-                                clearInterval(countDown);
-                            } else {
-                                $('#verCodeBtn').attr('disabled', true);
-                                $('#verCodeBtn').text(count + " 秒");
-                            }
-                            count--;
-                        }, 1000);
-                    } else {
-                        var html = '<div style="margin-bottom: 20px"><p style="margin: 24px 30px 0;font-size: 16px;">';
-                        if(data.responseData == "register") {
-                            html += '你的手机号还没有注册,请前往注册后使用。';
-                        } else {
-                            html += data.responseData;
-                        }
-                        html += '</p></div>';
-                        layer.open({
-                            type: 1,
-                            closeBtn: 1,
-                            area: ['350px', '200px'],
-                            anim: 5,
-                            btn: ['确定'],
-                            btnAlign: 'c',
-                            skin: 'df-layer',
-                            title: ['信息', 'font-size:18px;'],
-                            content: html,
-                            yes: function(index) {
-                                if(data.responseData == "register") {
-                                    window.location.href = "regUser.htm" /*tpa=http://liuyan.people.com.cn/regUser*/ ;
-                                }
-                                layer.close(index);
-                            }
-                        });
-                    }
-                }
-            });
         });
+        //调用倒计时函数
+        countDown(this);
+    });
+    //倒计时功能 60秒
+    let num=10;
+    function countDown(obj) {
+        num--;
+        if (num == 0) {
+            $(obj).prop("disabled", false);
+            $(obj).html("重新发送验证码");
+            num = 10;
+        } else {
+            $(obj).prop("disabled", true);
+            $(obj).html(num + "秒");
+            //一次性定时器，1秒调用一次
+            setTimeout(function () {
+                //递归调用
+                countDown(obj);
+            }, 1000);
+        }
+    }
+
+    $("#verCode").blur(function () {
+        let smsCodeOne=$(this).val();
+        let userPhone=$("#telephone").val();
+        if (smsCodeOne=="") {
+            return;
+        }
+        let url="${pageContext.request.contextPath}/frontUserMessage/checkSmsCode.do";
+        let data="smsCode="+smsCodeOne+"&userPhone="+userPhone;
+        $.get(url,data,function (resp) {
+            if (resp) {
+                $("#submit_btn").attr("disabled",false);
+            }else{
+                alert("验证码错误");
+                $("#submit_btn").attr("disabled","disabled");
+            }
+        })
     });
 </script>
 

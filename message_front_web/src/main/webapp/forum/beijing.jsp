@@ -70,7 +70,7 @@
 
                 <div style="width: 300px;margin-left:-10px;">
                     <a href="../threads/list-fid=539.htm"  class="message_index">查看留言</a>
-                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do"  class="message_index_color">我要留言</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do?id=${beijingLeaderOne.id}"  class="message_index_color">我要留言</a>
 
                 </div>
 

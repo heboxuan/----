@@ -28,4 +28,8 @@
     <select id="findUserByEmail" parameterType="String" resultType="com.he.domain.front.FrontUserMessage">
         select * from front_user_message where email=#{email}
     </select>
+
+    <select id="loginByPhone" parameterType="String" resultType="com.he.domain.front.FrontUserMessage">
+        select * from front_user_message where phone=#{telephone}
+    </select>
 </mapper>

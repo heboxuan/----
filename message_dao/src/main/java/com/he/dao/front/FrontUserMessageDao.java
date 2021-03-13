@@ -18,4 +18,6 @@ public interface FrontUserMessageDao {
     public abstract String loginform(String email);
 
     public abstract FrontUserMessage findUserByEmail(String email);
+
+    public abstract FrontUserMessage loginByPhone(String telephone);
 }

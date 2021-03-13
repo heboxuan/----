@@ -3,8 +3,11 @@ package com.he.web.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.he.domain.front.FrontUserMessage;
 import com.he.service.front.FrontUserMessageService;
+import org.apache.commons.lang.RandomStringUtils;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -57,6 +60,17 @@ public class FrontUserMessageController {
         return flag;
     }
 
+    @GetMapping("/checkSmsCode")
+    @ResponseBody
+    public Boolean checkSmsCode(String smsCode,String userPhone) {
+        String checkSmsCode = (String)session.getAttribute("smsCode_" + userPhone);
+        if (smsCode.equals(checkSmsCode)) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     @PostMapping("/loginform")
     public String loginform(String email,String password) {
         boolean flag=frontUserMessageService.loginform(email,password);
@@ -69,10 +83,30 @@ public class FrontUserMessageController {
         return "redirect:/index.jsp";
     }
 
+    @PostMapping("/loginByPhone")
+    public String loginByPhone(String telephone) {
+        FrontUserMessage userInfo=frontUserMessageService.loginByPhone(telephone);
+        session.setAttribute("userInfo",userInfo);
+        return "redirect:/index.jsp";
+    }
+
     @GetMapping("/logut")
     public String logut() {
         session.removeAttribute("userInfo");
         return "redirect:/index.jsp";
     }
 
+    @GetMapping("/sendSms")
+    @ResponseBody
+    public boolean sendSms() {
+        String telephone = request.getParameter("telephone");
+        //6位验证码
+        String smsCode = RandomStringUtils.randomNumeric(6);
+        boolean result=frontUserMessageService.sendSms(telephone,smsCode);
+        if (result) {
+            session.setAttribute("smsCode_"+telephone,smsCode);
+            System.out.println("验证码是："+smsCode);
+        }
+        return result;
+    }
 }
