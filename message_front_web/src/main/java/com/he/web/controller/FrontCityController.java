@@ -150,7 +150,7 @@ public class FrontCityController {
     }
 
     @PostMapping("/saveLeftMessage")
-    public void saveLeftMessage(String leaderId,String typeId,String field,
+    public String saveLeftMessage(String leaderId,String typeId,String field,
                                 String title,String passage,String askPassage,
                                 String extraPassage,String trueUsername,String messagePhone,
                                 String extraMessage) {
@@ -184,7 +184,7 @@ public class FrontCityController {
         frontUserMessage.setId(userId);
 
         frontCityService.saveLeftMessage(frontLeftMessage,frontUserMessage);
-
+        return "redirect:/forum/leftMessageSuccess.jsp";
     }
 
 }

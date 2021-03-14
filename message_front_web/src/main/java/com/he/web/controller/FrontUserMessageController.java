@@ -36,7 +36,7 @@ public class FrontUserMessageController {
     @PostMapping("/saveUserMessage")
     public String saveUserMessage(FrontUserMessage frontUserMessage) {
         frontUserMessageService.saveUserMessage(frontUserMessage);
-        return "redirect:/login.jsp";
+        return "redirect:/regUserSuccess.jsp";
     }
 
     @GetMapping("/checkUsername")
