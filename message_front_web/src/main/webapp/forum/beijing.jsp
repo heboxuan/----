@@ -92,7 +92,7 @@
 
                 <div style="width: 300px;margin-left:-10px;">
                     <a href="../threads/list-fid=540.htm"  class="message_index">查看留言</a>
-                    <a href="needlogin-referer=http---liuyan.people.com.cn-threads-post-fid=540.htm"  class="message_index_color">我要留言</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do?id=${beijingLeaderTwo.id}"  class="message_index_color">我要留言</a>
                 </div>
 
                 <p class="tack_message">

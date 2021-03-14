@@ -14,16 +14,17 @@
     </select>
 
     <select id="totalMessageSix" resultType="map" parameterType="Long">
-        select leader_name leaderName from front_leader_name
+        select id,leader_name leaderName from front_leader_name
         where city_id=#{id} and is_mayor="false"
     </select>
 
     <select id="totalMessageSeven" resultType="map" parameterType="Long">
-        select leader_name leaderName from front_leader_name
+        select id,leader_name leaderName from front_leader_name
         where city_id=#{id} and is_mayor="true"
     </select>
 
     <select id="findById" resultType="com.he.domain.front.FrontLeaderName">
-        select * from front_leader_name where id=#{leaderId}
+        select id id,city_id cityId,leader_name leaderName,is_mayor isMayor
+        from front_leader_name where id=#{leaderId}
     </select>
 </mapper>

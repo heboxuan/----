@@ -81,8 +81,10 @@ public class FrontCityServiceImpl implements FrontCityService {
         frontUserMessageDao.updateByUserId(frontUserMessage);
         frontLeftMessageDao.saveLeftMessage(frontLeftMessage);
         FrontLeaderName frontLeaderName=frontLeaderNameDao.findById(frontLeftMessage.getLeaderId());
+        System.out.println("111111111111111111111111111"+frontLeaderName);
         //获取城市id
         Long cityId = frontLeaderName.getCityId();
+        System.out.println("111111111111111111111111111"+cityId);
         frontCityDao.updateById(cityId);
     }
 }

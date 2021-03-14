@@ -75,7 +75,7 @@
 
                 <div style="width: 300px;margin-left:-10px;">
                     <a href="../threads/list-fid=733.htm"  class="message_index">查看留言</a>
-                    <a href="http://bad_redirect" class="message_index_color" onclick="javascript:return Threads.checkCount()">我要留言</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do?id=${countyLeaderOne.id}" class="message_index_color">我要留言</a>
 
                 </div>
 
@@ -97,7 +97,7 @@
 
                 <div style="width: 300px;margin-left:-10px;">
                     <a href="../threads/list-fid=734.htm" class="message_index">查看留言</a>
-                    <a href="http://bad_redirect" class="message_index_color" onclick="javascript:return Threads.checkCount()">我要留言</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do?id=${countyLeaderTwo.id}" class="message_index_color">我要留言</a>
 
                 </div>
 

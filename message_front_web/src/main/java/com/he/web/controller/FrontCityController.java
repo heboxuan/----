@@ -165,8 +165,13 @@ public class FrontCityController {
         frontLeftMessage.setField(field);
         frontLeftMessage.setTitle(title);
         frontLeftMessage.setPassage(passage);
-        frontLeftMessage.setAskPassage(askPassage);
-        frontLeftMessage.setExtraPassage(extraPassage);
+        if ("2".equals(typeId)) {
+            frontLeftMessage.setAskPassage(askPassage);
+            frontLeftMessage.setExtraPassage(extraPassage);
+        }else{
+            frontLeftMessage.setAskPassage(null);
+            frontLeftMessage.setExtraPassage(null);
+        }
         frontLeftMessage.setUserId(userId);
         frontLeftMessage.setIsProcess("false");
         frontLeftMessage.setTime(new Date());
