@@ -7,11 +7,13 @@ import com.he.dao.system.DeptDao;
 import com.he.domain.system.Dept;
 import com.he.service.system.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
 
 @Service
+@Transactional
 public class DeptServiceImpl implements DeptService {
     @Autowired
     private DeptDao deptDao;

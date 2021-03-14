@@ -45,7 +45,7 @@
 
 
 <!--留言区-->
-<form name="postForm" id="postForm" action="" method="post">
+<form name="postForm" id="postForm" action="${pageContext.request.contextPath}/frontCity/saveLeftMessage.do" method="post">
     <div class="liuyan_box01 w1200 clearfix">
         <input type="hidden" name="leaderId" value="${leaderId}">
         <div class="box01 grey2">
@@ -69,7 +69,7 @@
                     <td style="margin-top:20px">
                         <div class="layui-form-item">
                             <div class="layui-input-block">
-                                <input type="text" id="a" class="layui-input">
+                                <input type="text" name="field" id="a" class="layui-input">
                             </div>
                         </div>
                     </td>
@@ -77,7 +77,7 @@
                 <tr>
                     <td>*标题</td>
                     <td>
-                        <input name="subject" id="subject" type="text" maxlength="22" placeholder="请输入标题，不超过22字，请勿填写特殊符号" class="titlemessage">
+                        <input name="title" id="subject" type="text" maxlength="22" placeholder="请输入标题，不超过22字，请勿填写特殊符号" class="titlemessage">
                     </td>
                 </tr>
 
@@ -85,7 +85,7 @@
                     <td>*正文</td>
                     <td>
                         <li class="t02">
-                        <textarea name="content" id="content" cols="100" rows="6" placeholder="请输入正文
+                        <textarea name="passage" id="content" cols="100" rows="6" placeholder="请输入正文
                             1、描述尽量简明扼要，过多的修辞、宣泄并不会有助于问题的解决。
                             2、个人隐私信息，如手机号码、姓名、家庭住址等，请填写在页面下方个人信息备注内容版块内。
                             3、请勿发布违反管理条例的言论。" class="textmessage" maxlength="1000"></textarea>
@@ -97,7 +97,7 @@
                     <td>*诉求</td>
                     <td>
                         <li class="t02">
-                        <textarea name="appeal" id="appeal" cols="100" rows="6" placeholder="请您以文字方式在留言中简要说明反映问题的具体情况，并尽量提供全面的信息。
+                        <textarea name="askPassage" id="appeal" cols="100" rows="6" placeholder="请您以文字方式在留言中简要说明反映问题的具体情况，并尽量提供全面的信息。
                             提示：
                             1、需包含：事件经过、地址、诉求等信息。
                             2、请勿超过200字。" class="textmessage" maxlength="200"></textarea>
@@ -108,7 +108,7 @@
                     <td>补充信息</td>
                     <td>
                         <li class="t02">
-                    <textarea name="complainContent" id="complainContent" cols="100" rows="6" placeholder="如您还有信息需要补充，可填写在此处。
+                    <textarea name="extraPassage" id="complainContent" cols="100" rows="6" placeholder="如您还有信息需要补充，可填写在此处。
                         提示：
                         1、过多的修辞、情感宣泄会占用篇幅，并影响问题的解决速度。
                         2、请勿超过800字。" class="textmessage" maxlength="800"></textarea>
@@ -126,20 +126,20 @@
                 <tbody><tr>
                     <td>*姓名</td>
                     <td>
-                        <input id="realName" name="realName" value="" placeholder="真实姓名" class="truename_default">
+                        <input id="realName" name="trueUsername" value="" placeholder="真实姓名" class="truename_default">
                     </td>
                 </tr>
                 <tr>
                     <td>*电话</td>
                     <td>
-                        <input id="phone" name="phone" value="15522002039" placeholder="联系电话" class="truename_default" style="background:#e2e2e2" maxlength="11">
+                        <input id="phone" name="messagePhone" value="${userInfo.phone}" placeholder="联系电话" class="truename_default" style="background:#e2e2e2" maxlength="11">
                     </td>
                 </tr>
                 <tr>
                     <td>备注</td>
                     <td>
                         <li class="t02">
-                    <textarea name="hiddenRemark" id="hiddenRemark" cols="100" rows="6" style=" resize:none;" class="textmessage" placeholder="涉及到姓名、电话、身份证号码、详细地址、联系方式或其他不便公开发表的信息，请填写在此处。
+                    <textarea name="extraMessage" id="hiddenRemark" cols="100" rows="6" style=" resize:none;" class="textmessage" placeholder="涉及到姓名、电话、身份证号码、详细地址、联系方式或其他不便公开发表的信息，请填写在此处。
                             提示：
                             1、相关信息将不会在留言板上公开展示，仅供人民网工作人员及办理单位核实情况、沟通问题、反馈办理情况使用。
                             2、请勿超过200字。" maxlength="200"></textarea>
@@ -158,7 +158,7 @@
                     <label id="verCode-error" style="color: red"></label>
                 </p>
                 <p class="takecare">查看<a href="${pageContext.request.contextPath}/help/help-2.jsp" target="_blank" class="management">《领导留言板服务协议》</a></p>
-                <input type="button" id="submit-msg" value="同意协议并提交" class="submit" style="height: 40px">
+                <input type="submit" id="submit-msg" value="同意协议并提交" class="submit" style="height: 40px">
             </div>
         </div>
     </div>
@@ -175,6 +175,7 @@
     $("#varCode").blur(function () {
         let varCodeCheck=$(this).val();
         if (varCodeCheck=="") {
+            alert("验证码不正确");
             return;
         }
         let url="${pageContext.request.contextPath}/frontCity/varCodeCheck.do";

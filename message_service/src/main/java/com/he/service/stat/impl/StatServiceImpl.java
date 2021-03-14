@@ -4,11 +4,13 @@ import com.he.dao.stat.StatDao;
 import com.he.service.stat.StatService;
 import com.alibaba.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Map;
 
 @Service
+@Transactional
 public class StatServiceImpl implements StatService {
 
     @Autowired

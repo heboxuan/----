@@ -32,4 +32,12 @@
     <select id="loginByPhone" parameterType="String" resultType="com.he.domain.front.FrontUserMessage">
         select * from front_user_message where phone=#{telephone}
     </select>
+
+    <update id="updateByUserId">
+        update front_user_message
+        set message_phone=#{messagePhone},
+            extra_message=#{extraMessage},
+            true_username=#{trueUsername}
+        where id=#{id}
+    </update>
 </mapper>

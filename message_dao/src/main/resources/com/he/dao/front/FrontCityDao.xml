@@ -39,5 +39,12 @@
             id=#{id} and is_delete="false"
     </select>
 
+    <update id="updateById">
+
+    UPDATE front_city SET ask_num =
+    ( SELECT temp.result FROM ( SELECT ask_num + 1 result FROM front_city WHERE id = #{cityId} ) temp )
+    WHERE
+	id = #{cityId}
+    </update>
 
 </mapper>

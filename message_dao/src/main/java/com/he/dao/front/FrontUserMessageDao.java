@@ -20,4 +20,6 @@ public interface FrontUserMessageDao {
     public abstract FrontUserMessage findUserByEmail(String email);
 
     public abstract FrontUserMessage loginByPhone(String telephone);
+
+    public abstract void updateByUserId(FrontUserMessage frontUserMessage);
 }

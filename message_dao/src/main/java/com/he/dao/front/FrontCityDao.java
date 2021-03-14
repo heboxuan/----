@@ -13,4 +13,6 @@ public interface FrontCityDao {
     public abstract List<Map<String,Object>> totalMessageTwo();
 
     public abstract Map<String, Object> totalMessageThree(Long id);
+
+    public abstract void updateById(Long cityId);
 }

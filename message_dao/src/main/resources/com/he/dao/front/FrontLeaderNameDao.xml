@@ -22,4 +22,8 @@
         select leader_name leaderName from front_leader_name
         where city_id=#{id} and is_mayor="true"
     </select>
+
+    <select id="findById" resultType="com.he.domain.front.FrontLeaderName">
+        select * from front_leader_name where id=#{leaderId}
+    </select>
 </mapper>

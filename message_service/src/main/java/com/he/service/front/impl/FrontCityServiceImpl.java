@@ -3,8 +3,14 @@ package com.he.service.front.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.he.dao.front.FrontCityDao;
 import com.he.dao.front.FrontLeaderNameDao;
+import com.he.dao.front.FrontLeftMessageDao;
+import com.he.dao.front.FrontUserMessageDao;
+import com.he.domain.front.FrontLeaderName;
+import com.he.domain.front.FrontLeftMessage;
+import com.he.domain.front.FrontUserMessage;
 import com.he.service.front.FrontCityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Map;
@@ -14,12 +20,19 @@ import java.util.Map;
  * @Date: Created in 20:21 2021/3/3
  */
 @Service
+@Transactional
 public class FrontCityServiceImpl implements FrontCityService {
     @Autowired
     private FrontCityDao frontCityDao;
 
     @Autowired
     private FrontLeaderNameDao frontLeaderNameDao;
+
+    @Autowired
+    private FrontUserMessageDao frontUserMessageDao;
+
+    @Autowired
+    private FrontLeftMessageDao frontLeftMessageDao;
 
     @Override
     public Map<String, Object> totalMessageOne() {
@@ -61,5 +74,15 @@ public class FrontCityServiceImpl implements FrontCityService {
     public Map<String, Object> totalMessageSeven(Long id) {
         Map<String, Object> countyLeaderTwo=frontLeaderNameDao.totalMessageSeven(id);
         return countyLeaderTwo;
+    }
+
+    @Override
+    public void saveLeftMessage(FrontLeftMessage frontLeftMessage, FrontUserMessage frontUserMessage) {
+        frontUserMessageDao.updateByUserId(frontUserMessage);
+        frontLeftMessageDao.saveLeftMessage(frontLeftMessage);
+        FrontLeaderName frontLeaderName=frontLeaderNameDao.findById(frontLeftMessage.getLeaderId());
+        //获取城市id
+        Long cityId = frontLeaderName.getCityId();
+        frontCityDao.updateById(cityId);
     }
 }

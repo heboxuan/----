@@ -1,11 +1,13 @@
 package com.he.web.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.he.domain.front.FrontLeftMessage;
 import com.he.domain.front.FrontUserMessage;
 import com.he.service.front.FrontCityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -16,6 +18,7 @@ import javax.servlet.http.HttpSession;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -144,6 +147,39 @@ public class FrontCityController {
         }else{
             return false;
         }
+    }
+
+    @PostMapping("/saveLeftMessage")
+    public void saveLeftMessage(String leaderId,String typeId,String field,
+                                String title,String passage,String askPassage,
+                                String extraPassage,String trueUsername,String messagePhone,
+                                String extraMessage) {
+
+        FrontUserMessage userInfo = (FrontUserMessage)session.getAttribute("userInfo");
+        Long userId = userInfo.getId();
+
+        //留言信息
+        FrontLeftMessage frontLeftMessage=new FrontLeftMessage();
+        frontLeftMessage.setLeaderId(Long.valueOf(leaderId));
+        frontLeftMessage.setTypeId(typeId);
+        frontLeftMessage.setField(field);
+        frontLeftMessage.setTitle(title);
+        frontLeftMessage.setPassage(passage);
+        frontLeftMessage.setAskPassage(askPassage);
+        frontLeftMessage.setExtraPassage(extraPassage);
+        frontLeftMessage.setUserId(userId);
+        frontLeftMessage.setIsProcess("false");
+        frontLeftMessage.setTime(new Date());
+
+        //留言用户隐私信息
+        FrontUserMessage frontUserMessage=new FrontUserMessage();
+        frontUserMessage.setTrueUsername(trueUsername);
+        frontUserMessage.setMessagePhone(messagePhone);
+        frontUserMessage.setExtraMessage(extraMessage);
+        frontUserMessage.setId(userId);
+
+        frontCityService.saveLeftMessage(frontLeftMessage,frontUserMessage);
+
     }
 
 }

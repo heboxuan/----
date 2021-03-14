@@ -8,6 +8,7 @@ import com.he.dao.front.FrontUserMessageDao;
 import com.he.domain.front.FrontUserMessage;
 import com.he.service.front.FrontUserMessageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 /**
@@ -15,6 +16,7 @@ import org.springframework.util.StringUtils;
  * @Date: Created in 15:35 2021/2/27
  */
 @Service
+@Transactional
 public class FrontUserMessageServiceImpl implements FrontUserMessageService {
     @Autowired
     private FrontUserMessageDao frontUserMessageDao;

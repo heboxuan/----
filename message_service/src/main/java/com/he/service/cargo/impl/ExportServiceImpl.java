@@ -13,6 +13,7 @@ import com.github.pagehelper.PageInfo;
 import org.apache.cxf.jaxrs.client.WebClient;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +21,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
+@Transactional
 public class ExportServiceImpl implements ExportService {
 
     @Autowired

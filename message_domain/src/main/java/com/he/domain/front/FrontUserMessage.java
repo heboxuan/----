@@ -21,4 +21,7 @@ public class FrontUserMessage implements Serializable {
     private String password1;
     private String password2;
     private String isDelete;
+    private String messagePhone;
+    private String extraMessage;
+    private String trueUsername;
 }

@@ -1,5 +1,8 @@
 package com.he.service.front;
 
+import com.he.domain.front.FrontLeftMessage;
+import com.he.domain.front.FrontUserMessage;
+
 import java.util.List;
 import java.util.Map;
 
@@ -21,4 +24,6 @@ public interface FrontCityService {
     public abstract Map<String, Object> totalMessageSix(Long id);
 
     public abstract Map<String, Object> totalMessageSeven(Long id);
+
+    public abstract void saveLeftMessage(FrontLeftMessage frontLeftMessage, FrontUserMessage frontUserMessage);
 }
