@@ -1,6 +1,7 @@
 package com.he.web.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.he.domain.front.FrontLeaderName;
 import com.he.domain.front.FrontLeftMessage;
 import com.he.domain.front.FrontUserMessage;
 import com.he.service.front.FrontCityService;
@@ -185,6 +186,16 @@ public class FrontCityController {
 
         frontCityService.saveLeftMessage(frontLeftMessage,frontUserMessage);
         return "redirect:/forum/leftMessageSuccess.jsp";
+    }
+
+    @GetMapping("/messageList")
+    public String messageList(String id) {
+        Map<String, Object> map = frontCityService.messageList(id);
+        FrontLeaderName leaderDetail=(FrontLeaderName)map.get("leaderDetail");
+        List<Map<String,Object>> messageList=(List<Map<String,Object>>)map.get("messageList");
+        request.setAttribute("leaderDetail",leaderDetail);
+        request.setAttribute("messageList",messageList);
+        return "threads/messaageList";
     }
 
 }

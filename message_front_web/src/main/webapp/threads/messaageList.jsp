@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -9,7 +10,7 @@
     <meta http-equiv="Content-Language" content="utf-8" />
     <meta content="all" name="robots" />
     <title>
-        北京市委书记蔡奇 - 北京市 - 领导留言板 - 人民网
+        ${leaderDetail.leaderName} - 北京市 - 领导留言板 - 人民网
     </title>
     <meta name="keywords" content="领导留言板" />
     <meta name="description" content="领导留言板" />
@@ -43,59 +44,45 @@
 
 <div class="path_2j w1200 grey2">
     当前位置 ：
-    <a href="../index.htm" >领导留言板</a> &gt; 地方领导 &gt;
+    <a href="../index.htm" >领导留言板</a> &gt; 北京市 &gt;
 
-    <a href="../forum/list-fid=4.htm" >北京市</a> &gt;
-
-    <i>北京市委书记蔡奇</i>
+    <i>${leaderDetail.leaderName}</i>
 </div>
 
 <!--留言列表-->
 <div class="liuyan_box02 w1200 clearfix">
     <ul class="clearfix title" id="tab_type" style="cursor: pointer;">
-        <li>全部</li>
-        <li>待回复</li>
-        <li>办理中</li>
-        <li>已办理</li>
-        <a class="message_my" href="http://bad_redirect">
-            <img src="../static/www/images/message_new.png" class="message_new">
+        <li>留言信息展示（包括已经回复和未回复）</li>
+        <a class="message_my" href="${pageContext.request.contextPath}/frontCity/totalMessageOne.do">
+            <img src="${pageContext.request.contextPath}/static/www/images/message_new.png" class="message_new">
             我要留言
         </a>
     </ul>
 
     <div class="clearfix list_box" style="display: block;">
         <ul class="showMoreNChildren" id="list_content">
-            <li>
-                <h2>
-                    <b><a href="" target="_blank">1</a>
-                        <em class="red">2</em>
-                        <em class="orange">3</em>
-                        <em class="green">4</em>
-                        <em class="domainType">5</em>
-                        <em class="domainType">6</em>
-                    </b>
-                    <div>
-                        <em class="grey2">
-                            <div  class="fav-image" id="fav_{%=o.tid%}">
-                                <img src="${pageContext.request.contextPath}/static/www/images/collect_true.png" width="25" height="20" />
-                                <i id="">7</i>
-                            </div>
-                        </em>
-                    </div>
-                </h2>
-                <h3 class="fl grey2 clearfix">
+            <c:forEach items="${messageList}" var="message">
+                <li>
+                    <h2>
+                        <b><a href="" target="_blank">${message.title}</a>
+                            <em class="red">${message.isProcess}</em>
+                            <em class="domainType">${message.field}</em>
+                            <em class="domainType">${message.typeId}</em>
+                        </b>
+                    </h2>
+                    <h3 class="fl grey2 clearfix">
                     <span>
-                        123213123
+                            ${message.time}
                     </span>
-                </h3>
-                <p>
-                    123123123123123123123
-                    <i class="red">
-                        <a href="" target="_blank">[查看全文]</a>
-                    </i>
-                </p>
-
-            </li>
+                    </h3>
+                    <p>
+                        123123123123123123123
+                        <i class="red">
+                            <a href="" target="_blank">[查看全文]</a>
+                        </i>
+                    </p>
+                </li>
+            </c:forEach>
         </ul>
         <div class="showMorehandle more" id="show_more" style="display: block">加载更多</div>
     </div>

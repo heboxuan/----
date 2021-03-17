@@ -12,6 +12,7 @@ import com.he.service.front.FrontCityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -86,5 +87,15 @@ public class FrontCityServiceImpl implements FrontCityService {
         Long cityId = frontLeaderName.getCityId();
         System.out.println("111111111111111111111111111"+cityId);
         frontCityDao.updateById(cityId);
+    }
+
+    @Override
+    public Map<String,Object> messageList(String id) {
+        FrontLeaderName leaderDetail = frontLeaderNameDao.findById(Long.valueOf(id));
+        List<Map<String,Object>> messageList=frontLeftMessageDao.findByLeaderId(id);
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("leaderDetail",leaderDetail);
+        map.put("messageList",messageList);
+        return map;
     }
 }
