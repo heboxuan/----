@@ -37,6 +37,7 @@
 
 <body>
 <!--nav-->
+<%@ include file="../common/common-top-help.jsp"%>
 <!--nav end-->
 
 <div class="path_2j w1200 grey2">
@@ -116,40 +117,6 @@
                     </em>
                 </h3>
             </li>
-            <li class="comments">
-                <span class="title">评价</span>
-                <h4>
-                    <span class="grey2">
-                    <div class="sec-score">
-                        <span class="sec-score_firstspan">很满意</span>
-                        <span class="score empty_bgImg">
-                            <img class="i-1-full" src="${pageContext.request.contextPath}/static/www/images/icon-full.png">
-                            <img class="i-2-full" src="${pageContext.request.contextPath}/static/www/images/icon-full.png">
-                            <img class="i-3-full" src="${pageContext.request.contextPath}/static/www/images/icon-full.png">
-                            <img class="i-4-full" src="${pageContext.request.contextPath}/static/www/images/icon-full.png">
-                            <img class="i-5-full" src="${pageContext.request.contextPath}/static/www/images/icon-full.png">
-                        </span>
-                     </div>
-
-                     <span class="wrapSpan">解决程度:<span class="red back_info">5分</span></span>
-                     <span class="wrapSpan">办理态度:<span class="red back_info">5分</span></span>
-                     <span class="wrapSpan">办理速度:<span class="red back_info">5分</span></span>
-
-                    </span>
-                </h4>
-
-                <p class="zoom">好评!</p>
-
-                <div class="tips-area">
-
-                </div>
-
-                <h4>
-                    <em class="grey2">评价时间：2020-08-07 23:18</em>
-                </h4>
-
-            </li>
-
         </ul>
     </div>
 
@@ -157,6 +124,7 @@
 </div>
 
 <!--copyright-->
+<%@ include file="../common/common-bottom-help.jsp"%>
 
 <script src="${pageContext.request.contextPath}/static/common/js/webdig_test.js" language="javascript" type="text/javascript"></script>
 

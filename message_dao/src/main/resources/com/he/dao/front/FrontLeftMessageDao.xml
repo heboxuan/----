@@ -24,7 +24,7 @@
             END typeId,
             field field,
             title title,
-            passage passage,
+            left(passage,120) passage,
             ask_passage askPassage,
             extra_passage extraPassage,
             CASE is_process
