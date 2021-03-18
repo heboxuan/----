@@ -78,7 +78,7 @@
                     <p>
                             ${message.passage}...
                         <i class="red">
-                            <a href="" target="_blank">[查看全文]</a>
+                            <a href="${pageContext.request.contextPath}/frontCity/messageDetail.do?id=${message.id}" target="_blank">[查看全文]</a>
                         </i>
                     </p>
                 </li>

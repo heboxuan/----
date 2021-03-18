@@ -35,4 +35,31 @@
         FROM
             front_left_message where leader_id=#{id}
     </select>
+
+    <select id="findById" resultType="map">
+        SELECT
+            id id,
+            leader_id leaderId,
+            user_id userId,
+            CASE type_id
+            WHEN '1'  THEN '咨询'
+            WHEN '5' THEN '建言'
+            WHEN '2' THEN '投诉'
+            WHEN '6' THEN '求助'
+            WHEN '9' THEN '感谢'
+            END typeId,
+            field field,
+            title title,
+            passage passage,
+            ask_passage askPassage,
+            extra_passage extraPassage,
+            is_process isProcess,
+            CASE is_process
+            WHEN 'true'  THEN '已回复'
+            WHEN 'false' THEN '待回复'
+            END isProcessAlias,
+            DATE_FORMAT( time, '%Y-%m-%d %H:%i:%S' ) time
+        FROM
+            front_left_message where id=#{id}
+    </select>
 </mapper>

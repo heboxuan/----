@@ -198,4 +198,21 @@ public class FrontCityController {
         return "threads/messaageList";
     }
 
+    @GetMapping("/messageDetail")
+    public String messageDetail(String id) {
+        Map<String, Object> map = frontCityService.messageDetail(id);
+        Map<String, Object> frontLeftMessage=(Map<String, Object>)map.get("frontLeftMessage");
+        FrontLeaderName leaderDetail=(FrontLeaderName)map.get("leaderDetail");
+        String isProcess=(String)map.get("isProcess");
+        request.setAttribute("frontLeftMessage",frontLeftMessage);
+        request.setAttribute("leaderDetail",leaderDetail);
+
+        if ("true".equals(isProcess)) {
+            return "threads/messageDetailOne";
+        }else{
+            return "threads/messageDetailTwo";
+        }
+
+    }
+
 }

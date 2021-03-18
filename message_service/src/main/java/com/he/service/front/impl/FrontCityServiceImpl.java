@@ -98,4 +98,17 @@ public class FrontCityServiceImpl implements FrontCityService {
         map.put("messageList",messageList);
         return map;
     }
+
+    @Override
+    public Map<String, Object> messageDetail(String id) {
+        Map<String,Object> frontLeftMessage=frontLeftMessageDao.findById(Long.valueOf(id));
+        Long leaderId = (Long)frontLeftMessage.get("leaderId");
+        FrontLeaderName leaderDetail = frontLeaderNameDao.findById(leaderId);
+        String isProcess = (String)frontLeftMessage.get("isProcess");
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("frontLeftMessage",frontLeftMessage);
+        map.put("leaderDetail",leaderDetail);
+        map.put("isProcess",isProcess);
+        return map;
+    }
 }

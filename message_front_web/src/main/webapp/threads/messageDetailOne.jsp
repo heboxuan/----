@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Language" content="utf-8" />
     <meta content="all" name="robots" />
     <title>
-        全民健身发展不平衡，打造好15分钟健身圈 - 国家体育总局局长、党组书记苟仲文 - 领导留言板 - 人民网
+        ${frontLeftMessage.title}
     </title>
     <meta name="keywords" content="领导留言板" />
     <meta name="description" content="领导留言板" />
@@ -42,43 +42,34 @@
 
 <div class="path_2j w1200 grey2">
     当前位置 ：
-    <a href="../index.htm">领导留言板</a> &gt; 部委领导 &gt;
+    <a href="../index.htm" >领导留言板</a> &gt; 北京市 &gt;
 
-    <i>国家体育总局局长、党组书记苟仲文</i>
+    <i>${leaderDetail.leaderName}</i>
 </div>
 
 <div>
     <div class="liuyan_box03 w1200 clearfix">
         <h2>
             <b>
-                <span class="context-title-text">全民健身发展不平衡，打造好15分钟健身圈</span>
-                <em class="green">已办理</em>
-                <em class="domainType">建言</em>
+                <span class="context-title-text">${frontLeftMessage.title}</span>
+                <em class="red">${frontLeftMessage.isProcessAlias}</em>
+                <em class="domainType">${frontLeftMessage.typeId}</em>
             </b>
         </h2>
         <span>
-			A***
-			&nbsp;&nbsp;&nbsp;&nbsp;
-			2020-01-15 10:11
-			&nbsp;&nbsp;&nbsp;&nbsp;
-		</span>
+            ${frontLeftMessage.time}
+        </span>
         </h3>
         <p class="zoom content">
-            全民健身打造15分钟，健身权非常好，受欢迎可是很多地方都没有达到，
-            特别是东北地区，冬季寒冷，很不方便，很多场所对外开放有限，特别是哈尔滨市，
-            作为省会市15分健身圈市民基本都不知道，没有见到一个地方有十五分钟健身圈儿的标识，
-            只是民间的自发的健身活动，体育部门很少组织。<br/>麻烦局长了，请国家督促各地，特别是东北及哈尔滨市，
-            认真落实好全民健身，尤其是冬季的健身活动，健身场所的开放。
-            <br/>盼望局长为我们解决烦心事，增强体质谢谢</p>
-        <div>
-        </div>
+            ${frontLeftMessage.passage}
+        </p>
     </div>
 
     <div class="clearfix liuyan_box05 w1200">
         <ul>
             <li class="reply">
                 <span class="title">回复</span>
-                <h3><i class="red">国家体育总局局长苟仲文</i></h3>
+                <h3><i class="red">${leaderDetail.leaderName}</i></h3>
                 <p class="zoom">　　近年来，体育总局积极会同有关部门支持地方构建“15分钟健身圈”
                     （指在城市社区，居民从居住地步行不超过15分钟范围内，
                     有可供开展健步走、广场舞、球类运动等群众性健身活动的场地设施）。

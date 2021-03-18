@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Language" content="utf-8" />
     <meta content="all" name="robots" />
     <title>
-        全民健身发展不平衡，打造好15分钟健身圈 - 国家体育总局局长、党组书记苟仲文 - 领导留言板 - 人民网
+        ${frontLeftMessage.title}
     </title>
     <meta name="keywords" content="领导留言板" />
     <meta name="description" content="领导留言板" />
@@ -42,34 +42,30 @@
 
 <div class="path_2j w1200 grey2">
     当前位置 ：
-    <a href="../index.htm">领导留言板</a> &gt; 部委领导 &gt;
+    <a href="../index.htm" >领导留言板</a> &gt; 北京市 &gt;
 
-    <i>国家体育总局局长、党组书记苟仲文</i>
+    <i>${leaderDetail.leaderName}</i>
 </div>
 
 
 <div class="liuyan_box03 w1200 clearfix">
     <h2>
         <b>
-            <span class="context-title-text">简化机动车交易过程手续</span>
-            <em class="red">待回复</em>
-            <em class="domainType">建言</em>
-            <em class="domainType">建言</em>
+            <span class="context-title-text">${frontLeftMessage.title}</span>
+            <em class="red">${frontLeftMessage.isProcessAlias}</em>
+            <em class="domainType">${frontLeftMessage.typeId}</em>
         </b>
     </h2>
     <div class="fav"></div>
     <h3 class="fl grey2 clearfix">
 
         <span>
-			2021-02-18 00:23
+            ${frontLeftMessage.time}
 		</span>
     </h3>
 
-    <p class="zoom content">现阶段，机动车交易过程手续过于繁琐，异地过户更是困难重重，导致老百姓自行办理很困难，人为降低了消费积极性，建议在现阶段电子档案，电子查验已经全面推行的基础上，全面开放机动车交易，简化交易手续，尽快开放机动车异地过户交易，争取让老百姓跑一趟就能办理完所有手续。</p>
+    <p class="zoom content">${frontLeftMessage.passage}</p>
 
-    <div>
-
-    </div>
 </div>
 
 <div class="clearfix liuyan_box04 w1200 ">
@@ -79,10 +75,10 @@
                 <i class="red">认领交办</i>
             </h3>
             <p class="zoom">
-                您的留言我们已经收到！我们已将您反映的问题转相关部门进行处理，处理情况我们会及时与您进行沟通。感谢您的宝贵留言！</p>
+                您的留言已经收到！会及时与您进行沟通。感谢您的宝贵留言！</p>
             <h3>
                 <em class="grey2">
-                    交办时间:&nbsp;2021-02-17 15:05
+                    留言时间:&nbsp; ${frontLeftMessage.time}
                 </em>
             </h3>
         </li>
