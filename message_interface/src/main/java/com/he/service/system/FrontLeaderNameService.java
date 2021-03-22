@@ -9,14 +9,14 @@ import java.util.List;
 public interface FrontLeaderNameService {
     public abstract PageInfo findAll(int page, int size);
 
-    //public abstract void save(User user);
-    //
-    //public abstract void update(User user);
-    //
+    public abstract void save(FrontLeaderName frontLeaderName);
+
+    public abstract void update(FrontLeaderName frontLeaderName);
+
     public abstract FrontLeaderName findById(Long id);
-    //
-    //public abstract void delete(String id);
-    //
+
+    public abstract void delete(Long id);
+
     //public abstract List<String> findRolesByUserId(String id);
     //
     //public abstract void changeRole(String userid, String[] roleIds);

@@ -77,6 +77,7 @@
                         <th class="sorting">用户名</th>
                         <th class="sorting">职位</th>
                         <th class="sorting">邮箱</th>
+                        <th class="sorting">密码</th>
                         <th class="sorting">联系电话</th>
                         <th class="sorting">性别</th>
                         <th class="text-center">操作</th>
@@ -90,6 +91,7 @@
                         <td><a href="${ctx}/system/frontLeaderName/toUpdate.do?id=${o.id}">${item.leaderName}</a></td>
                         <td>${item.name }${item.isMayor}</td>
                         <td>${item.email }</td>
+                        <td>${item.password }</td>
                         <td>${item.telephone }</td>
                         <td>${item.gender ==0?'男':'女'}</td>
                         <th class="text-center">

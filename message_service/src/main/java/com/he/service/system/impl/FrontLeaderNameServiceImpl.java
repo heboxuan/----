@@ -31,26 +31,25 @@ public class FrontLeaderNameServiceImpl implements FrontLeaderNameService {
         return new PageInfo(list);
     }
 
-    //@Override
-    //public void save(User user) {
-    //    user.setId(UUID.randomUUID().toString());
-    //    userDao.save(user);
-    //}
-    //
-    //@Override
-    //public void update(User user) {
-    //    userDao.update(user);
-    //}
-    //
+    @Override
+    public void save(FrontLeaderName frontLeaderName) {
+        frontLeaderNameDao.save(frontLeaderName);
+    }
+
+    @Override
+    public void update(FrontLeaderName frontLeaderName) {
+        frontLeaderNameDao.update(frontLeaderName);
+    }
+
     @Override
     public FrontLeaderName findById(Long id) {
         return frontLeaderNameDao.findById(id);
     }
-    //
-    //@Override
-    //public void delete(String id) {
-    //    userDao.delete(id);
-    //}
+
+    @Override
+    public void delete(Long id) {
+        frontLeaderNameDao.delete(id);
+    }
     //
     //@Override
     //public List<String> findRolesByUserId(String id) {

@@ -21,4 +21,10 @@ public interface FrontLeaderNameDao {
     public abstract FrontLeaderName findById(Long leaderId);
 
     public abstract List<Map<String,Object>> findAll(String isDelete);
+
+    public abstract void save(FrontLeaderName frontLeaderName);
+
+    public abstract void update(FrontLeaderName frontLeaderName);
+
+    public abstract void delete(Long id);
 }

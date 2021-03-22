@@ -3,6 +3,7 @@ package com.he.web.controller.system;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.github.pagehelper.PageInfo;
 import com.he.common.utils.Encrypt;
+import com.he.common.utils.MailUtil;
 import com.he.domain.system.Dept;
 import com.he.domain.system.FrontLeaderName;
 import com.he.domain.system.Role;
@@ -49,8 +50,8 @@ public class FrontLeaderNameController extends BaseController {
 
     @RequestMapping("/toAdd")
     public String toAdd() {
-        List<Dept> deptList = deptService.findAll(getLoginCompanyId());
-        request.setAttribute("deptList",deptList);
+        //List<Dept> deptList = deptService.findAll(getLoginCompanyId());
+        //request.setAttribute("deptList",deptList);
         return "system/frontLeaderName/frontLeaderName-add";
     }
 
@@ -64,12 +65,12 @@ public class FrontLeaderNameController extends BaseController {
         //request.setAttribute("deptList",deptList);
         return "system/frontLeaderName/frontLeaderName-update";
     }
-//
-//    @RequestMapping("/delete")
-//    public String delete(String id) {
-//        frontLeaderNameService.delete(id);
-//        return "redirect:/system/frontLeaderName/list.do";
-//    }
+
+    @RequestMapping("/delete")
+    public String delete(Long id) {
+        frontLeaderNameService.delete(id);
+        return "redirect:/system/frontLeaderName/list.do";
+    }
 //
 //    @RequestMapping("/roleList")
 //    public String roleList(String id) {
@@ -92,38 +93,35 @@ public class FrontLeaderNameController extends BaseController {
 //        return "redirect:/system/frontLeaderName/list.do";
 //    }
 //
-//    @RequestMapping(value = "/edit",name = "保存或者更新用户")
-//    public String edit(FrontLeaderName frontLeaderName) throws Exception {
-//        //1、设置企业参数
-//        frontLeaderName.setCompanyId(getLoginCompanyId());
-//        frontLeaderName.setCompanyName(getLoginCompanyName());
-//        //2、判断是否具有id
-//        if(StringUtils.isEmpty(frontLeaderName.getId())) {
-//            String password = frontLeaderName.getPassword();
-//            frontLeaderName.setPassword(Encrypt.md5(password,frontLeaderName.getEmail()));
-//            //2.1 没有id，保存
-//            frontLeaderNameService.save(frontLeaderName);
-//
-////            //发送邮件
-//            String to = frontLeaderName.getEmail();
-//            String subject = "欢迎使用Saas-Export系统";
-//            String content = "尊敬的用户您好,欢迎使用Saas-Export系统。您的访问地址是 http://127.0.0.1:8088 , 登录用户名："+
-//                    frontLeaderName.getEmail()+", 登录密码" + password;
-//           // MailUtil.sendMsg(to,subject,content);
-//
-//            Map<String,String> map = new HashMap<>();
-//            map.put("to", to);
-//            map.put("subject", subject);
-//            map.put("content", content);
-//
-//            messageProducer.send("frontLeaderName.insert", map);
-//
-//        }else {
-//            //2.2 有id，更新
-//            frontLeaderNameService.update(frontLeaderName);
-//        }
-//        //3、重定向到列表
-//        return "redirect:/system/frontLeaderName/list.do";
-//    }
+    @RequestMapping(value = "/edit",name = "保存或者更新用户")
+    public String edit(FrontLeaderName frontLeaderName) throws Exception {
+        //判断是否具有id
+        if(StringUtils.isEmpty(frontLeaderName.getId())) {
+            String password = frontLeaderName.getPassword();
+            frontLeaderName.setPassword(Encrypt.md5(password,frontLeaderName.getEmail()));
+            //2.1 没有id，保存
+            frontLeaderNameService.save(frontLeaderName);
+
+//            //发送邮件
+            String to = frontLeaderName.getEmail();
+            String subject = "欢迎使用Saas-Message系统";
+            String content = "尊敬的用户您好,欢迎使用Saas-Message系统。您的访问地址是 http://127.0.0.1:8088 , 登录用户名："+
+                    frontLeaderName.getEmail()+", 登录密码" + password;
+            MailUtil.sendMsg(to,subject,content);
+
+            Map<String,String> map = new HashMap<>();
+            map.put("to", to);
+            map.put("subject", subject);
+            map.put("content", content);
+
+            messageProducer.send("frontLeaderName.insert", map);
+
+        }else {
+            //2.2 有id，更新
+            frontLeaderNameService.update(frontLeaderName);
+        }
+        //3、重定向到列表
+        return "redirect:/system/frontLeaderName/list.do";
+    }
 
 }

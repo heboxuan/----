@@ -24,8 +24,25 @@
     </select>
 
     <select id="findById" resultType="com.he.domain.system.FrontLeaderName">
-        select id id,city_id cityId,leader_name leaderName,is_mayor isMayor
-        from front_leader_name where id=#{leaderId}
+        SELECT
+            leader.id id,
+            leader.city_id cityId,
+            leader.leader_name leaderName,
+            city.`name` cityName,
+        CASE
+                leader.is_mayor
+                WHEN 'false' THEN
+                '书记' ELSE '区长'
+            END AS isMayor,
+            leader.email,
+            leader.password,
+            leader.gender,
+            leader.telephone,
+            leader.is_delete isDelete
+        FROM
+            front_leader_name leader
+            LEFT JOIN front_city city ON leader.city_id = city.id
+        where leader.id=#{leaderId} and leader.is_delete='false'
     </select>
 
     <select id="findAll" resultType="map">
@@ -49,4 +66,22 @@
             LEFT JOIN front_city city ON leader.city_id = city.id
         where leader.is_delete=#{isDelete}
     </select>
+
+    <insert id="save">
+        insert into front_leader_name(city_id,leader_name,is_mayor,email,password,gender,telephone,is_delete)
+        values(#{cityId},#{leaderName},#{isMayor},#{email},#{password},#{gender},#{telephone},"false")
+    </insert>
+
+    <update id="update">
+        update  front_leader_name
+        <set>
+
+        </set>
+    </update>
+
+    <update id="delete">
+        update front_leader_name
+        set is_delete='true'
+        where id=#{id}
+    </update>
 </mapper>
