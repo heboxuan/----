@@ -5,7 +5,7 @@
         <span class="logo-mini"><img src="${ctx}/img/logo.png"></span>
         <span class="logo-lg">
                     <img src="${ctx}/img/export.png">
-                    <i> SaaS外贸进出口平台</i>
+                    <i> SaaS政务信息咨询管理平台</i>
                 </span>
     </a>
 

@@ -1,4 +1,4 @@
-package com.he.domain.front;
+package com.he.domain.system;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,4 +18,9 @@ public class FrontLeaderName implements Serializable {
     private Long cityId;
     private String leaderName;
     private String isMayor;
+    private String email;
+    private String password;
+    private String gender;
+    private String telephone;
+    private String isDelete;
 }

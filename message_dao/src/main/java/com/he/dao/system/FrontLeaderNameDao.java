@@ -1,6 +1,6 @@
-package com.he.dao.front;
+package com.he.dao.system;
 
-import com.he.domain.front.FrontLeaderName;
+import com.he.domain.system.FrontLeaderName;
 
 import java.util.List;
 import java.util.Map;
@@ -19,4 +19,6 @@ public interface FrontLeaderNameDao {
     public abstract Map<String, Object> totalMessageSeven(Long id);
 
     public abstract FrontLeaderName findById(Long leaderId);
+
+    public abstract List<Map<String,Object>> findAll(String isDelete);
 }

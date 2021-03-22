@@ -1,11 +1,11 @@
 package com.he.service.front.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.he.dao.front.FrontCityDao;
-import com.he.dao.front.FrontLeaderNameDao;
+import com.he.dao.county.FrontCityDao;
+import com.he.dao.system.FrontLeaderNameDao;
 import com.he.dao.front.FrontLeftMessageDao;
 import com.he.dao.front.FrontUserMessageDao;
-import com.he.domain.front.FrontLeaderName;
+import com.he.domain.system.FrontLeaderName;
 import com.he.domain.front.FrontLeftMessage;
 import com.he.domain.front.FrontUserMessage;
 import com.he.service.front.FrontCityService;

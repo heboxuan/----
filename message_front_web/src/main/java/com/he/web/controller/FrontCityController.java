@@ -1,7 +1,7 @@
 package com.he.web.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.he.domain.front.FrontLeaderName;
+import com.he.domain.system.FrontLeaderName;
 import com.he.domain.front.FrontLeftMessage;
 import com.he.domain.front.FrontUserMessage;
 import com.he.service.front.FrontCityService;
