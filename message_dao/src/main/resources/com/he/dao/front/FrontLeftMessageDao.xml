@@ -70,13 +70,15 @@
             user.username,
             leftMessage.field field,
             leftMessage.title title,
-            LEFT ( leftMessage.passage, 60 ) passage
+            LEFT ( leftMessage.passage, 55 ) passage
         FROM
             `front_left_message` leftMessage
             LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
         WHERE
             leftMessage.type_id=#{typeId} and leftMessage.is_process='false'
 	        and leftMessage.leader_id=#{leaderId}
+	    order by
+	        leftMessage.time desc
     </select>
 
     <select id="findLeftMessageById" resultType="map">
@@ -100,18 +102,29 @@
             user.username,
             leftMessage.field field,
             leftMessage.title title,
-            LEFT ( leftMessage.passage, 60 ) passage
+            LEFT ( leftMessage.passage, 55 ) passage
         FROM
             `front_left_message` leftMessage
             LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
         WHERE
             leftMessage.type_id=#{typeId} and leftMessage.is_process='true'
 	        and leftMessage.leader_id=#{leaderId}
+	    order by
+	        leftMessage.time desc
     </select>
 
     <update id="updateResponsePassageById">
         update  front_left_message
-        set response_passage=#{responsePassage}
+        <set>
+            <if test="responsePassage!=null and responsePassage!='' ">
+                is_process='true',
+            </if>
+            <if test="responsePassage ==null or responsePassage=='' ">
+                is_process='false',
+            </if>
+            response_passage=#{responsePassage}
+        </set>
+
         where id=#{id}
     </update>
 </mapper>

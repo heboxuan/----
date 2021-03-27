@@ -21,7 +21,7 @@ public interface FrontLeftMessageDao {
 
     public abstract Map<String, Object> findLeftMessageById(Long id);
 
-    public abstract List<Map<String, Object>> findAlAll(Long leaderId, String typeId);
+    public abstract List<Map<String, Object>> findAlAll(@Param("leaderId")Long leaderId, @Param("typeId")String typeId);
 
     public abstract void updateResponsePassageById(@Param("id") Long id, @Param("responsePassage") String responsePassage);
 

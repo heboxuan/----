@@ -45,7 +45,7 @@ public class ConsultController extends BaseController {
 
     @RequestMapping("/toUpdate")
     public String toUpdate(Long id) {
-        //1.根据id查询
+
         Map<String,Object> leftMessageDetail = consultService.findLeftMessageById(id);
         request.setAttribute("leftMessageDetail",leftMessageDetail);
         return "cargo/consult/consult-update";
@@ -55,10 +55,15 @@ public class ConsultController extends BaseController {
     @RequestMapping("/edit")
     public String edit(Long id,String responsePassage) {
 
-        if (StringUtils.isEmpty(responsePassage)) {
+        if (!StringUtils.isEmpty(responsePassage)) {
             consultService.edit(id,responsePassage);
         }
-        //5.重定向到列表
+
+        if (StringUtils.isEmpty(responsePassage)) {
+            consultService.edit(id,null);
+        }
+
+
         return  "redirect:/cargo/consult/unlist.do?typeId=1";
     }
 }

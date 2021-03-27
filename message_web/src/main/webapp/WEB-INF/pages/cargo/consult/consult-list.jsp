@@ -18,47 +18,6 @@
     <!-- 页面meta /-->
     <script src="${ctx}/plugins/jQuery/jquery-2.2.3.min.js"></script>
 </head>
-<script>
-    function deleteById() {
-        var id = getCheckId()
-        if(id) {
-            if(confirm("你确认要删除此条记录吗？")) {
-                location.href="${ctx}/cargo/contract/delete.do?id="+id;
-            }
-        }else{
-            alert("请勾选待处理的记录，且每次只能勾选一个")
-        }
-    }
-
-    function submit() {
-        var id = getCheckId()
-        if(id) {
-            location.href="${ctx}/cargo/contract/submit.do?id="+id;
-        }else{
-            alert("请勾选待处理的记录，且每次只能勾选一个")
-        }
-    }
-
-    function cancel() {
-        var id = getCheckId()
-        if(id) {
-            location.href="${ctx}/cargo/contract/cancel.do?id="+id;
-        }else{
-            alert("请勾选待处理的记录，且每次只能勾选一个")
-        }
-    }
-
-    function view() {
-        var id = getCheckId()
-        if(id) {
-            location.href="${ctx}/cargo/contract/toView.do?id="+id;
-        }else{
-            alert("请勾选待处理的记录，且每次只能勾选一个")
-        }
-    }
-
-
-</script>
 <body>
 <div id="frameContent" class="content-wrapper" style="margin-left:0px;">
 <section class="content-header">
