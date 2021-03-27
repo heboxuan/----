@@ -5,6 +5,7 @@ import com.he.domain.system.User;
 import com.he.service.system.SysLogService;
 import com.alibaba.dubbo.config.annotation.Reference;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -29,8 +30,8 @@ public class LogAspect {
     @Autowired
     private HttpSession session;
 
-    @Around(value = "execution(* com.he.web.controller.*.*.*(..))")
-    public Object around(ProceedingJoinPoint pjp) throws Throwable {
+    @AfterReturning(value = "execution(* com.he.web.controller.LoginController.login(..))")
+    public Object afterReturning() throws Throwable {
         SysLog log=new SysLog();
         log.setIp(request.getRemoteAddr());
         log.setTime(new Date());
@@ -38,19 +39,10 @@ public class LogAspect {
         if (obj!=null) {
             User user=(User)obj;
             log.setUserName(user.getUserName());
-            log.setCompanyName(user.getCompanyName());
-            log.setCompanyId(user.getCompanyId());
         }
-        MethodSignature ms =(MethodSignature)pjp.getSignature();
-        Method method = ms.getMethod();
-        log.setMethod(method.getName());
-        if (method.isAnnotationPresent(RequestMapping.class)) {
-            RequestMapping annotation = method.getAnnotation(RequestMapping.class);
-            String name = annotation.name();
-            log.setAction(name);
-        }
+
         sysLogService.save(log);
-        return pjp.proceed();
+        return null;
     }
 
 }

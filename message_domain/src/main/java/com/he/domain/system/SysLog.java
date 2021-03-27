@@ -10,10 +10,6 @@ public class SysLog implements Serializable {
     private String userName;
     private String ip;
     private Date time;
-	private String method;
-	private String action;
-    private String companyId;
-    private String companyName;
 
 	public String getId() {
 		return id;
@@ -47,35 +43,4 @@ public class SysLog implements Serializable {
 		this.time = time;
 	}
 
-	public String getMethod() {
-		return method;
-	}
-
-	public void setMethod(String method) {
-		this.method = method;
-	}
-
-	public String getAction() {
-		return action;
-	}
-
-	public void setAction(String action) {
-		this.action = action;
-	}
-
-	public String getCompanyId() {
-		return companyId;
-	}
-
-	public void setCompanyId(String companyId) {
-		this.companyId = companyId;
-	}
-
-	public String getCompanyName() {
-		return companyName;
-	}
-
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
-	}
 }

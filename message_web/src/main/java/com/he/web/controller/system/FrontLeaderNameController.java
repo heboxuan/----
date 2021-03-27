@@ -95,10 +95,10 @@ public class FrontLeaderNameController extends BaseController {
 
     @RequestMapping(value = "/edit",name = "保存或者更新用户")
     public String edit(FrontLeaderName frontLeaderName) throws Exception {
+        String password = frontLeaderName.getPassword();
+        frontLeaderName.setPassword(Encrypt.md5(password,frontLeaderName.getEmail()));
         //判断是否具有id
         if(StringUtils.isEmpty(frontLeaderName.getId())) {
-            String password = frontLeaderName.getPassword();
-            frontLeaderName.setPassword(Encrypt.md5(password,frontLeaderName.getEmail()));
             //2.1 没有id，保存
             frontLeaderNameService.save(frontLeaderName);
 

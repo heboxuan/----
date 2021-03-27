@@ -7,10 +7,6 @@
         <result column="user_name" property="userName" />
         <result column="ip" property="ip" />
         <result column="time" property="time" />
-        <result column="method" property="method" />
-        <result column="action" property="action" />
-        <result column="company_id" property="companyId" />
-        <result column="company_name" property="companyName" />
     </resultMap>
 
     <!--查询全部-->
@@ -20,9 +16,9 @@
 
     <!--添加-->
     <insert id="save" parameterType="com.he.domain.system.SysLog">
-        insert into st_sys_log (id, user_name, ip, time, method, action,company_id,company_name
+        insert into st_sys_log (id, user_name, ip, time
           )
-        values (#{id}, #{userName}, #{ip}, #{time}, #{method},#{action},#{companyId},#{companyName}
+        values (#{id}, #{userName}, #{ip}, #{time}
           )
     </insert>
 </mapper>

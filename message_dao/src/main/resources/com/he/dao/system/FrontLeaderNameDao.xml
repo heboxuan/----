@@ -10,7 +10,7 @@
 
     <select id="totalMessageFive" resultType="map">
         select id,leader_name leaderName from front_leader_name
-        where city_id=1 and is_mayor="true"
+        where city_id=1 and is_mayor="truetrue"
     </select>
 
     <select id="totalMessageSix" resultType="map" parameterType="Long">
@@ -73,7 +73,7 @@
                 WHEN 'truetrue' THEN '市长' ELSE '区长'
             END AS isMayor,
             leader.email,
-            leader.PASSWORD,
+            leader.password,
             leader.gender,
             leader.telephone,
             leader.is_delete isDelete
