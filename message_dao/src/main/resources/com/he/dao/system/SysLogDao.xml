@@ -10,8 +10,13 @@
     </resultMap>
 
     <!--查询全部-->
-    <select id="findAll" parameterType="string" resultMap="BaseResultMap">
-        select * from st_sys_log
+    <select id="findAll" parameterType="string" resultType="map">
+        select
+        id,
+        user_name userName,
+        ip,
+         DATE_FORMAT( time, '%Y-%m-%d %H:%i:%S' ) time
+         from st_sys_log
     </select>
 
     <!--添加-->

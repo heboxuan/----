@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 @Service
@@ -21,7 +22,7 @@ public class SysLogServiceImpl implements SysLogService {
     @Override
     public PageInfo findAll(int page,int size) {
         PageHelper.startPage(page,size);
-        List<SysLog> list = sysLogDao.findAll();
+        List<Map<String,Object>> list = sysLogDao.findAll();
         return new PageInfo(list);
     }
 

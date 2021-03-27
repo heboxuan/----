@@ -26,4 +26,5 @@ public class FrontLeftMessage implements Serializable {
     private String extraPassage;
     private String isProcess;
     private Date time;
+    private String responsePassage;
 }

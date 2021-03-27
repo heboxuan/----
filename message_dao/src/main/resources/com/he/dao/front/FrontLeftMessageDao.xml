@@ -62,4 +62,56 @@
         FROM
             front_left_message where id=#{id}
     </select>
+
+
+    <select id="findUnAll" resultType="map">
+        SELECT
+            leftMessage.id id,
+            user.username,
+            leftMessage.field field,
+            leftMessage.title title,
+            LEFT ( leftMessage.passage, 60 ) passage
+        FROM
+            `front_left_message` leftMessage
+            LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
+        WHERE
+            leftMessage.type_id=#{typeId} and leftMessage.is_process='false'
+	        and leftMessage.leader_id=#{leaderId}
+    </select>
+
+    <select id="findLeftMessageById" resultType="map">
+        SELECT
+            leftMessage.id id,
+            user.username,
+            leftMessage.field field,
+            leftMessage.title title,
+            leftMessage.passage passage,
+            leftMessage.response_passage responsePassage
+        FROM
+            `front_left_message` leftMessage
+            LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
+        WHERE
+	        leftMessage.id=#{id}
+    </select>
+
+    <select id="findAlAll" resultType="map">
+        SELECT
+            leftMessage.id id,
+            user.username,
+            leftMessage.field field,
+            leftMessage.title title,
+            LEFT ( leftMessage.passage, 60 ) passage
+        FROM
+            `front_left_message` leftMessage
+            LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
+        WHERE
+            leftMessage.type_id=#{typeId} and leftMessage.is_process='true'
+	        and leftMessage.leader_id=#{leaderId}
+    </select>
+
+    <update id="updateResponsePassageById">
+        update  front_left_message
+        set response_passage=#{responsePassage}
+        where id=#{id}
+    </update>
 </mapper>
