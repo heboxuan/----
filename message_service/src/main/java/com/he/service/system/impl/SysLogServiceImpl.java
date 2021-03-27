@@ -19,9 +19,9 @@ public class SysLogServiceImpl implements SysLogService {
     private SysLogDao sysLogDao;
 
     @Override
-    public PageInfo findAll(String loginCompanyId,int page,int size) {
+    public PageInfo findAll(int page,int size) {
         PageHelper.startPage(page,size);
-        List<SysLog> list = sysLogDao.findAll(loginCompanyId);
+        List<SysLog> list = sysLogDao.findAll();
         return new PageInfo(list);
     }
 

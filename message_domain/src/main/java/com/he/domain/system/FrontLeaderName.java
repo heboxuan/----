@@ -16,7 +16,6 @@ import java.io.Serializable;
 public class FrontLeaderName implements Serializable {
     private Long id;
     private Long cityId;
-    private String cityName;
     private String leaderName;
     private String isMayor;
     private String email;

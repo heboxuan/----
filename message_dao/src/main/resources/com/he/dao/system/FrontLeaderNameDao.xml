@@ -31,8 +31,8 @@
             city.`name` cityName,
         CASE
                 leader.is_mayor
-                WHEN 'false' THEN
-                '书记' ELSE '区长'
+                WHEN 'false' THEN '书记'
+                WHEN 'truetrue' THEN '市长' ELSE '区长'
             END AS isMayor,
             leader.email,
             leader.password,
@@ -45,6 +45,22 @@
         where leader.id=#{leaderId} and leader.is_delete='false'
     </select>
 
+    <select id="findByLeaderId" resultType="map">
+        SELECT
+            leader.id id,
+            leader.city_id cityId,
+            leader.leader_name leaderName,
+            leader.is_mayor isMayor,
+            leader.email,
+            leader.password,
+            leader.gender,
+            leader.telephone,
+            leader.is_delete isDelete
+        FROM
+            front_leader_name leader
+        where leader.id=#{leaderId} and leader.is_delete='false'
+    </select>
+
     <select id="findAll" resultType="map">
         SELECT
             leader.id id,
@@ -53,8 +69,8 @@
             city.`name`,
         CASE
                 leader.is_mayor
-                WHEN 'false' THEN
-                '书记' ELSE '区长'
+                WHEN 'false' THEN '书记'
+                WHEN 'truetrue' THEN '市长' ELSE '区长'
             END AS isMayor,
             leader.email,
             leader.PASSWORD,
@@ -75,8 +91,30 @@
     <update id="update">
         update  front_leader_name
         <set>
+            <if test="cityId!=null">
+                city_id=#{cityId},
+            </if>
+            <if test="leaderName!=null and leaderName!=''">
+                leader_name=#{leaderName},
+            </if>
+            <if test="isMayor!=null and isMayor!=''">
+                is_mayor=#{isMayor},
+            </if>
+            <if test="email!=null and email!=''">
+                email=#{email},
+            </if>
+            <if test="password!=null and password!=''">
+                password=#{password},
+            </if>
+            <if test="gender!=null and gender!=''">
+                gender=#{gender},
+            </if>
+            <if test="telephone!=null and telephone!=''">
+                telephone=#{telephone}
+            </if>
 
         </set>
+        where id=#{id}
     </update>
 
     <update id="delete">

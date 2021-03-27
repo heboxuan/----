@@ -38,18 +38,33 @@
         <!--订单信息-->
         <div class="panel panel-default">
             <div class="panel-heading">用户信息</div>
-            <form id="editForm" action="${ctx}/system/user/edit.do" method="post">
-                <input type="hidden" id="id" name="id" value="${user.id}">
-<%--                <input type="hidden" id="deptName" name="deptName" value="${user.deptName}">--%>
+            <form id="editForm" action="${ctx}/system/frontLeaderName/edit.do" method="post">
+                <input type="hidden" id="id" name="id" value="${frontLeaderName.id}">
                 <div class="row data-type" style="margin: 0px">
                     <div class="col-md-1 title">用户名称</div>
                     <div class="col-md-5 data">
                         <input type="text" class="form-control" placeholder="用户名称" name="leaderName" value="${frontLeaderName.leaderName}">
                     </div>
 
+                    <div class="col-md-1 title">区域</div>
+                    <div class="col-md-5 data">
+                        <select class="form-control"  name="cityId">
+                            <option value="">请选择</option>
+                            <c:forEach items="${countyList}" var="item">
+                                <option ${frontLeaderName.cityId == item.id ?'selected':''} value="${item.id}">${item.name}</option>
+                            </c:forEach>
+                        </select>
+
+                    </div>
+
                     <div class="col-md-1 title">职位</div>
                     <div class="col-md-5 data">
-                        <input type="text" class="form-control" placeholder="职位" name="email" value="${frontLeaderName.cityName }${frontLeaderName.isMayor}">
+                        <select class="form-control" name="isMayor">
+                            <option value="">请选择</option>
+                            <c:forEach items="${jobList}" var="item">
+                                <option ${frontLeaderName.isMayor == item.key ?'selected':''} value="${item.key}">${item.value}</option>
+                            </c:forEach>
+                        </select>
                     </div>
 
                     <div class="col-md-1 title">邮箱</div>

@@ -20,6 +20,8 @@ public interface FrontLeaderNameDao {
 
     public abstract FrontLeaderName findById(Long leaderId);
 
+    public abstract Map<String,Object> findByLeaderId(Long leaderId);
+
     public abstract List<Map<String,Object>> findAll(String isDelete);
 
     public abstract void save(FrontLeaderName frontLeaderName);

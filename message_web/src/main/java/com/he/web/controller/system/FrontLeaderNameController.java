@@ -7,6 +7,7 @@ import com.he.common.utils.MailUtil;
 import com.he.domain.system.Dept;
 import com.he.domain.system.FrontLeaderName;
 import com.he.domain.system.Role;
+import com.he.service.county.CountyService;
 import com.he.service.system.DeptService;
 import com.he.service.system.FrontLeaderNameService;
 import com.he.service.system.RoleService;
@@ -18,6 +19,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,9 +32,7 @@ public class FrontLeaderNameController extends BaseController {
     private FrontLeaderNameService frontLeaderNameService;
 
     @Reference
-    private DeptService deptService;
-    @Reference
-    private RoleService roleService;
+    private CountyService countyService;
 
     @Autowired
     private MessageProducer messageProducer;
@@ -50,19 +50,40 @@ public class FrontLeaderNameController extends BaseController {
 
     @RequestMapping("/toAdd")
     public String toAdd() {
-        //List<Dept> deptList = deptService.findAll(getLoginCompanyId());
-        //request.setAttribute("deptList",deptList);
+
+        //各个区域集合
+        PageInfo list = countyService.findAll(1, 100);
+        List countyList = list.getList();
+
+        //职位集合
+        Map<String,String> jobList=new HashMap<>();
+        jobList.put("false","书记");
+        jobList.put("true","区长");
+        jobList.put("truetrue","市长");
+
+        request.setAttribute("countyList",countyList);
+        request.setAttribute("jobList",jobList);
         return "system/frontLeaderName/frontLeaderName-add";
     }
 
-
-
     @RequestMapping("/toUpdate")
     public String toUpdate(Long id) {
-        FrontLeaderName frontLeaderName=frontLeaderNameService.findById(id);
+        //领导个人信息
+        Map<String,Object> frontLeaderName=frontLeaderNameService.findByLeaderId(id);
+
+        //各个区域集合
+        PageInfo list = countyService.findAll(1, 100);
+        List countyList = list.getList();
+
+        //职位集合
+        Map<String,String> jobList=new HashMap<>();
+        jobList.put("false","书记");
+        jobList.put("true","区长");
+        jobList.put("truetrue","市长");
+
+        request.setAttribute("countyList",countyList);
+        request.setAttribute("jobList",jobList);
         request.setAttribute("frontLeaderName",frontLeaderName);
-        //List<Dept> deptList = deptService.findAll(getLoginCompanyId());
-        //request.setAttribute("deptList",deptList);
         return "system/frontLeaderName/frontLeaderName-update";
     }
 
@@ -71,28 +92,7 @@ public class FrontLeaderNameController extends BaseController {
         frontLeaderNameService.delete(id);
         return "redirect:/system/frontLeaderName/list.do";
     }
-//
-//    @RequestMapping("/roleList")
-//    public String roleList(String id) {
-//        FrontLeaderName frontLeaderName = frontLeaderNameService.findById(id);
-//        request.setAttribute("frontLeaderName",frontLeaderName);
-//        List<Role> roleList=roleService.findAll(getLoginCompanyId());
-//        request.setAttribute("roleList",roleList);
-//        List<String> roles=frontLeaderNameService.findRolesByfrontLeaderNameId(id);
-//        String frontLeaderNameRoleStr="";
-//        for (String roleId : roles) {
-//            frontLeaderNameRoleStr+=roleId+" ";
-//        }
-//        request.setAttribute("frontLeaderNameRoleStr",frontLeaderNameRoleStr);
-//        return "system/frontLeaderName/frontLeaderName-role";
-//    }
-//
-//    @RequestMapping("/changeRole")
-//    public String changeRole(String frontLeaderNameid, String[] roleIds) {
-//        frontLeaderNameService.changeRole(frontLeaderNameid,roleIds);
-//        return "redirect:/system/frontLeaderName/list.do";
-//    }
-//
+
     @RequestMapping(value = "/edit",name = "保存或者更新用户")
     public String edit(FrontLeaderName frontLeaderName) throws Exception {
         //判断是否具有id
@@ -103,18 +103,18 @@ public class FrontLeaderNameController extends BaseController {
             frontLeaderNameService.save(frontLeaderName);
 
 //            //发送邮件
-            String to = frontLeaderName.getEmail();
-            String subject = "欢迎使用Saas-Message系统";
-            String content = "尊敬的用户您好,欢迎使用Saas-Message系统。您的访问地址是 http://127.0.0.1:8088 , 登录用户名："+
-                    frontLeaderName.getEmail()+", 登录密码" + password;
-            MailUtil.sendMsg(to,subject,content);
-
-            Map<String,String> map = new HashMap<>();
-            map.put("to", to);
-            map.put("subject", subject);
-            map.put("content", content);
-
-            messageProducer.send("frontLeaderName.insert", map);
+//            String to = frontLeaderName.getEmail();
+//            String subject = "欢迎使用Saas-Message系统";
+//            String content = "尊敬的用户您好,欢迎使用Saas-Message系统。您的访问地址是 http://127.0.0.1:8088 , 登录用户名："+
+//                    frontLeaderName.getEmail()+", 登录密码" + password;
+//            MailUtil.sendMsg(to,subject,content);
+//
+//            Map<String,String> map = new HashMap<>();
+//            map.put("to", to);
+//            map.put("subject", subject);
+//            map.put("content", content);
+//
+//            messageProducer.send("frontLeaderName.insert", map);
 
         }else {
             //2.2 有id，更新

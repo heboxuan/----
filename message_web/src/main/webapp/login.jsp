@@ -26,7 +26,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="all-admin-index.html">SaaS政务信息咨询管理平台</a>
+        <a href="all-admin-index.html">政务信息咨询管理平台</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">

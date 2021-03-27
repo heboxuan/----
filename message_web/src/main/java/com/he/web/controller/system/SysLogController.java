@@ -18,7 +18,7 @@ public class SysLogController extends BaseController {
     public String list(
             @RequestParam(defaultValue = "1") int page,
             @RequestParam(defaultValue = "10") int size) {
-        PageInfo info=sysLogService.findAll(getLoginCompanyId(),page,size);
+        PageInfo info=sysLogService.findAll(page,size);
         request.setAttribute("page",info);
         return "system/log/log-list";
     }

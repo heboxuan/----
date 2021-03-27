@@ -47,6 +47,11 @@ public class FrontLeaderNameServiceImpl implements FrontLeaderNameService {
     }
 
     @Override
+    public Map<String, Object> findByLeaderId(Long id) {
+        return frontLeaderNameDao.findByLeaderId(id);
+    }
+
+    @Override
     public void delete(Long id) {
         frontLeaderNameDao.delete(id);
     }

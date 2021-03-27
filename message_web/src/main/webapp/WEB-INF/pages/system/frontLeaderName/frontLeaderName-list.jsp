@@ -88,7 +88,7 @@
                     <tr>
                         <td><input name="ids" value="${item.id}" type="checkbox" ></td>
                         <td>${status.index+1}</td>
-                        <td><a href="${ctx}/system/frontLeaderName/toUpdate.do?id=${o.id}">${item.leaderName}</a></td>
+                        <td><a href="${ctx}/system/frontLeaderName/toUpdate.do?id=${item.id}">${item.leaderName}</a></td>
                         <td>${item.name }${item.isMayor}</td>
                         <td>${item.email }</td>
                         <td>${item.password }</td>
