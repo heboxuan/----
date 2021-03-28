@@ -16,9 +16,6 @@ public interface UserService {
 
     public abstract void delete(String id);
 
-    public abstract List<String> findRolesByUserId(String id);
-
-    public abstract void changeRole(String userid, String[] roleIds);
 
     public abstract User findByEmail(String email);
 }

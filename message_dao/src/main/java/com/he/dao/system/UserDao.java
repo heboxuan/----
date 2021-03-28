@@ -23,11 +23,6 @@ public interface UserDao {
 	//更新
 	int update(User user);
 
-	public abstract List<String> findRolesByUserId(String id);
-
-	public abstract void deleteUserRole(String userid);
-
-	public abstract void saveUserRole(@Param("userId") String userid, @Param("roleId") String roleId);
 
 	public abstract User findByEmail(String email);
 }

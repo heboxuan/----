@@ -7,13 +7,6 @@ public class User implements Serializable {
      */ 
     private String id;
 
-    /** 
-     */ 
-    private String deptId;
-	
-	/** 
-     */ 
-    private String deptName;
 
     /** 
      */ 
@@ -37,27 +30,7 @@ public class User implements Serializable {
 
     /** 
      */ 
-    private String managerId;
-
-    /** 
-     */ 
-    private String joinDate;
-
-    /** 
-     */ 
-    private Double salary;
-
-    /** 
-     */ 
-    private String birthday;
-
-    /** 
-     */ 
     private String gender;
-
-    /** 
-     */ 
-    private String station;
 
     /** 
      */ 
@@ -77,12 +50,6 @@ public class User implements Serializable {
      */ 
     private String remark;
 
-    /** 
-     */ 
-    private Integer orderNo;
-
-    private String companyId;
-    private String companyName;
 
     public String getId() {
         return id;
@@ -92,13 +59,6 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public String getDeptId() {
-        return deptId;
-    }
-
-    public void setDeptId(String deptId) {
-        this.deptId = deptId;
-    }
 
     public String getEmail() {
         return email;
@@ -132,29 +92,6 @@ public class User implements Serializable {
         this.state = state;
     }
 
-    public String getDeptName() {
-        return deptName;
-    }
-
-    public void setDeptName(String deptName) {
-        this.deptName = deptName;
-    }
-
-    public String getManagerId() {
-        return managerId;
-    }
-
-    public void setManagerId(String managerId) {
-        this.managerId = managerId;
-    }
-    public Double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(Double salary) {
-        this.salary = salary;
-    }
-
 
     public String getGender() {
         return gender;
@@ -162,14 +99,6 @@ public class User implements Serializable {
 
     public void setGender(String gender) {
         this.gender = gender;
-    }
-
-    public String getStation() {
-        return station;
-    }
-
-    public void setStation(String station) {
-        this.station = station;
     }
 
     public String getTelephone() {
@@ -196,43 +125,4 @@ public class User implements Serializable {
         this.remark = remark;
     }
 
-    public Integer getOrderNo() {
-        return orderNo;
-    }
-
-    public void setOrderNo(Integer orderNo) {
-        this.orderNo = orderNo;
-    }
-
-    public String getJoinDate() {
-        return joinDate;
-    }
-
-    public void setJoinDate(String joinDate) {
-        this.joinDate = joinDate;
-    }
-
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
-    }
-
-	public String getCompanyId() {
-		return companyId;
-	}
-
-	public void setCompanyId(String companyId) {
-		this.companyId = companyId;
-	}
-
-	public String getCompanyName() {
-		return companyName;
-	}
-
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
-	}
 }
