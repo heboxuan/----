@@ -10,8 +10,15 @@
                 <img src="${ctx}/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p> ${sessionScope.loginUser.leaderName}</p>
-                <a href="#">${sessionScope.loginUser.companyName}</a>
+<%--                <p> ${sessionScope.loginUser.userName}</p>--%>
+                <p> ${sessionScope.loginUserName}</p>
+<%--                <a href="#">${sessionScope.loginUser.companyName}</a>--%>
+                <c:if test="${sessionScope.loginUserDegree==1}">
+                    <a href="#">领导</a>
+                </c:if>
+                <c:if test="${sessionScope.loginUserDegree==0}">
+                    <a href="#">企业管理员</a>
+                </c:if>
             </div>
         </div>
 

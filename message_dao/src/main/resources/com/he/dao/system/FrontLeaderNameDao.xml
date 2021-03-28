@@ -123,5 +123,27 @@
         where id=#{id}
     </update>
 
+    <select id="findMaxId" resultType="com.he.domain.system.FrontLeaderName">
+        SELECT
+            id id,
+          city_id cityId,
+          leader_name leaderName,
+          is_mayor isMayor,
+            email email,
+            `password` password,
+            gender gender,
+            telephone telephone,
+            is_delete isDelete
+        FROM
+            `front_leader_name`
+        WHERE
+            id =(
+            SELECT
+                max( id )
+        FROM
+            `front_leader_name`)
+    </select>
+
+
 
 </mapper>

@@ -1,6 +1,7 @@
 package com.he.domain.system;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class User implements Serializable {
     /** 
@@ -28,14 +29,6 @@ public class User implements Serializable {
     private Integer state;
 
 
-    /** 
-     */ 
-    private String gender;
-
-    /** 
-     */ 
-    private String telephone;
-
     /**
      * 0作为内部控制，租户企业不能使用
      *      0-saas管理员
@@ -46,9 +39,7 @@ public class User implements Serializable {
      */ 
     private Integer degree;
 
-    /** 
-     */ 
-    private String remark;
+
 
 
     public String getId() {
@@ -92,23 +83,6 @@ public class User implements Serializable {
         this.state = state;
     }
 
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
-
     public Integer getDegree() {
         return degree;
     }
@@ -117,12 +91,5 @@ public class User implements Serializable {
         this.degree = degree;
     }
 
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
 
 }

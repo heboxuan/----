@@ -30,4 +30,6 @@ public interface FrontLeaderNameDao {
 
     public abstract void delete(Long id);
 
+    public abstract FrontLeaderName findMaxId();
+
 }

@@ -33,11 +33,11 @@
         <p class="login-box-msg">登录系统</p>
         <form action="/login.do" method="post">
             <div class="form-group has-feedback">
-                <input type="email" name="email" value="lw@export.com" class="form-control" placeholder="Email">
+                <input type="email" name="email" class="form-control" placeholder="Email">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" name="password" value="123456" class="form-control" placeholder="密码">
+                <input type="password" name="password" class="form-control" placeholder="密码">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">

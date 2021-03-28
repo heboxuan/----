@@ -7,10 +7,7 @@
         <result column="user_name" property="userName"/>
         <result column="password" property="password"/>
         <result column="state" property="state"/>
-        <result column="gender" property="gender"/>
-        <result column="telephone" property="telephone"/>
         <result column="degree" property="degree"/>
-        <result column="remark" property="remark"/>
     </resultMap>
 
     <!--根据企业id查询全部-->
@@ -30,40 +27,29 @@
 
     <!--保存-->
     <insert id="save" parameterType="com.he.domain.system.User">
-        insert into pe_user (user_id, dept_id, email, user_name, password, state, company_id,
-        company_name, dept_name, manager_id, join_date, salary, birthday,
-        gender, station, telephone, degree, remark, order_no)
-        values (#{id}, #{deptId}, #{email}, #{userName}, #{password}, #{state}, #{companyId},
-        #{companyName}, #{deptName}, #{managerId}, #{joinDate}, #{salary}, #{birthday},
-        #{gender}, #{station}, #{telephone}, #{degree}, #{remark}, #{orderNo})
+        insert into pe_user (user_id, email, user_name, password, state,degree)
+        values (#{id}, #{email}, #{userName}, #{password}, #{state}, #{degree})
     </insert>
 
     <!--更新-->
     <update id="update" parameterType="com.he.domain.system.User">
         update pe_user
-        set dept_id = #{deptId},
-        email = #{email},
-        user_name = #{userName},
-        password = #{password},
-        state = #{state},
-        company_id = #{companyId},
-        company_name = #{companyName},
-        dept_name = #{deptName},
-        manager_id = #{managerId},
-        join_date = #{joinDate},
-        salary = #{salary},
-        birthday = #{birthday},
-        gender = #{gender},
-        station = #{station},
-        telephone = #{telephone},
-        degree = #{degree},
-        remark = #{remark},
-        order_no = #{orderNo}
+        <set>
+            <if test="email!=null and email!=''">
+                email=#{email},
+            </if>
+            <if test="state!=null">
+                state=#{state},
+            </if>
+            <if test="password!=null and password!=''">
+                password = #{password}
+            </if>
+        </set>
         where user_id = #{id}
     </update>
 
 
     <select id="findByEmail" resultMap="BaseResultMap">
-        select * from pe_user where email=#{email}
+        select * from pe_user where email=#{email} and state=1
     </select>
 </mapper>

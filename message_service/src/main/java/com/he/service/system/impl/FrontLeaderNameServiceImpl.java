@@ -56,4 +56,9 @@ public class FrontLeaderNameServiceImpl implements FrontLeaderNameService {
         frontLeaderNameDao.delete(id);
     }
 
+    @Override
+    public FrontLeaderName findMaxId() {
+        return frontLeaderNameDao.findMaxId();
+    }
+
 }

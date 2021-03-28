@@ -38,8 +38,8 @@ public class LogAspect {
         log.setTime(new Date());
         Object obj = session.getAttribute("loginUser");
         if (obj!=null) {
-            FrontLeaderName frontLeaderName=(FrontLeaderName) obj;
-            log.setUserName(frontLeaderName.getLeaderName());
+            User user=(User) obj;
+            log.setUserName(user.getUserName());
         }
 
         sysLogService.save(log);

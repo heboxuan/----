@@ -2,7 +2,6 @@ package com.he.web.controller.cargo;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.github.pagehelper.PageInfo;
-import com.he.domain.system.User;
 import com.he.service.cargo.ConsultService;
 import com.he.web.controller.BaseController;
 import org.springframework.stereotype.Controller;
@@ -13,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/cargo/consult")
-public class ConsultController extends BaseController {
+@RequestMapping("/cargo/advise")
+public class AdviseController extends BaseController {
     @Reference
     private ConsultService consultService;
 
@@ -26,7 +25,7 @@ public class ConsultController extends BaseController {
         String loginUserId = getLoginUser();
         PageInfo info = consultService.findUnAll(Long.valueOf(loginUserId), typeId,page, size);
         request.setAttribute("page",info);
-        return "cargo/consult/consult-list";
+        return "cargo/advise/advise-list";
     }
 
     @RequestMapping("/allist")
@@ -38,7 +37,7 @@ public class ConsultController extends BaseController {
         String loginUserId = getLoginUser();
         PageInfo info = consultService.findAlAll(Long.valueOf(loginUserId), typeId,page, size);
         request.setAttribute("page",info);
-        return "cargo/consult/consult-list";
+        return "cargo/advise/advise-list";
     }
 
     @RequestMapping("/toUpdate")
@@ -46,7 +45,7 @@ public class ConsultController extends BaseController {
 
         Map<String,Object> leftMessageDetail = consultService.findLeftMessageById(id);
         request.setAttribute("leftMessageDetail",leftMessageDetail);
-        return "cargo/consult/consult-update";
+        return "cargo/advise/advise-update";
     }
 
 
@@ -62,6 +61,6 @@ public class ConsultController extends BaseController {
         }
 
 
-        return  "redirect:/cargo/consult/unlist.do?typeId=1";
+        return  "redirect:/advise/advise/unlist.do?typeId=5";
     }
 }

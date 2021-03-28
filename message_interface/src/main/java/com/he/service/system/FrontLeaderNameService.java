@@ -20,4 +20,6 @@ public interface FrontLeaderNameService {
 
     public abstract Map<String, Object> findByLeaderId(Long id);
 
+    public abstract FrontLeaderName findMaxId();
+
 }
