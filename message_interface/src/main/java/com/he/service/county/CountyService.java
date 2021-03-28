@@ -1,7 +1,6 @@
 package com.he.service.county;
 
 import com.github.pagehelper.PageInfo;
-import com.he.domain.company.Company;
 import com.he.domain.county.FrontCity;
 
 public interface CountyService {

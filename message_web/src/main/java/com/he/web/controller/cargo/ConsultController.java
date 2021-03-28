@@ -2,7 +2,6 @@ package com.he.web.controller.cargo;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.github.pagehelper.PageInfo;
-import com.he.domain.cargo.Contract;
 import com.he.domain.system.User;
 import com.he.service.cargo.ConsultService;
 import com.he.web.controller.BaseController;

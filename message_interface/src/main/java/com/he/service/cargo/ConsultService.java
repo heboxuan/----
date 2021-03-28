@@ -1,9 +1,6 @@
 package com.he.service.cargo;
 
 import com.github.pagehelper.PageInfo;
-import com.he.domain.cargo.Contract;
-import com.he.domain.cargo.ContractExample;
-import com.he.domain.vo.ContractProductVo;
 
 import java.util.List;
 import java.util.Map;
