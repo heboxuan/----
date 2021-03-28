@@ -20,7 +20,6 @@ public interface ModuleService {
 
     public abstract void delete(String id);
 
-    //public abstract List<Module> findByUser(User user);
+    public abstract List<Module> findByUser(User user);
 
-    public abstract List<Module> findByfrontLeaderName(FrontLeaderName frontLeaderName);
 }

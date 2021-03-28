@@ -33,9 +33,6 @@ public class AuthRealm extends AuthorizingRealm {
     @Reference
     private ModuleService moduleService;
 
-    @Reference
-    private FrontLeaderNameService frontLeaderNameService;
-
     /**
      * 授权方法
      * @param principalCollection
@@ -43,8 +40,8 @@ public class AuthRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        FrontLeaderName frontLeaderName=(FrontLeaderName)principalCollection.getPrimaryPrincipal();
-        List<Module> modules = moduleService.findByfrontLeaderName(frontLeaderName);
+        User user=(User)principalCollection.getPrimaryPrincipal();
+        List<Module> modules = moduleService.findByUser(user);
         Set<String> permissions=new HashSet<>();
         for (Module module : modules) {
             permissions.add(module.getName());
@@ -65,17 +62,12 @@ public class AuthRealm extends AuthorizingRealm {
         UsernamePasswordToken upToken=(UsernamePasswordToken )authenticationToken;
         String email = upToken.getUsername();
         String password = new String(upToken.getPassword());
-        //User user = userService.findByEmail(email);
-        FrontLeaderName frontLeaderName = frontLeaderNameService.findByEmail(email);
-        //if (user != null) {
-        //    return new SimpleAuthenticationInfo(user, user.getPassword(), getName());
-        //} else {
-        //    return null;
-        //}
-        if (frontLeaderName != null) {
-            return new SimpleAuthenticationInfo(frontLeaderName, frontLeaderName.getPassword(), getName());
+        User user = userService.findByEmail(email);
+        if (user != null) {
+            return new SimpleAuthenticationInfo(user, user.getPassword(), getName());
         } else {
             return null;
         }
+
     }
 }

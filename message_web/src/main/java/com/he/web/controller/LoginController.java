@@ -32,11 +32,8 @@ public class LoginController extends BaseController{
             Subject subject = SecurityUtils.getSubject();
             UsernamePasswordToken upToken = new UsernamePasswordToken(email, password);
             subject.login(upToken);
-            //User user=(User)subject.getPrincipal();
-            FrontLeaderName frontLeaderName=(FrontLeaderName)subject.getPrincipal();
-            session.setAttribute("loginUser",frontLeaderName);
-            //List<Module> list = moduleService.findByUser(user);
-            List<Module> list = moduleService.findByfrontLeaderName(frontLeaderName);
+            User user=(User)subject.getPrincipal();
+            List<Module> list = moduleService.findByUser(user);
             System.out.println("123456"+moduleService.findAll());
             session.setAttribute("modules",list);
             return "home/main";
