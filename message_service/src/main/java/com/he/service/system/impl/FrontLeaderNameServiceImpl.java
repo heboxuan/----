@@ -56,8 +56,4 @@ public class FrontLeaderNameServiceImpl implements FrontLeaderNameService {
         frontLeaderNameDao.delete(id);
     }
 
-    @Override
-    public FrontLeaderName findByEmail(String email) {
-        return frontLeaderNameDao.findByEmail(email);
-    }
 }

@@ -123,21 +123,5 @@
         where id=#{id}
     </update>
 
-    <select id="findByEmail" resultType="com.he.domain.system.FrontLeaderName">
-        select
-            id id,
-            city_id cityId,
-            leader_name leaderName,
-            is_mayor isMayor,
-            email email,
-            password password,
-            gender gender,
-            telephone telephone,
-            is_delete isDelete,
-            degree degree,
-            state state
-        from
-            front_leader_name
-        where email=#{email}
-    </select>
+
 </mapper>
