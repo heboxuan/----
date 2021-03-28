@@ -69,7 +69,6 @@
     <!--根据belong查询模块-->
     <select id="findByBelong" resultMap="BaseResultMap">
     select * from ss_module where belong=#{belong}
-    order by order_no
 </select>
 
     <!--根据用户id，多个表联合查询用户的模块列表-->

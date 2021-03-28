@@ -2,6 +2,7 @@ package com.he.web.controller.cargo;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.github.pagehelper.PageInfo;
+import com.he.domain.system.FrontLeaderName;
 import com.he.domain.system.User;
 import com.he.service.cargo.ConsultService;
 import com.he.web.controller.BaseController;
@@ -23,7 +24,7 @@ public class ConsultController extends BaseController {
                        @RequestParam(defaultValue = "10",required = false) int size,
                        @RequestParam(required = false)String typeId
                        ) {
-        User user = getLoginUser();
+        FrontLeaderName loginUser = getLoginUser();
         Long leaderId=45L;
         PageInfo info = consultService.findUnAll(leaderId, typeId,page, size);
         request.setAttribute("page",info);
@@ -35,7 +36,7 @@ public class ConsultController extends BaseController {
                        @RequestParam(defaultValue = "10",required = false) int size,
                        @RequestParam(required = false)String typeId
     ) {
-        User user = getLoginUser();
+        FrontLeaderName loginUser = getLoginUser();
         Long leaderId=45L;
         PageInfo info = consultService.findAlAll(leaderId, typeId,page, size);
         request.setAttribute("page",info);

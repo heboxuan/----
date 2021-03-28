@@ -20,9 +20,5 @@ public interface FrontLeaderNameService {
 
     public abstract Map<String, Object> findByLeaderId(Long id);
 
-    //public abstract List<String> findRolesByUserId(String id);
-    //
-    //public abstract void changeRole(String userid, String[] roleIds);
-    //
-    //public abstract User findByEmail(String email);
+    public abstract FrontLeaderName findByEmail(String email);
 }

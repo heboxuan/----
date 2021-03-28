@@ -10,7 +10,7 @@
                 <img src="${ctx}/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p> ${sessionScope.loginUser.userName}</p>
+                <p> ${sessionScope.loginUser.leaderName}</p>
                 <a href="#">${sessionScope.loginUser.companyName}</a>
             </div>
         </div>

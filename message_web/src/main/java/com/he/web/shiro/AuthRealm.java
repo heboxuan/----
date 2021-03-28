@@ -1,8 +1,10 @@
 package com.he.web.shiro;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.he.domain.system.FrontLeaderName;
 import com.he.domain.system.Module;
 import com.he.domain.system.User;
+import com.he.service.system.FrontLeaderNameService;
 import com.he.service.system.ModuleService;
 import com.he.service.system.UserService;
 import org.apache.shiro.authc.AuthenticationException;
@@ -31,6 +33,9 @@ public class AuthRealm extends AuthorizingRealm {
     @Reference
     private ModuleService moduleService;
 
+    @Reference
+    private FrontLeaderNameService frontLeaderNameService;
+
     /**
      * 授权方法
      * @param principalCollection
@@ -38,8 +43,8 @@ public class AuthRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        User user=(User)principalCollection.getPrimaryPrincipal();
-        List<Module> modules = moduleService.findByUser(user);
+        FrontLeaderName frontLeaderName=(FrontLeaderName)principalCollection.getPrimaryPrincipal();
+        List<Module> modules = moduleService.findByfrontLeaderName(frontLeaderName);
         Set<String> permissions=new HashSet<>();
         for (Module module : modules) {
             permissions.add(module.getName());
@@ -60,9 +65,15 @@ public class AuthRealm extends AuthorizingRealm {
         UsernamePasswordToken upToken=(UsernamePasswordToken )authenticationToken;
         String email = upToken.getUsername();
         String password = new String(upToken.getPassword());
-        User user = userService.findByEmail(email);
-        if (user != null) {
-            return new SimpleAuthenticationInfo(user, user.getPassword(), getName());
+        //User user = userService.findByEmail(email);
+        FrontLeaderName frontLeaderName = frontLeaderNameService.findByEmail(email);
+        //if (user != null) {
+        //    return new SimpleAuthenticationInfo(user, user.getPassword(), getName());
+        //} else {
+        //    return null;
+        //}
+        if (frontLeaderName != null) {
+            return new SimpleAuthenticationInfo(frontLeaderName, frontLeaderName.getPassword(), getName());
         } else {
             return null;
         }

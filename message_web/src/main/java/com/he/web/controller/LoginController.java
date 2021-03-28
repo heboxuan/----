@@ -1,8 +1,10 @@
 package com.he.web.controller;
 
 
+import com.he.domain.system.FrontLeaderName;
 import com.he.domain.system.Module;
 import com.he.domain.system.User;
+import com.he.service.system.FrontLeaderNameService;
 import com.he.service.system.ModuleService;
 import com.he.service.system.UserService;
 import com.alibaba.dubbo.config.annotation.Reference;
@@ -17,9 +19,6 @@ import java.util.List;
 
 @Controller
 public class LoginController extends BaseController{
-
-    @Reference
-    private UserService userService;
     @Reference
     private ModuleService moduleService;
 
@@ -33,9 +32,11 @@ public class LoginController extends BaseController{
             Subject subject = SecurityUtils.getSubject();
             UsernamePasswordToken upToken = new UsernamePasswordToken(email, password);
             subject.login(upToken);
-            User user=(User)subject.getPrincipal();
-            session.setAttribute("loginUser",user);
-            List<Module> list = moduleService.findByUser(user);
+            //User user=(User)subject.getPrincipal();
+            FrontLeaderName frontLeaderName=(FrontLeaderName)subject.getPrincipal();
+            session.setAttribute("loginUser",frontLeaderName);
+            //List<Module> list = moduleService.findByUser(user);
+            List<Module> list = moduleService.findByfrontLeaderName(frontLeaderName);
             System.out.println("123456"+moduleService.findAll());
             session.setAttribute("modules",list);
             return "home/main";

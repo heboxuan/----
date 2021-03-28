@@ -23,4 +23,6 @@ public class FrontLeaderName implements Serializable {
     private String gender;
     private String telephone;
     private String isDelete;
+    private String state;
+    private int degree;
 }
