@@ -2,7 +2,6 @@ package com.he.web.controller.county;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.github.pagehelper.PageInfo;
-import com.he.domain.company.Company;
 import com.he.domain.county.FrontCity;
 import com.he.service.county.CountyService;
 import com.he.web.controller.BaseController;

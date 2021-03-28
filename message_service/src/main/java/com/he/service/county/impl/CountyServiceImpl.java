@@ -4,8 +4,6 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.he.dao.county.FrontCityDao;
-import com.he.domain.company.Company;
-import com.he.domain.company.CompanyExample;
 import com.he.domain.county.FrontCity;
 import com.he.domain.county.FrontCityExample;
 import com.he.service.county.CountyService;

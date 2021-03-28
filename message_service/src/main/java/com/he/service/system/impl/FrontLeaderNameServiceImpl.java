@@ -55,22 +55,9 @@ public class FrontLeaderNameServiceImpl implements FrontLeaderNameService {
     public void delete(Long id) {
         frontLeaderNameDao.delete(id);
     }
-    //
-    //@Override
-    //public List<String> findRolesByUserId(String id) {
-    //    return userDao.findRolesByUserId(id);
-    //}
-    //
-    //@Override
-    //public void changeRole(String userid, String[] roleIds) {
-    //    userDao.deleteUserRole(userid);
-    //    for (String roleId : roleIds) {
-    //        userDao.saveUserRole(userid,roleId);
-    //    }
-    //}
-    //
-    //@Override
-    //public User findByEmail(String email) {
-    //    return userDao.findByEmail(email);
-    //}
+
+    @Override
+    public FrontLeaderName findByEmail(String email) {
+        return frontLeaderNameDao.findByEmail(email);
+    }
 }

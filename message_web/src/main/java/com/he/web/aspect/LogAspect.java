@@ -1,5 +1,6 @@
 package com.he.web.aspect;
 
+import com.he.domain.system.FrontLeaderName;
 import com.he.domain.system.SysLog;
 import com.he.domain.system.User;
 import com.he.service.system.SysLogService;
@@ -37,8 +38,8 @@ public class LogAspect {
         log.setTime(new Date());
         Object obj = session.getAttribute("loginUser");
         if (obj!=null) {
-            User user=(User)obj;
-            log.setUserName(user.getUserName());
+            FrontLeaderName frontLeaderName=(FrontLeaderName) obj;
+            log.setUserName(frontLeaderName.getLeaderName());
         }
 
         sysLogService.save(log);

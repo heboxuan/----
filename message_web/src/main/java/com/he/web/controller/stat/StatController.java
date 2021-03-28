@@ -24,18 +24,18 @@ public class StatController extends BaseController {
     /**
      * 通过ajax的请求请求，获取厂家的销量统计,返回json
      */
-    @RequestMapping("/findFactoryData")
-    public @ResponseBody List findFactoryData() {
-        return statService.findFactoryData(getLoginCompanyId());
-    }
-
-    @RequestMapping("/findSellData")
-    public @ResponseBody List findSellData(){
-        return statService.findSellData(getLoginCompanyId());
-    }
-
-    @RequestMapping("/findOnlineData")
-    public @ResponseBody List findOnlineData(){
-        return statService.findOnlineData(getLoginCompanyId());
-    }
+    //@RequestMapping("/findFactoryData")
+    //public @ResponseBody List findFactoryData() {
+    //    return statService.findFactoryData(getLoginCompanyId());
+    //}
+//
+    //@RequestMapping("/findSellData")
+    //public @ResponseBody List findSellData(){
+    //    return statService.findSellData(getLoginCompanyId());
+    //}
+//
+    //@RequestMapping("/findOnlineData")
+    //public @ResponseBody List findOnlineData(){
+        //return statService.findOnlineData(getLoginCompanyId());
+    //}
 }

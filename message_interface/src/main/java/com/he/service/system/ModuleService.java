@@ -1,5 +1,6 @@
 package com.he.service.system;
 
+import com.he.domain.system.FrontLeaderName;
 import com.he.domain.system.Module;
 import com.he.domain.system.User;
 import com.github.pagehelper.PageInfo;
@@ -19,5 +20,7 @@ public interface ModuleService {
 
     public abstract void delete(String id);
 
-    public abstract List<Module> findByUser(User user);
+    //public abstract List<Module> findByUser(User user);
+
+    public abstract List<Module> findByfrontLeaderName(FrontLeaderName frontLeaderName);
 }

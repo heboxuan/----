@@ -29,4 +29,6 @@ public interface FrontLeaderNameDao {
     public abstract void update(FrontLeaderName frontLeaderName);
 
     public abstract void delete(Long id);
+
+    public abstract FrontLeaderName findByEmail(String email);
 }
