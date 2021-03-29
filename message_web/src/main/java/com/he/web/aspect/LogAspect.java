@@ -36,13 +36,11 @@ public class LogAspect {
         SysLog log=new SysLog();
         log.setIp(request.getRemoteAddr());
         log.setTime(new Date());
-        Object obj = session.getAttribute("loginUser");
-        if (obj!=null) {
-            User user=(User) obj;
-            log.setUserName(user.getUserName());
+        String loginUserName =(String) session.getAttribute("loginUserName");
+        if (loginUserName!=null) {
+            log.setUserName(loginUserName);
+            sysLogService.save(log);
         }
-
-        sysLogService.save(log);
         return null;
     }
 

@@ -17,6 +17,7 @@
         ip,
          DATE_FORMAT( time, '%Y-%m-%d %H:%i:%S' ) time
          from st_sys_log
+         order by time desc
     </select>
 
     <!--添加-->
