@@ -70,7 +70,8 @@
             user.username,
             leftMessage.field field,
             leftMessage.title title,
-            LEFT ( leftMessage.passage, 55 ) passage
+            LEFT ( leftMessage.passage, 55 ) passage,
+            LEFT ( leftMessage.ask_passage, 55 ) askPassage
         FROM
             `front_left_message` leftMessage
             LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
@@ -88,6 +89,8 @@
             leftMessage.field field,
             leftMessage.title title,
             leftMessage.passage passage,
+            leftMessage.ask_passage askPassage,
+            leftMessage.extra_passage extraPassage,
             leftMessage.response_passage responsePassage
         FROM
             `front_left_message` leftMessage
@@ -102,7 +105,8 @@
             user.username,
             leftMessage.field field,
             leftMessage.title title,
-            LEFT ( leftMessage.passage, 55 ) passage
+            LEFT ( leftMessage.passage, 55 ) passage,
+            LEFT ( leftMessage.ask_passage, 55 ) askPassage
         FROM
             `front_left_message` leftMessage
             LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id

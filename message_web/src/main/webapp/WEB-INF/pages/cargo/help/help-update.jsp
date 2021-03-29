@@ -22,7 +22,7 @@
     <section class="content-header">
         <h1>
             回复管理
-            <small>建言</small>
+            <small>求助</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
@@ -35,8 +35,8 @@
 
         <!--订单信息-->
         <div class="panel panel-default">
-            <div class="panel-heading">建言留言详情</div>
-            <form id="editForm" action="${ctx}/cargo/advise/edit.do" method="post">
+            <div class="panel-heading">求助留言详情</div>
+            <form id="editForm" action="${ctx}/cargo/help/edit.do" method="post">
                 <input type="hidden" name="id" value="${leftMessageDetail.id}">
                 <div class="row data-type" style="margin: 0px">
 

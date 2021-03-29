@@ -23,7 +23,7 @@
 <section class="content-header">
     <h1>
         回复管理
-        <small>建言</small>
+        <small>咨询</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
@@ -37,7 +37,7 @@
     <!-- .box-body -->
     <div class="box box-primary">
         <div class="box-header with-border">
-            <h3 class="box-title">建言留言列表</h3>
+            <h3 class="box-title">咨询留言列表</h3>
         </div>
 
         <div class="box-body">
@@ -49,8 +49,8 @@
                 <div class="pull-left">
                     <div class="form-group form-inline">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-default" title="待回复" onclick='location.href="${ctx}/cargo/advise/unlist.do?typeId=5"'><i class="fa fa-file-o"></i> 待回复</button>
-                            <button type="button" class="btn btn-default" title="已回复" onclick='location.href="${ctx}/cargo/advise/allist.do?typeId=5"'><i class="fa fa-file-o"></i> 已回复</button>
+                            <button type="button" class="btn btn-default" title="待回复" onclick='location.href="${ctx}/cargo/complaint/unlist.do?typeId=2"'><i class="fa fa-file-o"></i> 待回复</button>
+                            <button type="button" class="btn btn-default" title="已回复" onclick='location.href="${ctx}/cargo/complaint/allist.do?typeId=2"'><i class="fa fa-file-o"></i> 已回复</button>
                             <button type="button" class="btn btn-default" title="刷新" onclick="window.location.reload();"><i class="fa fa-refresh"></i> 刷新</button>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                         <th class="sorting">用户昵称</th>
                         <th class="sorting">领域</th>
                         <th class="sorting">标题</th>
-                        <th class="text-center">正文</th>
+                        <th class="text-center">诉求</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -81,9 +81,9 @@
                             <td>${o.username}</td>
                             <td>${o.field}</td>
                             <td>${o.title}</td>
-                            <td>${o.passage}......</td>
+                            <td>${o.askPassage}......</td>
                             <td>
-                                <a href="${ctx }/cargo/advise/toUpdate.do?id=${o.id}">[查看详情]</a>
+                                <a href="${ctx }/cargo/complaint/toUpdate.do?id=${o.id}">[查看详情]</a>
                             </td>
                         </tr>
                     </c:forEach>

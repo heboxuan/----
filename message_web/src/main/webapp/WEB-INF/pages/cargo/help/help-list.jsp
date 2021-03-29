@@ -23,7 +23,7 @@
 <section class="content-header">
     <h1>
         回复管理
-        <small>建言</small>
+        <small>求助</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
@@ -37,7 +37,7 @@
     <!-- .box-body -->
     <div class="box box-primary">
         <div class="box-header with-border">
-            <h3 class="box-title">建言留言列表</h3>
+            <h3 class="box-title">求助留言列表</h3>
         </div>
 
         <div class="box-body">
@@ -49,8 +49,8 @@
                 <div class="pull-left">
                     <div class="form-group form-inline">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-default" title="待回复" onclick='location.href="${ctx}/cargo/advise/unlist.do?typeId=5"'><i class="fa fa-file-o"></i> 待回复</button>
-                            <button type="button" class="btn btn-default" title="已回复" onclick='location.href="${ctx}/cargo/advise/allist.do?typeId=5"'><i class="fa fa-file-o"></i> 已回复</button>
+                            <button type="button" class="btn btn-default" title="待回复" onclick='location.href="${ctx}/cargo/help/unlist.do?typeId=6"'><i class="fa fa-file-o"></i> 待回复</button>
+                            <button type="button" class="btn btn-default" title="已回复" onclick='location.href="${ctx}/cargo/help/allist.do?typeId=6"'><i class="fa fa-file-o"></i> 已回复</button>
                             <button type="button" class="btn btn-default" title="刷新" onclick="window.location.reload();"><i class="fa fa-refresh"></i> 刷新</button>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                             <td>${o.title}</td>
                             <td>${o.passage}......</td>
                             <td>
-                                <a href="${ctx }/cargo/advise/toUpdate.do?id=${o.id}">[查看详情]</a>
+                                <a href="${ctx }/cargo/help/toUpdate.do?id=${o.id}">[查看详情]</a>
                             </td>
                         </tr>
                     </c:forEach>

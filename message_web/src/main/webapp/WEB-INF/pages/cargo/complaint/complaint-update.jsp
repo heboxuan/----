@@ -36,7 +36,7 @@
         <!--订单信息-->
         <div class="panel panel-default">
             <div class="panel-heading">建言留言详情</div>
-            <form id="editForm" action="${ctx}/cargo/advise/edit.do" method="post">
+            <form id="editForm" action="${ctx}/cargo/complaint/edit.do" method="post">
                 <input type="hidden" name="id" value="${leftMessageDetail.id}">
                 <div class="row data-type" style="margin: 0px">
 
@@ -49,9 +49,13 @@
                     <div class="col-md-4 data">
                         <input type="text" class="form-control" readonly="readonly" name="title" value="${leftMessageDetail.title}">
                     </div>
-                    <div class="col-md-2 title rowHeight2x" style="height: 200px;line-height: 200px">正文</div>
+                    <div class="col-md-2 title rowHeight2x" style="height: 200px;line-height: 200px">诉求</div>
                     <div class="col-md-10 data rowHeight2x" style="height: 200px">
-                        <textarea class="form-control" rows="8" name="remark" readonly="passage">${leftMessageDetail.passage}</textarea>
+                        <textarea class="form-control" rows="8" name="remark" readonly="passage">${leftMessageDetail.askPassage}</textarea>
+                    </div>
+                    <div class="col-md-2 title rowHeight2x" style="height: 200px;line-height: 200px">补充信息</div>
+                    <div class="col-md-10 data rowHeight2x" style="height: 200px">
+                        <textarea class="form-control" rows="8" name="remark" readonly="passage">${leftMessageDetail.extraPassage}</textarea>
                     </div>
                     <div class="col-md-2 title rowHeight2x" style="height: 200px;line-height: 200px">回复</div>
                     <div class="col-md-10 data rowHeight2x" style="height: 200px">

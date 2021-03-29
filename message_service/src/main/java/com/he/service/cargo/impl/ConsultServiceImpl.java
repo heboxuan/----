@@ -3,10 +3,12 @@ package com.he.service.cargo.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.he.dao.county.FrontCityDao;
 import com.he.dao.front.FrontLeftMessageDao;
 import com.he.service.cargo.ConsultService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -16,6 +18,9 @@ import java.util.Map;
 public class ConsultServiceImpl implements ConsultService {
     @Autowired
     private FrontLeftMessageDao frontLeftMessageDao;
+
+    @Autowired
+    private FrontCityDao frontCityDao;
 
 
     /**

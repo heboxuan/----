@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/cargo/advise")
-public class AdviseController extends BaseController {
+@RequestMapping("/cargo/help")
+public class HelpController extends BaseController {
     @Reference
     private ConsultService consultService;
 
@@ -25,7 +25,7 @@ public class AdviseController extends BaseController {
         String loginUserId = getLoginUser();
         PageInfo info = consultService.findUnAll(Long.valueOf(loginUserId), typeId,page, size);
         request.setAttribute("page",info);
-        return "cargo/advise/advise-list";
+        return "cargo/help/help-list";
     }
 
     @RequestMapping("/allist")
@@ -37,7 +37,7 @@ public class AdviseController extends BaseController {
         String loginUserId = getLoginUser();
         PageInfo info = consultService.findAlAll(Long.valueOf(loginUserId), typeId,page, size);
         request.setAttribute("page",info);
-        return "cargo/advise/advise-list";
+        return "cargo/help/help-list";
     }
 
     @RequestMapping("/toUpdate")
@@ -45,7 +45,7 @@ public class AdviseController extends BaseController {
 
         Map<String,Object> leftMessageDetail = consultService.findLeftMessageById(id);
         request.setAttribute("leftMessageDetail",leftMessageDetail);
-        return "cargo/advise/advise-update";
+        return "cargo/help/help-update";
     }
 
 
@@ -61,6 +61,6 @@ public class AdviseController extends BaseController {
         }
 
 
-        return  "redirect:/cargo/advise/unlist.do?typeId=5";
+        return  "redirect:/cargo/help/unlist.do?typeId=6";
     }
 }
