@@ -22,20 +22,24 @@ public class StatController extends BaseController {
     }
 
     /**
-     * 通过ajax的请求请求，获取厂家的销量统计,返回json
+     * 通过ajax的请求请求，每个区的咨询总数,返回json
      */
-    //@RequestMapping("/findFactoryData")
-    //public @ResponseBody List findFactoryData() {
-    //    return statService.findFactoryData(getLoginCompanyId());
-    //}
-    //
-    //@RequestMapping("/findSellData")
-    //public @ResponseBody List findSellData(){
-    //    return statService.findSellData(getLoginCompanyId());
-    //}
-    //
-    //@RequestMapping("/findOnlineData")
-    //public @ResponseBody List findOnlineData(){
-    //    return statService.findOnlineData(getLoginCompanyId());
-    //}
+    @RequestMapping("/findAskData")
+    public @ResponseBody List findAskData() {
+        return statService.findAskData();
+    }
+
+    /**
+     * 通过ajax的请求请求，每个区的留言总数,返回json
+     */
+    @RequestMapping("/findResData")
+    public @ResponseBody List findResData(){
+        return statService.findResData();
+    }
+
+    @RequestMapping("/findOnlineData")
+    public @ResponseBody List findOnlineData(){
+        String loginUserId=(String)session.getAttribute("loginUserId");
+        return statService.findOnlineData(loginUserId);
+    }
 }

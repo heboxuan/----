@@ -14,7 +14,7 @@
     <section class="content-header">
         <h1>
             统计分析
-            <small>厂家销量统计</small>
+            <small>各区咨询总数对比</small>
         </h1>
     </section>
     <section class="content">
@@ -26,7 +26,7 @@
 </body>
 <script type="text/javascript">
 
-    $.get("/stat/findFactoryData.do",function(data){
+    $.get("/stat/findAskData.do",function(data){
 
         var titles = [];
 
@@ -45,8 +45,8 @@
          */
         var option = {
             title: {
-                text: '某站点用户访问来源',
-                subtext: '纯属虚构',
+                text: '',
+                subtext: '',
                 left: 'center'
             },
             tooltip: {

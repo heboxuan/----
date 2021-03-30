@@ -217,4 +217,123 @@
     WHERE
 	id = #{cityId}
     </update>
+
+  <update id="updateResponseNumByLeftMessageIdAdd">
+        UPDATE front_city
+        SET response_num =(
+            SELECT
+                temp.responseNum + 1
+            FROM
+                (
+                SELECT
+                    city.response_num AS responseNum,
+                    city.id cityId
+                FROM
+                    `front_left_message` leftMessage
+                    LEFT JOIN front_leader_name leaderName ON leftMessage.leader_id = leaderName.id
+                    LEFT JOIN front_city city ON leaderName.city_id = city.id
+                WHERE
+                    leftMessage.id = #{id}
+                ) temp
+            )
+        WHERE
+            front_city.id = (
+            SELECT
+                cityId
+            FROM
+                (
+                SELECT
+                    city.id cityId
+                FROM
+                    `front_left_message` leftMessage
+                    LEFT JOIN front_leader_name leaderName ON leftMessage.leader_id = leaderName.id
+                    LEFT JOIN front_city city ON leaderName.city_id = city.id
+                WHERE
+                    leftMessage.id = #{id}
+                ) temp
+            )
+  </update>
+
+  <update id="updateResponseNumByLeftMessageIdSub">
+        UPDATE front_city
+        SET response_num =(
+            SELECT
+                temp.responseNum - 1
+            FROM
+                (
+                SELECT
+                    city.response_num AS responseNum,
+                    city.id cityId
+                FROM
+                    `front_left_message` leftMessage
+                    LEFT JOIN front_leader_name leaderName ON leftMessage.leader_id = leaderName.id
+                    LEFT JOIN front_city city ON leaderName.city_id = city.id
+                WHERE
+                    leftMessage.id = #{id}
+                ) temp
+            )
+        WHERE
+            front_city.id = (
+            SELECT
+                cityId
+            FROM
+                (
+                SELECT
+                    city.id cityId
+                FROM
+                    `front_left_message` leftMessage
+                    LEFT JOIN front_leader_name leaderName ON leftMessage.leader_id = leaderName.id
+                    LEFT JOIN front_city city ON leaderName.city_id = city.id
+                WHERE
+                    leftMessage.id = #{id}
+                ) temp
+            )
+  </update>
+
+    <select id="findAskData" resultType="map">
+        SELECT
+            ask_num
+        value
+            ,
+        NAME name
+        FROM
+            front_city
+        where is_delete='false'
+        GROUP BY
+        NAME
+
+    </select>
+
+    <select id="findResData" resultType="map">
+
+        SELECT
+            response_num
+        amount
+            ,
+        NAME productNo
+        FROM
+            front_city
+        where is_delete='false'
+        GROUP BY
+        NAME
+    </select>
+
+
+    <select id="findOnlineData" parameterType="String" resultType="map">
+        SELECT
+            ask_num
+        total
+            ,
+        NAME hour
+        FROM
+            front_city
+        WHERE
+            id =(
+            SELECT
+                city.id
+            FROM
+                front_leader_name leaderName
+                LEFT JOIN front_city city ON leaderName.city_id = city.id  where leaderName.id=#{loginUserId}
+            )
+    </select>
 </mapper>

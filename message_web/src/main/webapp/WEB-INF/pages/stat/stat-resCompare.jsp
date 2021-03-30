@@ -20,7 +20,7 @@
     <section class="content-header">
         <h1>
             统计分析
-            <small>产品销量排行榜</small>
+            <small>各区回复总数对比</small>
         </h1>
     </section>
     <section class="content">
@@ -38,7 +38,7 @@
     //     rotate:70
     // }
 
-    $.get("/stat/findSellData.do",function(data) {
+    $.get("/stat/findResData.do",function(data) {
         //处理数据格式
         var titles = []; //x轴数据
         var amounts = []; //y轴数据
@@ -86,7 +86,7 @@
                 {
                     name: '直接访问',
                     type: 'bar',
-                    barWidth: '60%',
+                    barWidth: '70%',
                     data: amounts
                 }
             ]

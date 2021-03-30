@@ -69,4 +69,16 @@ public interface FrontCityDao {
     public abstract Map<String, Object> totalMessageThree(Long id);
 
     public abstract void updateById(Long cityId);
+
+    public abstract void updateResponseNumByLeftMessageIdAdd(Long id);
+
+    public abstract void updateResponseNumByLeftMessageIdSub(Long id);
+
+    //每个区的留言总数
+    public abstract List<Map> findAskData();
+
+    //每个区的咨询总数
+    public abstract List<Map> findResData();
+
+    public abstract List<Map> findOnlineData(String loginUserId);
 }

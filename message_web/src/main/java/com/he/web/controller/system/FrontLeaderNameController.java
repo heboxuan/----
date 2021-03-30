@@ -3,6 +3,7 @@ package com.he.web.controller.system;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.github.pagehelper.PageInfo;
 import com.he.common.utils.Encrypt;
+import com.he.common.utils.MailUtil;
 import com.he.domain.system.FrontLeaderName;
 import com.he.domain.system.User;
 import com.he.service.county.CountyService;
@@ -10,6 +11,7 @@ import com.he.service.system.FrontLeaderNameService;
 import com.he.service.system.UserService;
 import com.he.web.controller.BaseController;
 import com.he.web.utils.MessageProducer;
+import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
@@ -101,7 +103,7 @@ public class FrontLeaderNameController extends BaseController {
     @RequestMapping(value = "/edit",name = "保存或者更新用户")
     public String edit(FrontLeaderName frontLeaderName) throws Exception {
         String email=frontLeaderName.getEmail();
-        String password = frontLeaderName.getPassword();
+        String password = RandomStringUtils.randomNumeric(6);
         String dePassword=Encrypt.md5(password,email);
 
         frontLeaderName.setPassword(dePassword);
@@ -122,30 +124,30 @@ public class FrontLeaderNameController extends BaseController {
             userService.save(user);
 
 //            //发送邮件
-//            String to = frontLeaderName.getEmail();
-//            String subject = "欢迎使用Saas-Message系统";
-//            String content = "尊敬的用户您好,欢迎使用Saas-Message系统。您的访问地址是 http://127.0.0.1:8088 , 登录用户名："+
-//                    frontLeaderName.getEmail()+", 登录密码" + password;
-//            MailUtil.sendMsg(to,subject,content);
-//
-//            Map<String,String> map = new HashMap<>();
-//            map.put("to", to);
-//            map.put("subject", subject);
-//            map.put("content", content);
-//
-//            messageProducer.send("frontLeaderName.insert", map);
+            String to = frontLeaderName.getEmail();
+            String subject = "欢迎使用Saas-Message系统";
+            String content = "尊敬的用户您好,欢迎使用Saas-Message系统。您的访问地址是 http://127.0.0.1:8088 , 登录用户名："+
+                    frontLeaderName.getEmail()+", 登录密码" + password;
+            MailUtil.sendMsg(to,subject,content);
+
+            //Map<String,String> map = new HashMap<>();
+            //map.put("to", to);
+            //map.put("subject", subject);
+            //map.put("content", content);
+
+            //messageProducer.send("frontLeaderName.insert", map);
 
         }else {
             //有id，更新
             frontLeaderNameService.update(frontLeaderName);
 
-            Long id=frontLeaderName.getId();
-            User user=new User();
-            user.setId(id.toString());
-            user.setEmail(email);
-            user.setPassword(dePassword);
+            //Long id=frontLeaderName.getId();
+            //User user=new User();
+            //user.setId(id.toString());
+            //user.setEmail(email);
+            //user.setPassword(dePassword);
 
-            userService.update(user);
+            //userService.update(user);
 
         }
         //3、重定向到列表

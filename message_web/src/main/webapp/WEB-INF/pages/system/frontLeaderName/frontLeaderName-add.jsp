@@ -74,7 +74,7 @@
 
                     <div class="col-md-1 title">密码</div>
                     <div class="col-md-5 data">
-                        <input type="password" class="form-control" placeholder="密码" name="password" >
+                        <input type="password" class="form-control" placeholder="密码" name="password" readonly="readonly">
                     </div>
 
                     <div class="col-md-1 title">联系电话</div>

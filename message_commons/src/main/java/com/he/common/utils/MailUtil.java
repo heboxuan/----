@@ -44,7 +44,7 @@ public class MailUtil {
         //8.准备发送，得到火箭
         Transport transport = session.getTransport("smtp");
         //9.设置火箭的发射目标
-        transport.connect("smtp.qq.com", "2423571560@qq.com", "qoxuwbyyqoqmeaed");
+        transport.connect("smtp.qq.com", "2423571560@qq.com", "bnxqrqjbajrcdhfj");
         //10.发送
         transport.sendMessage(message, message.getAllRecipients());
         //11.关闭
@@ -52,7 +52,7 @@ public class MailUtil {
     }
 
     public static void main(String[] args) throws Exception {
-        MailUtil.sendMsg("1460055344@qq.com","我们一起来画龙","左手和我一起画个龙，右手画一道彩虹，走起");
+        MailUtil.sendMsg("3548859133@qq.com","我们一起来画龙","左手和我一起画个龙，右手画一道彩虹，走起");
     }
 
 }

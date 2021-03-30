@@ -8,13 +8,13 @@ import java.util.Map;
  */
 public interface StatService {
 
-    //生产厂家的销量数据
-    List<Map> findFactoryData(String companyId);
+    //每个区的咨询总数
+    List<Map> findAskData();
 
-    //产品销量排行榜数据
-    List<Map> findSellData(String companyId);
+    //每个区的回复总数
+    List<Map> findResData();
 
     //系统访问压力图数据
-    List<Map> findOnlineData(String companyId);
+    List<Map> findOnlineData(String loginUserId);
 }
 

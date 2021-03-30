@@ -69,12 +69,12 @@
 
                     <div class="col-md-1 title">邮箱</div>
                     <div class="col-md-5 data">
-                        <input type="text" class="form-control" placeholder="邮箱" name="email" value="${frontLeaderName.email}">
+                        <input type="text" class="form-control" placeholder="邮箱" name="email" value="${frontLeaderName.email}" readonly="readonly">
                     </div>
 
                     <div class="col-md-1 title">密码</div>
                     <div class="col-md-5 data">
-                        <input type="password" class="form-control" placeholder="密码" name="password" value="${frontLeaderName.password}">
+                        <input type="password" class="form-control" placeholder="密码" name="password" value="${frontLeaderName.password}" readonly="readonly">
                     </div>
 
                     <div class="col-md-1 title">联系电话</div>

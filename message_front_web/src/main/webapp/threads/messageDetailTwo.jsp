@@ -64,7 +64,7 @@
 		</span>
     </h3>
 
-    <p class="zoom content">${frontLeftMessage.passage}</p>
+    <p class="zoom content">${frontLeftMessage.passage}${frontLeftMessage.askPassage}</p>
 
 </div>
 

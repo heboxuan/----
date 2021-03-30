@@ -53,5 +53,11 @@ public class ConsultServiceImpl implements ConsultService {
     @Override
     public void edit(Long id, String responsePassage) {
         frontLeftMessageDao.updateResponsePassageById(id,responsePassage);
+
+        if (!StringUtils.isEmpty(responsePassage)) {
+            frontCityDao.updateResponseNumByLeftMessageIdAdd(id);
+        } else {
+            frontCityDao.updateResponseNumByLeftMessageIdSub(id);
+        }
     }
 }
