@@ -15,7 +15,7 @@
         <div class="fr">
             <c:choose>
                 <c:when test="${not empty sessionScope.userInfo}">
-                    <a href="${pageContext.request.contextPath}/login.jsp" id="login-point" target="_blank">${sessionScope.userInfo.username},欢迎您</a>|
+                    <a href="${pageContext.request.contextPath}/frontUserMessage/userCenterUnRes.do">${sessionScope.userInfo.username},欢迎您</a>|
                     <a href="${pageContext.request.contextPath}/frontUserMessage/logut.do">退出</a>
                 </c:when>
                 <c:otherwise>

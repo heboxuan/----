@@ -132,4 +132,40 @@
 
         where id=#{id}
     </update>
+
+    <select id="userCenterUnResByUserId" resultType="map">
+        SELECT
+            leftMessage.id id,
+            user.username,
+            leftMessage.field field,
+            leftMessage.title title,
+            LEFT ( leftMessage.passage, 66 ) passage,
+            LEFT ( leftMessage.ask_passage, 66 ) askPassage
+        FROM
+            `front_left_message` leftMessage
+            LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
+        WHERE
+            leftMessage.is_process='false'
+	        and leftMessage.user_id=#{id}
+	    order by
+	        leftMessage.time desc
+    </select>
+
+    <select id="userCenterAlRes" resultType="map">
+        SELECT
+            leftMessage.id id,
+            user.username,
+            leftMessage.field field,
+            leftMessage.title title,
+            LEFT ( leftMessage.passage, 66 ) passage,
+            LEFT ( leftMessage.ask_passage, 66 ) askPassage
+        FROM
+            `front_left_message` leftMessage
+            LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
+        WHERE
+            leftMessage.is_process='true'
+	        and leftMessage.user_id=#{id}
+	    order by
+	        leftMessage.time desc
+    </select>
 </mapper>

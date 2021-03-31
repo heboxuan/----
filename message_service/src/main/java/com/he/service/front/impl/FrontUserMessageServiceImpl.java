@@ -4,12 +4,16 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
 import com.he.common.utils.Encrypt;
 import com.he.common.utils.SmsUtils;
+import com.he.dao.front.FrontLeftMessageDao;
 import com.he.dao.front.FrontUserMessageDao;
 import com.he.domain.front.FrontUserMessage;
 import com.he.service.front.FrontUserMessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * @Author: heboxuan
@@ -18,8 +22,12 @@ import org.springframework.util.StringUtils;
 @Service
 @Transactional
 public class FrontUserMessageServiceImpl implements FrontUserMessageService {
+
     @Autowired
     private FrontUserMessageDao frontUserMessageDao;
+
+    @Autowired
+    private FrontLeftMessageDao frontLeftMessageDao;
 
     @Override
     public void saveUserMessage(FrontUserMessage frontUserMessage) {
@@ -102,5 +110,17 @@ public class FrontUserMessageServiceImpl implements FrontUserMessageService {
     public FrontUserMessage loginByPhone(String telephone) {
         FrontUserMessage userInfo=frontUserMessageDao.loginByPhone(telephone);
         return userInfo;
+    }
+
+    @Override
+    public List<Map<String, Object>> userCenterUnRes(Long id) {
+        List<Map<String,Object>> userUnlists=frontLeftMessageDao.userCenterUnResByUserId(id);
+        return userUnlists;
+    }
+
+    @Override
+    public List<Map<String, Object>> userCenterAlRes(Long id) {
+        List<Map<String,Object>> userAllists=frontLeftMessageDao.userCenterAlRes(id);
+        return userAllists;
     }
 }

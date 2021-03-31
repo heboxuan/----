@@ -25,4 +25,7 @@ public interface FrontLeftMessageDao {
 
     public abstract void updateResponsePassageById(@Param("id") Long id, @Param("responsePassage") String responsePassage);
 
+    public abstract List<Map<String, Object>> userCenterUnResByUserId(Long id);
+
+    public abstract List<Map<String, Object>> userCenterAlRes(Long id);
 }

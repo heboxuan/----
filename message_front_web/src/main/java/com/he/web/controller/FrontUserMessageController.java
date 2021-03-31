@@ -4,10 +4,8 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.he.domain.front.FrontUserMessage;
 import com.he.service.front.FrontUserMessageService;
 import org.apache.commons.lang.RandomStringUtils;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +13,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @Author: heboxuan
@@ -109,4 +109,22 @@ public class FrontUserMessageController {
         }
         return result;
     }
+
+    @GetMapping("/userCenterUnRes")
+    public String userCenterUnRes() {
+        FrontUserMessage userInfo=(FrontUserMessage)session.getAttribute("userInfo");
+        List<Map<String,Object>> userUnlists=frontUserMessageService.userCenterUnRes(userInfo.getId());
+        request.setAttribute("userUnlists",userUnlists);
+        return "userCenterUnRes";
+    }
+
+    @GetMapping("/userCenterAlRes")
+    public String userCenterAlRes() {
+        FrontUserMessage userInfo=(FrontUserMessage)session.getAttribute("userInfo");
+        List<Map<String,Object>> userAllists=frontUserMessageService.userCenterAlRes(userInfo.getId());
+        request.setAttribute("userAllists",userAllists);
+        return "userCenterAlRes";
+    }
+
+
 }

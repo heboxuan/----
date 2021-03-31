@@ -2,6 +2,9 @@ package com.he.service.front;
 
 import com.he.domain.front.FrontUserMessage;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * @Author: heboxuan
  * @Date: Created in 15:34 2021/2/27
@@ -22,4 +25,8 @@ public interface FrontUserMessageService {
     public abstract boolean sendSms(String telephone, String smsCode);
 
     public abstract FrontUserMessage loginByPhone(String telephone);
+
+    public abstract List<Map<String, Object>> userCenterUnRes(Long id);
+
+    public abstract List<Map<String, Object>> userCenterAlRes(Long id);
 }

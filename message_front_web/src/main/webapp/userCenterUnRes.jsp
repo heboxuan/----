@@ -36,8 +36,9 @@
 </head>
 
 <body>
-<!--nav-->
 
+<!--nav-->
+<%@ include file="/common/common-top-help.jsp"%>
 <!--nav end-->
 
 <script src="${pageContext.request.contextPath}/static/common/js/pagination.ajax.js" type="text/javascript"></script>
@@ -57,20 +58,13 @@
 
     <h2 class="title">
         <em><img src="${pageContext.request.contextPath}/img/icon24.png" width="32" height="32" />
-            <b>您好，贺李HL</b>
+            <b>您好，${userInfo.username}</b>
         </em>
         <i>
-
-            <a href="/user/msg">查看新消息</a>|
-            <a href="/user/threads">我的留言</a>|
-            <a href="/user/favorList">我的收藏</a>|
-
-            <a href="/regcomp/subUserInfo" style="color:red;font-weight: bold">企业用户</a>|
-
-            <a href="/user/info">个人资料</a>|
+            <a style="color:red;font-weight: bold">用户中心</a>|
             <a href="http://sso.people.com.cn/u/changepwd" target="_blank">修改密码</a>|
-            <a href="/help" target="_blank">帮助手册</a>|
-            <a href="/logout">退出</a>|
+            <a href="${pageContext.request.contextPath}/help/help-1.jsp" target="_blank">帮助手册</a>|
+            <a href="${pageContext.request.contextPath}/frontUserMessage/logut.do">退出</a>|
         </i>
     </h2>
 </div>
@@ -78,24 +72,29 @@
     <div class="fl">
         <ul>
             <li class="t01 white" >
-                <a href="/user/threads?type=0">待回复</a>
+                <a href="${pageContext.request.contextPath}/frontUserMessage/userCenterUnRes.do">待回复</a>
             </li>
             <li  >
-                <a href="/user/threads?type=1">已回复</a>
+                <a href="${pageContext.request.contextPath}/frontUserMessage/userCenterAlRes.do">已回复</a>
             </li>
-            <li  >
-                <a href="/user/threads?type=2">未展示</a>
-            </li>
+<%--            <li  >--%>
+<%--                <a href="/user/threads?type=2">未展示</a>--%>
+<%--            </li>--%>
         </ul>
     </div>
 
     <div class="fr" id="listData">
         <ul id="list_content" class="clearfix">
-            <li class="watermark_dcl">
-                <h2>
-                   <a><i class="grey3"> 12321333133</i></a>
-                </h2>
-            </li>
+            <c:forEach items="${userUnlists}" var="userUnlist">
+                <li class="watermark_dcl">
+                    <h2>
+                        <a href="${pageContext.request.contextPath}/frontCity/messageDetail.do?id=${userUnlist.id}" target="_blank">
+                            <i class="grey3"> ${userUnlist.passage}${userUnlist.askPassage}...</i>
+                        </a>
+                    </h2>
+                </li>
+            </c:forEach>
+
         </ul>
 
     </div>
@@ -103,9 +102,9 @@
 
 
 <!--copyright-->
+<%@ include file="/common/common-bottom-help.jsp"%>
 
-<script src="/static/common/js/webdig_test.js" language="javascript"
-        type="text/javascript"></script>
+<script src="/static/common/js/webdig_test.js" language="javascript" type="text/javascript"></script>
 
 </body>
 </html>
