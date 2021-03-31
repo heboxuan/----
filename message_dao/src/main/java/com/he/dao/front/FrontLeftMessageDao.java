@@ -13,7 +13,7 @@ import java.util.Map;
 public interface FrontLeftMessageDao {
     public abstract void saveLeftMessage(FrontLeftMessage frontLeftMessage);
 
-    public abstract List<Map<String, Object>> findByLeaderId(String id);
+    public abstract List<Map<String, Object>> findByLeaderId(@Param("id") String id,@Param("end") Integer limit);
 
     public abstract Map<String,Object> findById(Long valueOf);
 

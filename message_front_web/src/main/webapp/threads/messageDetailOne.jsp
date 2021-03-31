@@ -61,7 +61,7 @@
         </span>
         </h3>
         <p class="zoom content">
-            ${frontLeftMessage.passage}
+            ${frontLeftMessage.passage}${frontLeftMessage.askPassage}<br>${frontLeftMessage.extraPassage}
         </p>
     </div>
 
@@ -72,11 +72,11 @@
                 <h3><i class="red">${leaderDetail.leaderName}</i></h3>
                 <p class="zoom">　　${frontLeftMessage.responsePassage}</p>
 
-                <h3>
-                    <em class="grey2">
-                    回复时间：2020-08-06 08:33
-                    </em>
-                </h3>
+<%--                <h3>--%>
+<%--                    <em class="grey2">--%>
+<%--                    回复时间：2020-08-06 08:33--%>
+<%--                    </em>--%>
+<%--                </h3>--%>
             </li>
         </ul>
     </div>

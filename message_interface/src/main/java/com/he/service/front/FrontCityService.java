@@ -27,7 +27,7 @@ public interface FrontCityService {
 
     public abstract void saveLeftMessage(FrontLeftMessage frontLeftMessage, FrontUserMessage frontUserMessage);
 
-    public abstract Map<String,Object> messageList(String id);
+    public abstract Map<String,Object> messageList(String id,Integer limit);
 
     public abstract Map<String, Object> messageDetail(String id);
 }

@@ -76,7 +76,7 @@
                     </span>
                     </h3>
                     <p>
-                            ${message.passage}...
+                            ${message.passage}${message.askPassage}...
                         <i class="red">
                             <a href="${pageContext.request.contextPath}/frontCity/messageDetail.do?id=${message.id}" target="_blank">[查看全文]</a>
                         </i>
@@ -84,7 +84,9 @@
                 </li>
             </c:forEach>
         </ul>
-        <div class="showMorehandle more" id="show_more" style="display: block">加载更多</div>
+        <div class="showMorehandle more" id="show_more" style="display: block">
+            <a href="${pageContext.request.contextPath}/frontCity/messageList.do?id=${leaderDetail.id}&limit=${limit}">加载更多</a>
+        </div>
     </div>
 </div>
 <!--留言列表 end-->

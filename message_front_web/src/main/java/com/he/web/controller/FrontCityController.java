@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.imageio.ImageIO;
@@ -189,12 +190,14 @@ public class FrontCityController {
     }
 
     @GetMapping("/messageList")
-    public String messageList(String id) {
-        Map<String, Object> map = frontCityService.messageList(id);
+    public String messageList(@RequestParam(required = true) String id,
+                              @RequestParam(required = false,defaultValue = "5")Integer limit) {
+        Map<String, Object> map = frontCityService.messageList(id,limit);
         FrontLeaderName leaderDetail=(FrontLeaderName)map.get("leaderDetail");
         List<Map<String,Object>> messageList=(List<Map<String,Object>>)map.get("messageList");
         request.setAttribute("leaderDetail",leaderDetail);
         request.setAttribute("messageList",messageList);
+        request.setAttribute("limit",limit+5);
         return "threads/messaageList";
     }
 

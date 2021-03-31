@@ -90,9 +90,9 @@ public class FrontCityServiceImpl implements FrontCityService {
     }
 
     @Override
-    public Map<String,Object> messageList(String id) {
+    public Map<String,Object> messageList(String id,Integer limit) {
         FrontLeaderName leaderDetail = frontLeaderNameDao.findById(Long.valueOf(id));
-        List<Map<String,Object>> messageList=frontLeftMessageDao.findByLeaderId(id);
+        List<Map<String,Object>> messageList=frontLeftMessageDao.findByLeaderId(id,limit);
         HashMap<String, Object> map = new HashMap<>();
         map.put("leaderDetail",leaderDetail);
         map.put("messageList",messageList);

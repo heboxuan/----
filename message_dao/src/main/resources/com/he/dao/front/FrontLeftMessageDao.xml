@@ -33,7 +33,7 @@
             END isProcess,
             DATE_FORMAT( time, '%Y-%m-%d %H:%i:%S' ) time
         FROM
-            front_left_message where leader_id=#{id}
+            front_left_message where leader_id=#{id} order by time desc limit 0,#{end}
     </select>
 
     <select id="findById" resultType="map">
