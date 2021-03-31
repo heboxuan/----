@@ -126,5 +126,21 @@ public class FrontUserMessageController {
         return "userCenterAlRes";
     }
 
+    @GetMapping("/userDetail")
+    public String userDetail() {
+        //FrontUserMessage userInfo=(FrontUserMessage)session.getAttribute("userInfo");
+        //userInfo.setPassword1(userInfo.getPassword2());
+        //request.setAttribute("userInfo",userInfo);
+        return "redirect:/updateUser.jsp";
+    }
+
+    @PostMapping("/updateUserMessage")
+    public String updateUserMessage(FrontUserMessage frontUserMessage) {
+        frontUserMessageService.updateUserMessage(frontUserMessage);
+        return "redirect:/frontUserMessage/userCenterUnRes.do";
+    }
+
+
+
 
 }

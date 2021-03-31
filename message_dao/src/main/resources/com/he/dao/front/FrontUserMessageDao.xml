@@ -35,9 +35,29 @@
 
     <update id="updateByUserId">
         update front_user_message
-        set message_phone=#{messagePhone},
-            extra_message=#{extraMessage},
-            true_username=#{trueUsername}
+        <set>
+            <if test="username !=null and username!=''">
+                username=#{username},
+            </if>
+            <if test="email !=null and email!=''">
+                email=#{email},
+            </if>
+            <if test="password1 !=null and password1!=''">
+                password1=#{password1},
+            </if>
+            <if test="password2 !=null and password2!=''">
+                password2=#{password2},
+            </if>
+            <if test="messagePhone !=null and messagePhone!=''">
+                message_phone=#{messagePhone},
+            </if>
+            <if test="extraMessage !=null and extraMessage!=''">
+                extra_message=#{extraMessage},
+            </if>
+            <if test="trueUsername !=null and trueUsername!=''">
+                true_username=#{trueUsername}
+            </if>
+        </set>
         where id=#{id}
     </update>
 </mapper>

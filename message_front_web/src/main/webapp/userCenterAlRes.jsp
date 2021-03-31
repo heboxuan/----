@@ -62,7 +62,7 @@
         </em>
         <i>
             <a style="color:red;font-weight: bold">用户中心</a>|
-            <a href="http://sso.people.com.cn/u/changepwd" target="_blank">修改密码</a>|
+            <a href="${pageContext.request.contextPath}/frontUserMessage/userDetail.do" target="_blank">修改密码</a>|
             <a href="${pageContext.request.contextPath}/help/help-1.jsp" target="_blank">帮助手册</a>|
             <a href="${pageContext.request.contextPath}/frontUserMessage/logut.do">退出</a>|
         </i>

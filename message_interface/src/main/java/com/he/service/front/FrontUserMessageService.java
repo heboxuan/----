@@ -29,4 +29,6 @@ public interface FrontUserMessageService {
     public abstract List<Map<String, Object>> userCenterUnRes(Long id);
 
     public abstract List<Map<String, Object>> userCenterAlRes(Long id);
+
+    public abstract void updateUserMessage(FrontUserMessage frontUserMessage);
 }

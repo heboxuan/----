@@ -33,9 +33,9 @@ public class FrontUserMessageServiceImpl implements FrontUserMessageService {
     public void saveUserMessage(FrontUserMessage frontUserMessage) {
         String password1 = frontUserMessage.getPassword1();
         String email = frontUserMessage.getEmail();
-        String salty = Encrypt.md5(password1, email);
-        frontUserMessage.setPassword1(salty);
-        frontUserMessage.setPassword2(salty);
+        String dePassword = Encrypt.md5(password1, email);
+        frontUserMessage.setPassword1(dePassword);
+        frontUserMessage.setPassword2(dePassword);
         frontUserMessage.setIsDelete("false");
         frontUserMessageDao.saveUserMessage(frontUserMessage);
     }
@@ -122,5 +122,16 @@ public class FrontUserMessageServiceImpl implements FrontUserMessageService {
     public List<Map<String, Object>> userCenterAlRes(Long id) {
         List<Map<String,Object>> userAllists=frontLeftMessageDao.userCenterAlRes(id);
         return userAllists;
+    }
+
+    @Override
+    public void updateUserMessage(FrontUserMessage frontUserMessage) {
+        String password = frontUserMessage.getPassword1();
+        if (!StringUtils.isEmpty(password)) {
+            String enPassword = Encrypt.md5(password, frontUserMessage.getEmail());
+            frontUserMessage.setPassword1(enPassword);
+            frontUserMessage.setPassword2(enPassword);
+        }
+        frontUserMessageDao.updateByUserId(frontUserMessage);
     }
 }
