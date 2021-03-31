@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Language" content="utf-8" />
     <meta content="all" name="robots" />
     <title>
-        领导留言板 - 地方领导频道 - 人民网
+        政务信息咨询
     </title>
     <meta name="keywords" content="领导留言板" />
     <meta name="description" content="领导留言板" />

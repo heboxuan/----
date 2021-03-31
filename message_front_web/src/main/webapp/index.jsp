@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html;charset=GB2312" />
     <meta http-equiv="Content-Language" content="utf-8" />
     <meta content="all" name="robots" />
-    <title>领导留言板</title>
+    <title>政务信息咨询</title>
     <meta name="keywords" content="领导留言板,部委领导,地方领导,对书记省长说,向书记省长建言,网友留言,网友建言,网络问政,社情民意,舆情,网络舆情,人民网" />
     <meta name="description" content="领导留言板,国内唯一的全国性领导干部留言板,为全国六十多位书记省长,数千位地市县级党政正职官员分别开通留言页面,供网友留言反映问题,供领导干部随时查阅，晓畅民意" />
     <meta name="filetype" content="1" />

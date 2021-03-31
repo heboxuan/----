@@ -45,22 +45,22 @@
                     <a href="${pageContext.request.contextPath}/frontCity/totalMessageOne.do" target="_blank">留言</a>
                 </li>
                 <li>
-                    <a href="javascript:if(confirm('http://leaders.people.com.cn/GB/178291/218130/434146/index.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://leaders.people.com.cn/GB/178291/218130/434146/index.html'" tppabs="http://leaders.people.com.cn/GB/178291/218130/434146/index.html" target="_blank">政企直通车</a>
+                    <a href="" target="_blank">政企直通车</a>
                 </li>
                 <li>
-                    <a href="javascript:if(confirm('http://leaders.people.com.cn/GB/178291/218130/434275/index.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://leaders.people.com.cn/GB/178291/218130/434275/index.html'" tppabs="http://leaders.people.com.cn/GB/178291/218130/434275/index.html" target="_blank">案例库</a>
+                    <a href="" target="_blank">案例库</a>
                 </li>
                 <li>
-                    <a href="javascript:if(confirm('http://leaders.people.com.cn/GB/178291/409148/412370/index.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://leaders.people.com.cn/GB/178291/409148/412370/index.html'" tppabs="http://leaders.people.com.cn/GB/178291/409148/412370/index.html" target="_blank">反馈</a>
+                    <a href="" target="_blank">反馈</a>
                 </li>
                 <li>
-                    <a href="javascript:if(confirm('http://leaders.people.com.cn/GB/178291/409148/412371/index.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://leaders.people.com.cn/GB/178291/409148/412371/index.html'" tppabs="http://leaders.people.com.cn/GB/178291/409148/412371/index.html" target="_blank">指数</a>
+                    <a href="" target="_blank">指数</a>
                 </li>
                 <li>
-                    <a href="javascript:if(confirm('http://leaders.people.com.cn/GB/178291/409148/421788/index.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://leaders.people.com.cn/GB/178291/409148/421788/index.html'" tppabs="http://leaders.people.com.cn/GB/178291/409148/421788/index.html" target="_blank">来信调查</a>
+                    <a href="" target="_blank">来信调查</a>
                 </li>
                 <li>
-                    <a href="javascript:if(confirm('http://leaders.people.com.cn/GB/178291/429209/index.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://leaders.people.com.cn/GB/178291/429209/index.html'" tppabs="http://leaders.people.com.cn/GB/178291/429209/index.html" target="_blank">解决了吗</a>
+                    <a href="" target="_blank">解决了吗</a>
                 </li>
                 <style>
                     .nav03 .fl ul li {
