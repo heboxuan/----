@@ -1,6 +1,7 @@
 package com.he.dao.system;
 
 import com.he.domain.system.FrontLeaderName;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -22,7 +23,7 @@ public interface FrontLeaderNameDao {
 
     public abstract Map<String,Object> findByLeaderId(Long leaderId);
 
-    public abstract List<Map<String,Object>> findAll(String isDelete);
+    public abstract List<Map<String,Object>> findAll(@Param("isDelete") String isDelete, @Param("findByParam")String findByParam);
 
     public abstract void save(FrontLeaderName frontLeaderName);
 

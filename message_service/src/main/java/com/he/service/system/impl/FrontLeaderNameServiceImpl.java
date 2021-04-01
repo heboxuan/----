@@ -24,10 +24,10 @@ public class FrontLeaderNameServiceImpl implements FrontLeaderNameService {
     private FrontLeaderNameDao frontLeaderNameDao;
 
     @Override
-    public PageInfo findAll(int page, int size) {
+    public PageInfo findAll(int page, int size,String findByParam) {
         PageHelper.startPage(page,size);
         String isDelete="false";
-        List<Map<String,Object>> list = frontLeaderNameDao.findAll(isDelete);
+        List<Map<String,Object>> list = frontLeaderNameDao.findAll(isDelete,findByParam);
         return new PageInfo(list);
     }
 

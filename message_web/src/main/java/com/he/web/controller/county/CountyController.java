@@ -24,8 +24,10 @@ public class CountyController extends BaseController {
 
 
     @RequestMapping("/list")
-    public String findAll(@RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "5") int size) {
-        PageInfo info=countyService.findAll(page,size);
+    public String findAll(@RequestParam(defaultValue = "1") int page,
+                          @RequestParam(defaultValue = "5") int size,
+                          @RequestParam(required = false)String findByParam) {
+        PageInfo info=countyService.findAll(page,size,findByParam);
         request.setAttribute("page",info);
         return "county/county-list";
     }

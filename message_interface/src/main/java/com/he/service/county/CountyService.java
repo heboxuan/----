@@ -4,7 +4,7 @@ import com.github.pagehelper.PageInfo;
 import com.he.domain.county.FrontCity;
 
 public interface CountyService {
-    public abstract PageInfo findAll(int page, int size);
+    public abstract PageInfo findAll(int page, int size,String findByParam);
 
     public abstract void save(FrontCity frontCity);
 

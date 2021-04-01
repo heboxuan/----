@@ -63,24 +63,54 @@
 
     <select id="findAll" resultType="map">
         SELECT
-            leader.id id,
-            leader.city_id cityId,
-            leader.leader_name leaderName,
-            city.`name`,
-        CASE
-                leader.is_mayor
-                WHEN 'false' THEN '书记'
-                WHEN 'truetrue' THEN '市长' ELSE '区长'
-            END AS isMayor,
-            leader.email,
-            leader.password,
-            leader.gender,
-            leader.telephone,
-            leader.is_delete isDelete
+        *
         FROM
-            front_leader_name leader
-            LEFT JOIN front_city city ON leader.city_id = city.id
+        (
+        SELECT
+        leader.id id,
+        leader.city_id cityId,
+        leader.leader_name leaderName,
+        city.`name`,
+        CASE
+        leader.is_mayor
+        WHEN 'false' THEN
+        '书记'
+        WHEN 'truetrue' THEN
+        '市长' ELSE '区长'
+        END AS isMayor,
+        leader.email,
+        leader.PASSWORD,
+        leader.gender,
+        leader.telephone,
+        leader.is_delete isDelete,
+        concat(
+        leader.leader_name,
+        city.`name`,
+        CASE
+        leader.is_mayor
+        WHEN 'false' THEN
+        '书记'
+        WHEN 'truetrue' THEN
+        '市长' ELSE '区长'
+        END,
+        leader.email,
+        CASE
+        leader.gender
+        WHEN '0' THEN
+        '男' ELSE '女'
+        END,
+        leader.telephone
+        ) as findByparam
+        FROM
+        front_leader_name leader
+        LEFT JOIN front_city city ON leader.city_id = city.id
         where leader.is_delete=#{isDelete}
+        ) AS temp
+        <where>
+            <if test="findByParam!=null and findByParam!=''">
+                temp.findByParam like concat('%',#{findByParam},'%')
+            </if>
+        </where>
     </select>
 
     <insert id="save">

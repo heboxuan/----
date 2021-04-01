@@ -76,7 +76,7 @@ public class PasswordController extends BaseController {
         Map<String,Object> frontLeaderName=frontLeaderNameService.findByLeaderId(Long.valueOf(id));
 
         //各个区域集合
-        PageInfo list = countyService.findAll(1, 100);
+        PageInfo list = countyService.findAll(1, 100,null);
         List countyList = list.getList();
 
         //职位集合

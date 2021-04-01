@@ -8,7 +8,8 @@ import java.util.List;
 import java.util.Map;
 
 public interface FrontLeaderNameService {
-    public abstract PageInfo findAll(int page, int size);
+    public abstract PageInfo findAll(int page, int size,
+                                     String findByParam);
 
     public abstract void save(FrontLeaderName frontLeaderName);
 

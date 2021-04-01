@@ -9,6 +9,7 @@ import com.he.domain.county.FrontCityExample;
 import com.he.service.county.CountyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.UUID;
@@ -22,11 +23,14 @@ public class CountyServiceImpl implements CountyService{
 
 
     @Override
-    public PageInfo findAll(int page, int size) {
+    public PageInfo findAll(int page, int size,String findByParam) {
         PageHelper.startPage(page,size);
         FrontCityExample example=new FrontCityExample();
         FrontCityExample.Criteria criteria = example.createCriteria();
         criteria.andIsDeleteEqualTo("false");
+        if (findByParam!=null&&!"".equals(findByParam)) {
+            criteria.andNameLike("%"+findByParam+"%");
+        }
         List<FrontCity> list = frontCityDao.selectByExample(example);
         return new PageInfo(list);
     }

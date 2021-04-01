@@ -43,10 +43,11 @@ public class FrontLeaderNameController extends BaseController {
 
     @RequestMapping("/list")
     public String list(
-            @RequestParam(defaultValue = "1")int page,
-            @RequestParam(defaultValue = "10")int size
+            @RequestParam(defaultValue = "1",required = false)int page,
+            @RequestParam(defaultValue = "10",required = false)int size,
+            @RequestParam(required = false) String findByParam
     ) {
-        PageInfo info=frontLeaderNameService.findAll(page,size);
+        PageInfo info=frontLeaderNameService.findAll(page,size,findByParam);
         request.setAttribute("page",info);
         return "system/frontLeaderName/frontLeaderName-list";
     }
@@ -55,7 +56,7 @@ public class FrontLeaderNameController extends BaseController {
     public String toAdd() {
 
         //各个区域集合
-        PageInfo list = countyService.findAll(1, 100);
+        PageInfo list = countyService.findAll(1, 100,null);
         List countyList = list.getList();
 
         //职位集合
@@ -75,7 +76,7 @@ public class FrontLeaderNameController extends BaseController {
         Map<String,Object> frontLeaderName=frontLeaderNameService.findByLeaderId(id);
 
         //各个区域集合
-        PageInfo list = countyService.findAll(1, 100);
+        PageInfo list = countyService.findAll(1, 100,null);
         List countyList = list.getList();
 
         //职位集合

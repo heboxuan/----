@@ -66,9 +66,10 @@
                         </div>
                     </div>
                     <div class="box-tools pull-right">
-                        <div class="has-feedback">
-                            <input type="text" class="form-control input-sm" placeholder="搜索">
-                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                        <div class="has-feedback" >
+                            <form method="get" href="${pageContext.request.contextPath}/county/list.do">
+                                <input style="display:inline-block;width:100px"  type="text" class="form-control input-sm" name="findByParam" placeholder="搜索"><button name="搜索">搜索</button>
+                            </form>
                         </div>
                     </div>
                     <!--工具栏/-->
