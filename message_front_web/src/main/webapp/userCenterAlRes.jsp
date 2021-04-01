@@ -9,8 +9,8 @@
     <title>
         政务信息咨询
     </title>
-    <meta name="keywords" content="领导留言板"/>
-    <meta name="description" content="领导留言板"/>
+    <meta name="keywords" content="领导咨询板"/>
+    <meta name="description" content="领导咨询板"/>
     <meta name="filetype" content="1"/>
     <meta name="publishedtype" content="1"/>
     <meta name="pagetype" content="2"/>
@@ -51,7 +51,7 @@
     });
 </script>
 
-<div class="path_2j w1200 grey2">当前位置 ：领导留言板 > 用户中心</div>
+<div class="path_2j w1200 grey2">当前位置 ：领导咨询板 > 用户中心</div>
 
 <div class="clearfix xiugai_con w1200">
 

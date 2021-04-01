@@ -17,11 +17,15 @@ public interface FrontLeftMessageDao {
 
     public abstract Map<String,Object> findById(Long valueOf);
 
-    public abstract List<Map<String, Object>> findUnAll(@Param("leaderId") Long leaderId, @Param("typeId")String typeId);
+    public abstract List<Map<String, Object>> findUnAll(@Param("leaderId") Long leaderId,
+                                                        @Param("typeId")String typeId,
+                                                        @Param("findByParam")String findByParam);
 
     public abstract Map<String, Object> findLeftMessageById(Long id);
 
-    public abstract List<Map<String, Object>> findAlAll(@Param("leaderId")Long leaderId, @Param("typeId")String typeId);
+    public abstract List<Map<String, Object>> findAlAll(@Param("leaderId")Long leaderId,
+                                                        @Param("typeId")String typeId,
+                                                        @Param("findByParam")String findByParam);
 
     public abstract void updateResponsePassageById(@Param("id") Long id, @Param("responsePassage") String responsePassage);
 

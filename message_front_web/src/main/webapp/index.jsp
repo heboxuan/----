@@ -6,8 +6,8 @@
     <meta http-equiv="Content-Language" content="utf-8" />
     <meta content="all" name="robots" />
     <title>政务信息咨询</title>
-    <meta name="keywords" content="领导留言板,部委领导,地方领导,对书记省长说,向书记省长建言,网友留言,网友建言,网络问政,社情民意,舆情,网络舆情,人民网" />
-    <meta name="description" content="领导留言板,国内唯一的全国性领导干部留言板,为全国六十多位书记省长,数千位地市县级党政正职官员分别开通留言页面,供网友留言反映问题,供领导干部随时查阅，晓畅民意" />
+    <meta name="keywords" content="领导咨询板,部委领导,地方领导,对书记省长说,向书记省长建言,网友咨询,网友建言,网络问政,社情民意,舆情,网络舆情,人民网" />
+    <meta name="description" content="领导咨询板,国内唯一的全国性领导干部咨询板,为全国六十多位书记省长,数千位地市县级党政正职官员分别开通咨询页面,供网友咨询反映问题,供领导干部随时查阅，晓畅民意" />
     <meta name="filetype" content="1" />
     <meta name="publishedtype" content="1" />
     <meta name="pagetype" content="2" />
@@ -164,8 +164,8 @@
                 <p>安全生产问题线索征集</p>
             </li>
             <li>
-                <img src="img/MAIN202007291723228336530368538.jpg" width="165" height="100" border="0" alt="助力“六保” 期待您留言" />
-                <p>助力“六保” 期待您留言</p>
+                <img src="img/MAIN202007291723228336530368538.jpg" width="165" height="100" border="0" alt="助力“六保” 期待您咨询" />
+                <p>助力“六保” 期待您咨询</p>
 
             </li>
             <li>
@@ -188,13 +188,13 @@
         <div class="clearfix box_liuyan" style="margin-top: 22px;">
             <dl>
                 <dt class="fl">
-                    <b class="white">给领导留言</b>
-                    <p><strong class="red"><em><img src="${pageContext.request.contextPath}/img/icon25.gif" width="13" height="12" />昨日留言</em><i id="threadsNum" style="color: #d73240">123</i>条</strong><br />
-                        <em>今年留言</em><i id="yearThreadsNum">123</i>条<br />
-                        <em>历史总留言</em><i id="totalThreadsNum">123</i>条</p>
+                    <b class="white">给领导咨询</b>
+                    <p><strong class="red"><em><img src="${pageContext.request.contextPath}/img/icon25.gif" width="13" height="12" />昨日咨询</em><i id="threadsNum" style="color: #d73240">123</i>条</strong><br />
+                        <em>今年咨询</em><i id="yearThreadsNum">123</i>条<br />
+                        <em>历史总咨询</em><i id="totalThreadsNum">123</i>条</p>
                 </dt>
                 <dd class="fr">
-                    <b class="white">各区留言</b>
+                    <b class="white">各区咨询</b>
                     <p><strong class="blue"><em><img src="${pageContext.request.contextPath}/img/icon24.gif" width="13" height="12" />昨日回复</em><i id="answersNum" style="color: #467abb">123</i>条</strong><br />
                         <em>今年回复</em><i id="yearAnswersNum">123</i>条<br />
                         <em>历史总回复</em><i id="totalAnswersNum">123</i>条</p>
@@ -294,7 +294,7 @@
 <div class="fr p2_right">
     <div class="p2_right_df">
         <h2>
-            <em class="white">7×24h 留言</em>
+            <em class="white">7×24h 咨询</em>
             <span class="localName">换一批</span>
         </h2>
 

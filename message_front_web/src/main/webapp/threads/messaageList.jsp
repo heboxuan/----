@@ -12,8 +12,8 @@
     <title>
         ${leaderDetail.leaderName}政务信息咨询
     </title>
-    <meta name="keywords" content="领导留言板" />
-    <meta name="description" content="领导留言板" />
+    <meta name="keywords" content="领导咨询板" />
+    <meta name="description" content="领导咨询板" />
     <meta name="filetype" content="1" />
     <meta name="publishedtype" content="1" />
     <meta name="pagetype" content="2" />
@@ -44,18 +44,18 @@
 
 <div class="path_2j w1200 grey2">
     当前位置 ：
-    <a href="../index.htm" >领导留言板</a> &gt; 北京市 &gt;
+    <a href="../index.htm" >领导咨询板</a> &gt; 北京市 &gt;
 
     <i>${leaderDetail.leaderName}</i>
 </div>
 
-<!--留言列表-->
+<!--咨询列表-->
 <div class="liuyan_box02 w1200 clearfix">
     <ul class="clearfix title" id="tab_type" style="cursor: pointer;">
-        <li>留言信息展示（包括已经回复和未回复）</li>
+        <li>咨询信息展示（包括已经回复和未回复）</li>
         <a class="message_my" href="${pageContext.request.contextPath}/frontCity/totalMessageOne.do">
             <img src="${pageContext.request.contextPath}/static/www/images/message_new.png" class="message_new">
-            我要留言
+            我要咨询
         </a>
     </ul>
 
@@ -89,7 +89,7 @@
         </div>
     </div>
 </div>
-<!--留言列表 end-->
+<!--咨询列表 end-->
 
 <%@ include file="../common/common-bottom-help.jsp"%>
 

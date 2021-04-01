@@ -21,8 +21,9 @@ public class ModuleController extends BaseController {
     @RequestMapping("/list")
     public String list(
             @RequestParam(defaultValue = "1") int page,
-            @RequestParam(defaultValue = "10") int size) {
-        PageInfo info=moduleService.findAll(page,size);
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(required = false)String findByParam) {
+        PageInfo info=moduleService.findAll(page,size,findByParam);
         request.setAttribute("page",info);
         return "system/module/module-list";
     }

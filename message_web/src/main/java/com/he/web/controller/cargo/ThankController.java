@@ -20,23 +20,27 @@ public class ThankController extends BaseController {
     @RequestMapping("/unlist")
     public String unlist(@RequestParam(defaultValue = "1",required = false) int page,
                        @RequestParam(defaultValue = "10",required = false) int size,
-                       @RequestParam(required = false)String typeId
+                       @RequestParam(required = false)String typeId,
+                         @RequestParam(required = false)String findByParam
                        ) {
         String loginUserId = getLoginUser();
-        PageInfo info = consultService.findUnAll(Long.valueOf(loginUserId), typeId,page, size);
+        PageInfo info = consultService.findUnAll(Long.valueOf(loginUserId), typeId,page, size,findByParam);
         request.setAttribute("page",info);
+        request.setAttribute("url","unlist");
         return "cargo/thank/thank-list";
     }
 
     @RequestMapping("/allist")
     public String allist(@RequestParam(defaultValue = "1",required = false) int page,
                        @RequestParam(defaultValue = "10",required = false) int size,
-                       @RequestParam(required = false)String typeId
+                       @RequestParam(required = false)String typeId,
+                         @RequestParam(required = false)String findByParam
     ) {
         //User user = getLoginUser();
         String loginUserId = getLoginUser();
-        PageInfo info = consultService.findAlAll(Long.valueOf(loginUserId), typeId,page, size);
+        PageInfo info = consultService.findAlAll(Long.valueOf(loginUserId), typeId,page, size,findByParam);
         request.setAttribute("page",info);
+        request.setAttribute("url","allist");
         return "cargo/thank/thank-list";
     }
 

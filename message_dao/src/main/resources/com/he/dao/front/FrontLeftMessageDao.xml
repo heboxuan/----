@@ -67,20 +67,38 @@
 
     <select id="findUnAll" resultType="map">
         SELECT
-            leftMessage.id id,
-            user.username,
-            leftMessage.field field,
-            leftMessage.title title,
-            LEFT ( leftMessage.passage, 55 ) passage,
-            LEFT ( leftMessage.ask_passage, 55 ) askPassage
+            *
         FROM
-            `front_left_message` leftMessage
-            LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
-        WHERE
-            leftMessage.type_id=#{typeId} and leftMessage.is_process='false'
-	        and leftMessage.leader_id=#{leaderId}
-	    order by
-	        leftMessage.time desc
+            (
+            SELECT
+                leftMessage.id id,
+                USER.username,
+                leftMessage.field field,
+                leftMessage.title title,
+                LEFT ( leftMessage.passage, 55 ) passage,
+                LEFT ( leftMessage.ask_passage, 55 ) askPassage,
+                CONCAT(
+                    USER.username,
+                    leftMessage.field,
+                    leftMessage.title,
+                    IFNULL( LEFT ( leftMessage.passage, 55 ), '' ),
+                IFNULL( LEFT ( leftMessage.ask_passage, 55 ), '' ))  as 'findByParam'
+            FROM
+                `front_left_message` leftMessage
+                LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
+            WHERE
+                leftMessage.type_id = #{typeId} and leftMessage.is_process='false'
+
+                AND leftMessage.leader_id = #{leaderId}
+
+            ORDER BY
+            leftMessage.time DESC
+            ) AS temp
+            <where>
+                <if test="findByParam!=null and findByParam!=''">
+                    temp.findByParam like concat('%',#{findByParam},'%')
+                </if>
+            </where>
     </select>
 
     <select id="findLeftMessageById" resultType="map">
@@ -102,20 +120,38 @@
 
     <select id="findAlAll" resultType="map">
         SELECT
-            leftMessage.id id,
-            user.username,
-            leftMessage.field field,
-            leftMessage.title title,
-            LEFT ( leftMessage.passage, 55 ) passage,
-            LEFT ( leftMessage.ask_passage, 55 ) askPassage
+        *
         FROM
-            `front_left_message` leftMessage
-            LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
+        (
+        SELECT
+        leftMessage.id id,
+        USER.username,
+        leftMessage.field field,
+        leftMessage.title title,
+        LEFT ( leftMessage.passage, 55 ) passage,
+        LEFT ( leftMessage.ask_passage, 55 ) askPassage,
+        CONCAT(
+        USER.username,
+        leftMessage.field,
+        leftMessage.title,
+        IFNULL( LEFT ( leftMessage.passage, 55 ), '' ),
+        IFNULL( LEFT ( leftMessage.ask_passage, 55 ), '' ))  as 'findByParam'
+        FROM
+        `front_left_message` leftMessage
+        LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
         WHERE
-            leftMessage.type_id=#{typeId} and leftMessage.is_process='true'
-	        and leftMessage.leader_id=#{leaderId}
-	    order by
-	        leftMessage.time desc
+        leftMessage.type_id = #{typeId} and leftMessage.is_process='true'
+
+        AND leftMessage.leader_id = #{leaderId}
+
+        ORDER BY
+        leftMessage.time DESC
+        ) AS temp
+        <where>
+            <if test="findByParam!=null and findByParam!=''">
+                temp.findByParam like concat('%',#{findByParam},'%')
+            </if>
+        </where>
     </select>
 
     <update id="updateResponsePassageById">

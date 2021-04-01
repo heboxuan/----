@@ -10,8 +10,8 @@
     <title>
         ${frontLeftMessage.title}政务信息咨询
     </title>
-    <meta name="keywords" content="领导留言板" />
-    <meta name="description" content="领导留言板" />
+    <meta name="keywords" content="领导咨询板" />
+    <meta name="description" content="领导咨询板" />
     <meta name="filetype" content="1" />
     <meta name="publishedtype" content="1" />
     <meta name="pagetype" content="2" />
@@ -42,7 +42,7 @@
 
 <div class="path_2j w1200 grey2">
     当前位置 ：
-    <a href="../index.htm" >领导留言板</a> &gt; 北京市 &gt;
+    <a href="../index.htm" >领导咨询板</a> &gt; 北京市 &gt;
 
     <i>${leaderDetail.leaderName}</i>
 </div>
@@ -75,10 +75,10 @@
                 <i class="red">认领交办</i>
             </h3>
             <p class="zoom">
-                您的留言已经收到！会及时与您进行沟通。感谢您的宝贵留言！</p>
+                您的咨询已经收到！会及时与您进行沟通。感谢您的宝贵咨询！</p>
             <h3>
                 <em class="grey2">
-                    留言时间:&nbsp; ${frontLeftMessage.time}
+                    咨询时间:&nbsp; ${frontLeftMessage.time}
                 </em>
             </h3>
         </li>

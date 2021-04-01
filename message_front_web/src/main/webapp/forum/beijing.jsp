@@ -10,8 +10,8 @@
     <title>
         ${beijingTotal.name}政务信息咨询
     </title>
-    <meta name="keywords" content="领导留言板" />
-    <meta name="description" content="领导留言板" />
+    <meta name="keywords" content="领导咨询板" />
+    <meta name="description" content="领导咨询板" />
     <meta name="filetype" content="1" />
     <meta name="publishedtype" content="1" />
     <meta name="pagetype" content="2" />
@@ -48,13 +48,13 @@
 
 <div class="path_2j w1200 grey2">
     当前位置 ：
-    <a href="../index.jsp" >领导留言板</a> > ${beijingTotal.name}
+    <a href="../index.jsp" >领导咨询板</a> > ${beijingTotal.name}
 </div>
 <div class="index_content w1200">
 
     <div class="clearfix district_box02 w1200">
         <div class="fl"><strong>${beijingTotal.name}</strong>
-            <p>历史留言总量: <i class="red">${beijingTotal.askNum}</i> 条　<span><br/></span>历史回复总量: <i class="red">${beijingTotal.reNum}</i> 条</p>
+            <p>历史咨询总量: <i class="red">${beijingTotal.askNum}</i> 条　<span><br/></span>历史回复总量: <i class="red">${beijingTotal.reNum}</i> 条</p>
         </div>
     </div>
 
@@ -69,15 +69,15 @@
                 </dt>
 
                 <div style="width: 300px;margin-left:-10px;">
-                    <a href="${pageContext.request.contextPath}/frontCity/messageList.do?id=${beijingLeaderOne.id}"  class="message_index">查看留言</a>
-                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do?id=${beijingLeaderOne.id}"  class="message_index_color">我要留言</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/messageList.do?id=${beijingLeaderOne.id}"  class="message_index">查看咨询</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do?id=${beijingLeaderOne.id}"  class="message_index_color">我要咨询</a>
 
                 </div>
 
                 <p class="tack_message">
-                    <a href="../threads/list-fid=539.htm"  style="margin-top:25px;">年度总留言量: <i class="red">19658</i> 条 &nbsp;&nbsp;</a>
+                    <a href=""  style="margin-top:25px;">期待您的咨询 &nbsp;&nbsp;</a>
                     <span><br/></span>
-                    <a href="../threads/list-fid=539&state=4.htm" >年度公开回复量: <i class="red">18989</i> 条 &nbsp;&nbsp;</a>
+                    <a href="" >一定给您最好的回复 &nbsp;&nbsp;</a>
                 </p>
             </dl>
         </div>
@@ -91,14 +91,14 @@
                 </dt>
 
                 <div style="width: 300px;margin-left:-10px;">
-                    <a href="${pageContext.request.contextPath}/frontCity/messageList.do?id=${beijingLeaderTwo.id}"  class="message_index">查看留言</a>
-                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do?id=${beijingLeaderTwo.id}"  class="message_index_color">我要留言</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/messageList.do?id=${beijingLeaderTwo.id}"  class="message_index">查看咨询</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do?id=${beijingLeaderTwo.id}"  class="message_index_color">我要咨询</a>
                 </div>
 
                 <p class="tack_message">
-                    <a href="../threads/list-fid=540.htm"  style="margin-top:25px;">年度总留言量: <i class="red">5978</i> 条 &nbsp;&nbsp;</a>
+                    <a href=""  style="margin-top:25px;">期待您的咨询 &nbsp;&nbsp;</a>
                     <span><br/></span>
-                    <a href="../threads/list-fid=540&state=4.htm" >年度公开回复量: <i class="red">5786</i> 条 &nbsp;&nbsp;</a>
+                    <a href="" >一定给您最好的回复 &nbsp;&nbsp;</a>
                 </p>
             </dl>
         </div>
@@ -112,7 +112,7 @@
                     <b>
                         <a class="count-limit" href="${pageContext.request.contextPath}/frontCity/totalMessageTwo.do?id=${county.id}">${county.name}</a>
                     </b>
-                    <p class="grey2">历史留言总量: <i class="red">${county.askNum}</i> 条</p>
+                    <p class="grey2">历史咨询总量: <i class="red">${county.askNum}</i> 条</p>
                     <p class="grey2">历史回复总量: <i class="red">${county.reNum}</i> 条</p>
                 </li>
             </c:forEach>
@@ -135,7 +135,7 @@
 <div class="bottom_copyright1 clearfix">
     <div class="clearfix w1200">
         <div class="fl left">
-            <h2><i class="icon"></i>一块帮老百姓办事的留言板</h2>
+            <h2><i class="icon"></i>一块帮老百姓办事的咨询板</h2>
             <p>
                 邮箱：leader@people.cn
             </p>
@@ -150,16 +150,16 @@
                     <a href="../help/help-2.jsp" target="_blank">服务协议</a>
                 </li>
                 <li>
-                    <a href="../help/help-3.jsp" target="_blank">留言基础操作</a>
+                    <a href="../help/help-3.jsp" target="_blank">咨询基础操作</a>
                 </li>
                 <li>
-                    <a href="../help/help-4.jsp" target="_blank">如何删除留言</a>
+                    <a href="../help/help-4.jsp" target="_blank">如何删除咨询</a>
                 </li>
                 <li>&emsp;&emsp;
                     <a href="../help/help-5.jsp" target="_blank">常见问题</a>
                 </li>
                 <li>
-                    <a href="../help/help-6.jsp" target="_blank">留言如何迅速得到办理</a>
+                    <a href="../help/help-6.jsp" target="_blank">咨询如何迅速得到办理</a>
                 </li>
                 <li>
                     <a href="../help/help-7.jsp" target="_blank">联系我们</a>

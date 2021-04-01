@@ -8,8 +8,8 @@
     <title>
         政务信息咨询
     </title>
-    <meta name="keywords" content="领导留言板">
-    <meta name="description" content="领导留言板">
+    <meta name="keywords" content="领导咨询板">
+    <meta name="description" content="领导咨询板">
     <meta name="filetype" content="1">
     <meta name="publishedtype" content="1">
     <meta name="pagetype" content="2">

@@ -1,6 +1,7 @@
 package com.he.dao.system;
 
 import com.he.domain.system.Module;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ public interface ModuleDao {
     int update(Module module);
 
     //查询全部
-    List<Module> findAll();
+    List<Module> findAll(@Param("findByParam") String findByParam);
 
     public abstract List<Module> findByBelong(int i);
 

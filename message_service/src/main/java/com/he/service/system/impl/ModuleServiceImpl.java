@@ -19,15 +19,15 @@ public class ModuleServiceImpl implements ModuleService {
     private ModuleDao moduleDao;
 
     @Override
-    public PageInfo findAll(int page, int size) {
+    public PageInfo findAll(int page, int size,String findByParam) {
         PageHelper.startPage(page,size);
-        List<Module> list = moduleDao.findAll();
+        List<Module> list = moduleDao.findAll(findByParam);
         return new PageInfo(list);
     }
 
     @Override
     public List<Module> findAll() {
-        return moduleDao.findAll();
+        return moduleDao.findAll(null);
     }
 
     @Override

@@ -64,9 +64,10 @@
                     </div>
                 </div>
                 <div class="box-tools pull-right">
-                    <div class="has-feedback">
-                        <input type="text" class="form-control input-sm" placeholder="搜索">
-                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                    <div class="has-feedback" >
+                        <form method="get" href="${pageContext.request.contextPath}/system/module/list.do">
+                            <input style="display:inline-block;width:100px"  type="text" class="form-control input-sm" name="findByParam" placeholder="搜索"><button name="搜索">搜索</button>
+                        </form>
                     </div>
                 </div>
                 <!--工具栏/-->
@@ -93,7 +94,7 @@
                     <c:forEach items="${page.list}" var="o"  varStatus="st">
                         <tr>
                             <td><input type="checkbox" name="id" value="${o.id }"/></td>
-                            <td>${status.index+1}</td>
+                            <td>${st.index+1}</td>
                             <td><a href="moduleAction_toview?id=${o.id}">${o.name}</a></td>
                             <td>${o.parentName}</td>
                             <td>${o.cpermission}</td>

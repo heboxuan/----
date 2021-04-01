@@ -9,8 +9,8 @@
     <title>
         ${countyDetail.name}政务信息咨询
     </title>
-    <meta name="keywords" content="领导留言板" />
-    <meta name="description" content="领导留言板" />
+    <meta name="keywords" content="领导咨询板" />
+    <meta name="description" content="领导咨询板" />
     <meta name="filetype" content="1" />
     <meta name="publishedtype" content="1" />
     <meta name="pagetype" content="2" />
@@ -47,7 +47,7 @@
 
 <div class="path_2j w1200 grey2">
     当前位置 ：
-    <a href="../index.jsp" >领导留言板</a> > 北京市 &gt; ${countyDetail.name}
+    <a href="../index.jsp" >领导咨询板</a> > 北京市 &gt; ${countyDetail.name}
 </div>
 <div class="index_content w1200">
     <script type="application/javascript">
@@ -60,7 +60,7 @@
 
     <div class="clearfix district_box02 w1200">
         <div class="fl"><strong>${countyDetail.name}</strong>
-            <p>历史留言总量: <i class="red">${countyDetail.askNum}</i> 条　<span><br/></span>历史回复总量: <i class="red">${countyDetail.reNum}</i> 条</p>
+            <p>历史咨询总量: <i class="red">${countyDetail.askNum}</i> 条　<span><br/></span>历史回复总量: <i class="red">${countyDetail.reNum}</i> 条</p>
         </div>
 
     </div>
@@ -74,15 +74,15 @@
                 </dt>
 
                 <div style="width: 300px;margin-left:-10px;">
-                    <a href="${pageContext.request.contextPath}/frontCity/messageList.do?id=${countyLeaderOne.id}"  class="message_index">查看留言</a>
-                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do?id=${countyLeaderOne.id}" class="message_index_color">我要留言</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/messageList.do?id=${countyLeaderOne.id}"  class="message_index">查看咨询</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do?id=${countyLeaderOne.id}" class="message_index_color">我要咨询</a>
 
                 </div>
 
                 <p class="tack_message">
-                    <a href="../threads/list-fid=733.htm" style="margin-top:25px;">年度总留言量: <i class="red">539</i> 条 &nbsp;&nbsp;</a>
+                    <a href=""  style="margin-top:25px;">期待您的咨询 &nbsp;&nbsp;</a>
                     <span><br/></span>
-                    <a href="../threads/list-fid=733&state=4.htm" >年度公开回复量: <i class="red">537</i> 条 &nbsp;&nbsp;</a>
+                    <a href="" >一定给您最好的回复 &nbsp;&nbsp;</a>
                 </p>
             </dl>
         </div>
@@ -96,15 +96,15 @@
                 </dt>
 
                 <div style="width: 300px;margin-left:-10px;">
-                    <a href="${pageContext.request.contextPath}/frontCity/messageList.do?id=${countyLeaderTwo.id}"  class="message_index">查看留言</a>
-                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do?id=${countyLeaderTwo.id}" class="message_index_color">我要留言</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/messageList.do?id=${countyLeaderTwo.id}"  class="message_index">查看咨询</a>
+                    <a href="${pageContext.request.contextPath}/frontCity/checkLogin.do?id=${countyLeaderTwo.id}" class="message_index_color">我要咨询</a>
 
                 </div>
 
                 <p class="tack_message">
-                    <a href="../threads/list-fid=734.htm"  style="margin-top:25px;">年度总留言量: <i class="red">320</i> 条 &nbsp;&nbsp;</a>
+                    <a href=""  style="margin-top:25px;">期待您的咨询 &nbsp;&nbsp;</a>
                     <span><br/></span>
-                    <a href="../threads/list-fid=734&state=4.htm" >年度公开回复量: <i class="red">317</i> 条 &nbsp;&nbsp;</a>
+                    <a href="" >一定给您最好的回复 &nbsp;&nbsp;</a>
                 </p>
             </dl>
         </div>

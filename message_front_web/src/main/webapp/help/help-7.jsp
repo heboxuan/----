@@ -10,8 +10,8 @@
     <title>
         政务信息咨询
     </title>
-    <meta name="keywords" content="领导留言板" />
-    <meta name="description" content="领导留言板" />
+    <meta name="keywords" content="领导咨询板" />
+    <meta name="description" content="领导咨询板" />
     <meta name="filetype" content="1" />
     <meta name="publishedtype" content="1" />
     <meta name="pagetype" content="2" />
@@ -218,7 +218,7 @@
 
 <div class="path_2j w1200 grey2">
     <p>当前位置 :
-        <a href="../index.jsp" >领导留言 </a>&nbsp;&gt;&nbsp;
+        <a href="../index.jsp" >领导咨询 </a>&nbsp;&gt;&nbsp;
         <a href="help-1.jsp" >帮助中心</a>
     </p>
 </div>
@@ -239,16 +239,16 @@
                     <a href="help-2.jsp" id="title_2" >服务协议</a>
                 </li>
                 <li>
-                    <a href="help-3.jsp" id="title_3">留言基础操作</a>
+                    <a href="help-3.jsp" id="title_3">咨询基础操作</a>
                 </li>
                 <li>
-                    <a href="help-4.jsp" id="title_4" >如何删除留言</a>
+                    <a href="help-4.jsp" id="title_4" >如何删除咨询</a>
                 </li>
                 <li>
                     <a href="help-5.jsp" id="title_6" >常见问题</a>
                 </li>
                 <li>
-                    <a href="help-6.jsp" id="title_7" >留言如何迅速得到办理</a>
+                    <a href="help-6.jsp" id="title_7" >咨询如何迅速得到办理</a>
                 </li>
                 <li>
                     <a href="help-7.jsp" id="title_8" class="active">联系我们</a>
@@ -265,7 +265,7 @@
             <div class="table">
                 <h4>7 联系我们</h4>
                 <ol>
-                    <li>《领导留言板》客服邮箱：leader@people.cn</li>
+                    <li>《领导咨询板》客服邮箱：leader@people.cn</li>
                 </ol>
             </div>
         </div>

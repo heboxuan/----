@@ -10,8 +10,8 @@
     <title>
         政务信息咨询
     </title>
-    <meta name="keywords" content="领导留言板" />
-    <meta name="description" content="领导留言板" />
+    <meta name="keywords" content="领导咨询板" />
+    <meta name="description" content="领导咨询板" />
     <meta name="filetype" content="1" />
     <meta name="publishedtype" content="1" />
     <meta name="pagetype" content="2" />
@@ -45,7 +45,7 @@
 
 <div class="path_2j w1200 grey2">
     当前位置 ：
-    <a href="#">领导留言板</a> &gt; 消息提示
+    <a href="#">领导咨询板</a> &gt; 消息提示
 </div>
 
 <script language="javascript">
@@ -74,7 +74,7 @@
             <div class="uc-bd">
 
                 <div class="w1200 clearfix search_none">
-                    请先登录留言板再发表留言
+                    请先登录咨询板再发表咨询
                     <br/>
                     <p>如果浏览器没有自动跳转,请
                         <a href="${pageContext.request.contextPath}/login.jsp" >点击这里</a>

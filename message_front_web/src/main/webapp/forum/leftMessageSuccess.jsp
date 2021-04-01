@@ -8,8 +8,8 @@
     <title>
         政务信息咨询
     </title>
-    <meta name="keywords" content="领导留言板">
-    <meta name="description" content="领导留言板">
+    <meta name="keywords" content="领导咨询板">
+    <meta name="description" content="领导咨询板">
     <meta name="filetype" content="1">
     <meta name="publishedtype" content="1">
     <meta name="pagetype" content="2">
@@ -43,7 +43,7 @@
     <span>
         <img src="${pageContext.request.contextPath}/img/icon22.png" width="127" height="126">
     </span>
-    <h1 style="font-size:36px;font-weight: bold">留言成功！</h1>
+    <h1 style="font-size:36px;font-weight: bold">咨询成功！</h1>
     <p style="text-align:center;margin:20px 0px">
         <span style="display:inline;font-size: 18px;margin-right: 100px"><a href="${pageContext.request.contextPath}/index.jsp">去首页</a></span>
     </p>

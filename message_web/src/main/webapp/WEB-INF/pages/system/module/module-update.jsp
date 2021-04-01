@@ -13,7 +13,7 @@
         <section class="content-header">
             <h1>
                 系统管理
-                <small>部门管理</small>
+                <small>模块管理</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> 首页</a></li>

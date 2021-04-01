@@ -31,9 +31,9 @@ public class ConsultServiceImpl implements ConsultService {
      * @return
      */
     @Override
-    public PageInfo findUnAll(Long leaderId, String typeId,int page, int size) {
+    public PageInfo findUnAll(Long leaderId, String typeId,int page, int size,String findByParam) {
         PageHelper.startPage(page,size);
-        List<Map<String,Object>> list=frontLeftMessageDao.findUnAll(leaderId,typeId);
+        List<Map<String,Object>> list=frontLeftMessageDao.findUnAll(leaderId,typeId,findByParam);
         return new PageInfo(list);
     }
 
@@ -44,9 +44,9 @@ public class ConsultServiceImpl implements ConsultService {
     }
 
     @Override
-    public PageInfo findAlAll(Long leaderId, String typeId, int page, int size) {
+    public PageInfo findAlAll(Long leaderId, String typeId, int page, int size,String findByParam) {
         PageHelper.startPage(page,size);
-        List<Map<String,Object>> list=frontLeftMessageDao.findAlAll(leaderId,typeId);
+        List<Map<String,Object>> list=frontLeftMessageDao.findAlAll(leaderId,typeId,findByParam);
         return new PageInfo(list);
     }
 

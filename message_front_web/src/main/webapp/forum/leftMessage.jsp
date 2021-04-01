@@ -8,8 +8,8 @@
     <title>
         政务信息咨询
     </title>
-    <meta name="keywords" content="领导留言板">
-    <meta name="description" content="领导留言板">
+    <meta name="keywords" content="领导咨询板">
+    <meta name="description" content="领导咨询板">
     <meta name="filetype" content="1">
     <meta name="publishedtype" content="1">
     <meta name="pagetype" content="2">
@@ -40,18 +40,18 @@
 
 <div class="path_2j w1200 grey2">
     当前位置 ：
-    <a href="${pageContext.request.contextPath}/index.jsp" >领导留言板</a> > 北京市 &gt;&nbsp;留言
+    <a href="${pageContext.request.contextPath}/index.jsp" >领导咨询板</a> > 北京市 &gt;&nbsp;咨询
 </div>
 
 
-<!--留言区-->
+<!--咨询区-->
 <form name="postForm" id="postForm" action="${pageContext.request.contextPath}/frontCity/saveLeftMessage.do" method="post">
     <div class="liuyan_box01 w1200 clearfix">
         <input type="hidden" name="leaderId" value="${leaderId}">
         <div class="box01 grey2">
         </div>
         <div class="w1200">
-            <h3 class="message_title">留言信息</h3>
+            <h3 class="message_title">咨询信息</h3>
             <table class="message_box" cellpadding="0" cellspacing="0">
                 <tbody><tr>
                     <td>*类别</td>
@@ -97,7 +97,7 @@
                     <td>*诉求</td>
                     <td>
                         <li class="t02">
-                        <textarea name="askPassage" id="appeal" cols="100" rows="6" placeholder="请您以文字方式在留言中简要说明反映问题的具体情况，并尽量提供全面的信息。
+                        <textarea name="askPassage" id="appeal" cols="100" rows="6" placeholder="请您以文字方式在咨询中简要说明反映问题的具体情况，并尽量提供全面的信息。
                             提示：
                             1、需包含：事件经过、地址、诉求等信息。
                             2、请勿超过200字。" class="textmessage" maxlength="200"></textarea>
@@ -141,7 +141,7 @@
                         <li class="t02">
                     <textarea name="extraMessage" id="hiddenRemark" cols="100" rows="6" style=" resize:none;" class="textmessage" placeholder="涉及到姓名、电话、身份证号码、详细地址、联系方式或其他不便公开发表的信息，请填写在此处。
                             提示：
-                            1、相关信息将不会在留言板上公开展示，仅供人民网工作人员及办理单位核实情况、沟通问题、反馈办理情况使用。
+                            1、相关信息将不会在咨询板上公开展示，仅供人民网工作人员及办理单位核实情况、沟通问题、反馈办理情况使用。
                             2、请勿超过200字。" maxlength="200"></textarea>
                         </li>
                     </td>
@@ -157,14 +157,14 @@
                     </span>
                     <label id="verCode-error" style="color: red"></label>
                 </p>
-                <p class="takecare">查看<a href="${pageContext.request.contextPath}/help/help-2.jsp" target="_blank" class="management">《领导留言板服务协议》</a></p>
+                <p class="takecare">查看<a href="${pageContext.request.contextPath}/help/help-2.jsp" target="_blank" class="management">《领导咨询板服务协议》</a></p>
                 <input type="submit" id="submit-msg" value="同意协议并提交" class="submit" style="height: 40px">
             </div>
         </div>
     </div>
 </form>
 
-<!--留言区 end-->
+<!--咨询区 end-->
 
 <script type="text/javascript">
     function changeImage() {

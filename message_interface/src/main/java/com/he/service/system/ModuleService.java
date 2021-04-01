@@ -8,7 +8,7 @@ import com.github.pagehelper.PageInfo;
 import java.util.List;
 
 public interface ModuleService {
-    public abstract PageInfo findAll(int page, int size);
+    public abstract PageInfo findAll(int page, int size,String findByParam);
 
     public abstract List<Module> findAll();
 

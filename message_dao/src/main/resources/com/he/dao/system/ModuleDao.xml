@@ -22,7 +22,37 @@
 
     <!--查询全部模块列表-->
     <select id="findAll" resultMap="BaseResultMap">
-        select * from ss_module
+        SELECT
+            *
+        FROM
+            (
+            SELECT
+                *,
+                CONCAT(
+                    `name`,
+                    parent_name,
+                    cpermission,
+                    curl,
+                CASE
+                        ctype
+                        WHEN '0' THEN
+                        '主菜单' ELSE '二级菜单'
+                    END,
+                    belong,
+                CASE
+                        state
+                        WHEN '0' THEN
+                        '停用' ELSE '启用'
+                    END
+                    ) AS 'findByParam'
+                FROM
+                ss_module
+            ) AS temp
+            <where>
+                <if test="findByParam!=null and findByParam!=''">
+                    temp.findByParam like concat('%',#{findByParam},'%')
+                </if>
+            </where>
     </select>
 
     <!--根据id查询-->
