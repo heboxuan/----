@@ -234,73 +234,55 @@
         <div class="headingNews" >
         <div class="hdNews clearfix">
             <p>
-                <strong>做好本职工作 更好服务群众</strong>
-                <em class="grey2">　　“这次评选对象重点面向基层和工作一线，体现了党中央关心关爱基层干部的鲜明导向，我心里感到很温暖。…</em>
+                <strong>深耕实体经济 展现新的作为（治理者说）</strong>
+                <em class="grey2">　　继续把握自身发展优势，继续深耕实体经济，打造一流营商环境，持续健全振兴实体经济的体制机制，把提升全产业链水平作为主攻方向　　　　2020年9月，习近平总书记在湖南考察时指出，着力打造国家重要先进制造业、具有核心竞争力的科技创新、内陆地区改革开放的高地，在推动高质量发展上闯出新...</em>
             </p>
         </div>
         <div class="hdNews clearfix">
             <p>
-                <strong>做好本职工作 更好服务群众</strong>
-                <em class="grey2">　　“这次评选对象重点面向基层和工作一线，体现了党中央关心关爱基层干部的鲜明导向，我心里感到很温暖。…</em>
+                <strong>奋力推动“十四五”时期商务高质量发展（人民要论）</strong>
+                <em class="grey2">　　十三届全国人大四次会议通过的《中华人民共和国国民经济和社会发展第十四个五年规划和2035年远景目标纲要》（以下简称《纲要》），坚持以习近平新时代中国特色社会主义思想为指导，深入贯彻党的十九届五中全会精神，总结了“十三五”时期发展成就，实化量化了“十四五”时期我国经济社会发展的...</em>
             </p>
         </div>
         <div class="hdNews clearfix">
             <p>
-                <strong>做好本职工作 更好服务群众</strong>
-                <em class="grey2">　　“这次评选对象重点面向基层和工作一线，体现了党中央关心关爱基层干部的鲜明导向，我心里感到很温暖。…</em>
+                <strong>谱写铸牢中华民族共同体意识的西藏篇章（人民要论）</strong>
+                <em class="grey2">　　习近平总书记在中央第七次西藏工作座谈会上强调：“要挖掘、整理、宣传西藏自古以来各民族交往交流交融的历史事实，引导各族群众看到民族的走向和未来，深刻认识到中华民族是命运共同体，促进各民族交往交流交融。”面对新形势新任务，我们要深入学习贯彻习近平总书记关于铸牢中华民族共同体意识的...</em>
             </p>
         </div>
         <div class="hdNews clearfix">
             <p>
-                <strong>做好本职工作 更好服务群众</strong>
-                <em class="grey2">　　“这次评选对象重点面向基层和工作一线，体现了党中央关心关爱基层干部的鲜明导向，我心里感到很温暖。…</em>
+                <strong>守护蓝色星球  共建绿色家园</strong>
+                <em class="grey2">　　生命的存续离不开适宜的环境，天气、气候、水等自然环境要素与人类的生存发展息息相关。今年3月23日是第六十一个世界气象日，主题为“海洋、我们的气候和天气”，旨在帮助人们更加深入地理解海洋、气候和天气之间不可分割的联系，也是为了纪念联合国海洋科学促进可持续发展十年（2021—20...</em>
             </p>
         </div>
         <div class="hdNews clearfix">
             <p>
-                <strong>做好本职工作 更好服务群众</strong>
-                <em class="grey2">　　“这次评选对象重点面向基层和工作一线，体现了党中央关心关爱基层干部的鲜明导向，我心里感到很温暖。…</em>
+                <strong>聚法治之力 筑平安之基（声音）</strong>
+                <em class="grey2">　　王国生 　　统筹发展和安全，切实增强人民群众的获得感、幸福感、安全感，努力实现高质量发展和高水平安全的良性互动 　　 　　习近平法治思想是马克思主义法治理论中国化最新成果，为推进全面依法治国提供了根本遵循和行动指南。 　　对习近平法治思想学...</em>
             </p>
         </div>
         <div class="hdNews clearfix">
             <p>
-                <strong>做好本职工作 更好服务群众</strong>
-                <em class="grey2">　　“这次评选对象重点面向基层和工作一线，体现了党中央关心关爱基层干部的鲜明导向，我心里感到很温暖。…</em>
+                <strong>深入贯彻新发展理念 推进水资源集约安全利用</strong>
+                <em class="grey2">　　3月22日是第二十九届“世界水日”，第三十四届“中国水周”的宣传活动也同时拉开帷幕。联合国确定今年“世界水日”的主题是“珍惜水、爱护水”，我国纪念2021年“世界水日”和开展“中国水周”活动的宣传主题是“深入贯彻新发展理念，推进水资源集约安全利用”。　　党的十八大以来，以习近...</em>
             </p>
         </div>
         <div class="hdNews clearfix">
             <p>
-                <strong>做好本职工作 更好服务群众</strong>
-                <em class="grey2">　　“这次评选对象重点面向基层和工作一线，体现了党中央关心关爱基层干部的鲜明导向，我心里感到很温暖。…</em>
-            </p>
-        </div>
-        <div class="hdNews clearfix">
-            <p>
-                <strong>做好本职工作 更好服务群众</strong>
-                <em class="grey2">　　“这次评选对象重点面向基层和工作一线，体现了党中央关心关爱基层干部的鲜明导向，我心里感到很温暖。…</em>
-            </p>
-        </div>
-        <div class="hdNews clearfix">
-            <p>
-                <strong>做好本职工作 更好服务群众</strong>
-                <em class="grey2">　　“这次评选对象重点面向基层和工作一线，体现了党中央关心关爱基层干部的鲜明导向，我心里感到很温暖。…</em>
-            </p>
-        </div>
-        <div class="hdNews clearfix">
-            <p>
-                <strong>做好本职工作 更好服务群众</strong>
-                <em class="grey2">　　“这次评选对象重点面向基层和工作一线，体现了党中央关心关爱基层干部的鲜明导向，我心里感到很温暖。…</em>
+                <strong>带头抓落实 善于抓落实 层层抓落实（声音）</strong>
+                <em class="grey2">　　刘 宁 　　无论任何时候，该做的事，要知重负重、攻坚克难，顶着压力也要干；该负责的事，要挺身而出、冲锋在前，冒着风险也要担 　 　　反对空谈、强调实干、注重落实，是我们党的优良传统。习近平总书记强调：“真抓才能攻坚克难，实干才能梦想成真。”进入...</em>
             </p>
         </div>
         <div class="page_n clearfix">
-            <a href="index1.html#fy01" tppabs="http://liuyan.people.com.cn/index1.html#fy01">上一页</a>&nbsp;
-            <a href="index1.html#fy01" tppabs="http://liuyan.people.com.cn/index1.html#fy01">1</a>&nbsp;
+            <a href="" >上一页</a>&nbsp;
+            <a href="" >1</a>&nbsp;
             <a class="common_current_page">2</a>&nbsp;
-            <a href="javascript:if(confirm('http://liuyan.people.com.cn/index3.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://liuyan.people.com.cn/index3.html#fy01'" tppabs="http://liuyan.people.com.cn/index3.html#fy01">3</a>&nbsp;
-            <a href="index4.html#fy01" tppabs="http://liuyan.people.com.cn/index4.html#fy01">4</a>&nbsp;
-            <a href="index5.html#fy01" tppabs="http://liuyan.people.com.cn/index5.html#fy01">5</a>&nbsp;
-            <a href="index6.html#fy01" tppabs="http://liuyan.people.com.cn/index6.html#fy01">6</a>&nbsp;&nbsp;
-            <a href="javascript:if(confirm('http://liuyan.people.com.cn/index3.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 不可用, 或放弃了下载, 或项目即将停止。  \n\n你想在服务器上打开它?'))window.location='http://liuyan.people.com.cn/index3.html#fy01'" tppabs="http://liuyan.people.com.cn/index3.html#fy01">下一页</a>
+            <a href="" >3</a>&nbsp;
+            <a href="" >4</a>&nbsp;
+            <a href="" >5</a>&nbsp;
+            <a href="" >6</a>&nbsp;&nbsp;
+            <a href="">下一页</a>
         </div>
         <!--all page-->
         <!--PageNo=6-->
@@ -318,36 +300,36 @@
 
         <ul class="clearfix list_01">
             <li>
-                <div style="font-size: 17px;">做好本职工作 更好服务群众</div>
-                <em class="grey2">众”……连日来，受表彰代表表</em>
+                <div style="font-size: 17px;">侯庄子站附近交通规划不合理</div>
+                <em class="grey2">门头沟区区长喻华锋（代）2021-03-31 16:07</em>
             </li>
             <li>
-                <div style="font-size: 17px;">做好本职工作 更好服务群众</div>
-                <em class="grey2">众”……连日来，受表彰代表表</em>
+                <div style="font-size: 17px;">希望加强河南村非机动车管理</div>
+                <em class="grey2">顺义区委书记高朋2021-03-31 16:07</em>
             </li>
             <li>
-                <div style="font-size: 17px;">做好本职工作 更好服务群众</div>
-                <em class="grey2">众”……连日来，受表彰代表表</em>
+                <div style="font-size: 17px;">前门西河沿大街的腾退政策</div>
+                <em class="grey2">西城区委书记孙军民2021-03-31 16:07</em>
             </li>
             <li>
-                <div style="font-size: 17px;">做好本职工作 更好服务群众</div>
-                <em class="grey2">众”……连日来，受表彰代表表</em>
+                <div style="font-size: 17px;">北京市朝阳区挚诚博大科技有限公司 钻法律漏洞</div>
+                <em class="grey2">朝阳区委书记王灏2021-03-31 16:07</em>
             </li>
             <li>
-                <div style="font-size: 17px;">做好本职工作 更好服务群众</div>
-                <em class="grey2">众”……连日来，受表彰代表表</em>
+                <div style="font-size: 17px;">北投集团不给付拆迁款</div>
+                <em class="grey2">北京市市长陈吉宁2021-03-31 16:07</em>
             </li>
             <li>
-                <div style="font-size: 17px;">做好本职工作 更好服务群众</div>
-                <em class="grey2">众”……连日来，受表彰代表表</em>
+                <div style="font-size: 17px;">大兴街心公园儿童游乐设施匮乏</div>
+                <em class="grey2">大兴区区长王有国2021-03-31 16:07</em>
             </li>
             <li>
-                <div style="font-size: 17px;">做好本职工作 更好服务群众</div>
-                <em class="grey2">众”……连日来，受表彰代表表</em>
+                <div style="font-size: 17px;">通州朝通嘉园老旧小区加装电梯问题</div>
+                <em class="grey2">北京市委书记蔡奇2021-03-31 15:59</em>
             </li>
             <li>
-                <div style="font-size: 17px;">做好本职工作 更好服务群众</div>
-                <em class="grey2">众”……连日来，受表彰代表表</em>
+                <div style="font-size: 17px;">关于朝阳区学校服务片的理解</div>
+                <em class="grey2">朝阳区委书记王灏2021-03-31 15:59</em>
             </li>
         </ul>
     </div>
