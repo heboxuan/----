@@ -46,6 +46,14 @@
                         <input type="text" class="form-control" placeholder="用户名称" readonly="readonly" name="leaderName" value="${frontLeaderName.leaderName}">
                     </div>
 
+                    <div class="col-md-1 title">性别</div>
+                    <div class="col-md-5 data">
+                        <div class="form-group form-inline">
+                            <div class="radio"><label><input type="radio" ${frontLeaderName.gender==0?'checked':''} name="gender" value="0">男</label></div>
+                            <div class="radio"><label><input type="radio" ${frontLeaderName.gender==1?'checked':''} name="gender" value="1">女</label></div>
+                        </div>
+                    </div>
+
                     <div class="col-md-1 title">区域</div>
                     <div class="col-md-5 data">
                         <select class="form-control"  name="cityId">
@@ -67,6 +75,11 @@
                         </select>
                     </div>
 
+                    <div class="col-md-1 title">其它职位</div>
+                    <div class="col-md-5 data">
+                        <input type="text" class="form-control" placeholder="其它职位" name="otherJob" value="${frontLeaderName.otherJob}" readonly="readonly">
+                    </div>
+
                     <div class="col-md-1 title">邮箱</div>
                     <div class="col-md-5 data">
                         <input type="text" class="form-control" placeholder="邮箱" name="email" value="${frontLeaderName.email}" readonly="readonly">
@@ -84,13 +97,7 @@
                     </div>
 
 
-                    <div class="col-md-1 title">性别</div>
-                    <div class="col-md-5 data">
-                        <div class="form-group form-inline">
-                            <div class="radio"><label><input type="radio" ${frontLeaderName.gender==0?'checked':''} name="gender" value="0">男</label></div>
-                            <div class="radio"><label><input type="radio" ${frontLeaderName.gender==1?'checked':''} name="gender" value="1">女</label></div>
-                        </div>
-                    </div>
+
                 </div>
             </form>
         </div>

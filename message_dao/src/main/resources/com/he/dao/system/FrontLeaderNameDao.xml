@@ -55,7 +55,8 @@
             leader.password,
             leader.gender,
             leader.telephone,
-            leader.is_delete isDelete
+            leader.is_delete isDelete,
+            IFNULL(leader.other_job,'无') otherJob
         FROM
             front_leader_name leader
         where leader.id=#{leaderId} and leader.is_delete='false'
@@ -70,6 +71,7 @@
         leader.id id,
         leader.city_id cityId,
         leader.leader_name leaderName,
+        leader.other_job otherJob,
         city.`name`,
         CASE
         leader.is_mayor
@@ -79,7 +81,7 @@
         '市长' ELSE '区长'
         END AS isMayor,
         leader.email,
-        leader.PASSWORD,
+        leader.password,
         leader.gender,
         leader.telephone,
         leader.is_delete isDelete,
@@ -93,6 +95,7 @@
         WHEN 'truetrue' THEN
         '市长' ELSE '区长'
         END,
+        leader.other_job,
         leader.email,
         CASE
         leader.gender
@@ -114,8 +117,8 @@
     </select>
 
     <insert id="save">
-        insert into front_leader_name(city_id,leader_name,is_mayor,email,password,gender,telephone,is_delete)
-        values(#{cityId},#{leaderName},#{isMayor},#{email},#{password},#{gender},#{telephone},"false")
+        insert into front_leader_name(city_id,leader_name,is_mayor,email,password,gender,telephone,is_delete,other_job)
+        values(#{cityId},#{leaderName},#{isMayor},#{email},#{password},#{gender},#{telephone},"false",#{otherJob})
     </insert>
 
     <update id="update">

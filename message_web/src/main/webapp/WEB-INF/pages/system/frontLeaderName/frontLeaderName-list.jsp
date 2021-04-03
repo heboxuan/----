@@ -40,7 +40,7 @@
 <section class="content-header">
     <h1>
         系统管理
-        <small>用户管理</small>
+        <small>领导管理</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="all-admin-index.html"><i class="fa fa-dashboard"></i> 首页</a></li>
@@ -49,7 +49,7 @@
 <section class="content">
     <div class="box box-primary">
         <div class="box-header with-border">
-            <h3 class="box-title">用户列表</h3>
+            <h3 class="box-title">领导列表</h3>
         </div>
         <div class="box-body">
             <div class="table-box">
@@ -75,12 +75,13 @@
                     <tr>
                         <th class="" style="padding-right:0px;"></th>
                         <th class="sorting">序号</th>
-                        <th class="sorting">用户名</th>
+                        <th class="sorting">领导名</th>
+                        <th class="sorting">性别</th>
                         <th class="sorting">职位</th>
+                        <th class="sorting">其它职位</th>
                         <th class="sorting">邮箱</th>
                         <th class="sorting">密码</th>
                         <th class="sorting">联系电话</th>
-                        <th class="sorting">性别</th>
                         <th class="text-center">操作</th>
                     </tr>
                     </thead>
@@ -90,11 +91,19 @@
                         <td><input name="ids" value="${item.id}" type="checkbox" ></td>
                         <td>${status.index+1}</td>
                         <td><a href="${ctx}/system/frontLeaderName/toUpdate.do?id=${item.id}">${item.leaderName}</a></td>
+                        <td>${item.gender ==0?'男':'女'}</td>
                         <td>${item.name }${item.isMayor}</td>
+                        <c:choose>
+                            <c:when test="${empty item.otherJob}">
+                                <td>无</td>
+                            </c:when>
+                            <c:otherwise>
+                                <td>${item.otherJob }</td>
+                            </c:otherwise>
+                        </c:choose>
                         <td>${item.email }</td>
                         <td>${item.password }</td>
                         <td>${item.telephone }</td>
-                        <td>${item.gender ==0?'男':'女'}</td>
                         <th class="text-center">
                             <button type="button" class="btn bg-olive btn-xs" onclick='location.href="${ctx}/system/frontLeaderName/toUpdate.do?id=${item.id}"'>编辑</button>
                         </th>

@@ -23,11 +23,11 @@
     <section class="content-header">
         <h1>
             系统管理
-            <small>用户管理</small>
+            <small>领导管理</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="/"><i class="fa fa-dashboard"></i> 首页</a></li>
-            <li><a href="${ctx}/system/user/list.do">用户列表</a></li>
+            <li><a href="${ctx}/system/user/list.do">领导列表</a></li>
         </ol>
     </section>
     <!-- 内容头部 /-->
@@ -37,13 +37,21 @@
 
         <!--订单信息-->
         <div class="panel panel-default">
-            <div class="panel-heading">用户信息</div>
+            <div class="panel-heading">领导信息</div>
             <form id="editForm" action="${ctx}/system/frontLeaderName/edit.do" method="post">
                 <input type="hidden" id="id" name="id" >
                 <div class="row data-type" style="margin: 0px">
-                    <div class="col-md-1 title">用户名称</div>
+                    <div class="col-md-1 title">领导名称</div>
                     <div class="col-md-5 data">
-                        <input type="text" class="form-control" placeholder="用户名称" name="leaderName">
+                        <input type="text" class="form-control" placeholder="领导名称" name="leaderName">
+                    </div>
+
+                    <div class="col-md-1 title">性别</div>
+                    <div class="col-md-5 data">
+                        <div class="form-group form-inline">
+                            <div class="radio"><label><input type="radio" checked name="gender" value="0">男</label></div>
+                            <div class="radio"><label><input type="radio"  name="gender" value="1">女</label></div>
+                        </div>
                     </div>
 
                     <div class="col-md-1 title">区域</div>
@@ -67,6 +75,11 @@
                         </select>
                     </div>
 
+                    <div class="col-md-1 title">其它职位</div>
+                    <div class="col-md-5 data">
+                        <input type="text" class="form-control" placeholder="其它职位" name="otherJob">
+                    </div>
+
                     <div class="col-md-1 title">邮箱</div>
                     <div class="col-md-5 data">
                         <input type="text" class="form-control" placeholder="邮箱" name="email" >
@@ -82,14 +95,6 @@
                         <input type="text" class="form-control" placeholder="电话" name="telephone" >
                     </div>
 
-
-                    <div class="col-md-1 title">性别</div>
-                    <div class="col-md-5 data">
-                        <div class="form-group form-inline">
-                            <div class="radio"><label><input type="radio" checked name="gender" value="0">男</label></div>
-                            <div class="radio"><label><input type="radio"  name="gender" value="1">女</label></div>
-                        </div>
-                    </div>
                 </div>
             </form>
         </div>
