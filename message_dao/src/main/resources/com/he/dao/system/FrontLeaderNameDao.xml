@@ -52,14 +52,26 @@
             leader.leader_name leaderName,
             leader.is_mayor isMayor,
             leader.email,
-            leader.password,
+            leader.PASSWORD,
             leader.gender,
             leader.telephone,
             leader.is_delete isDelete,
-            IFNULL(leader.other_job,'无') otherJob
+            IFNULL( leader.other_job, '无' ) otherJob,
+            city.`name`,
+        CASE
+                leader.is_mayor
+                WHEN 'truetrue' THEN
+                '市长'
+                WHEN 'false' THEN
+                '书记'
+                WHEN 'true' THEN
+                '区长'
+            END job
         FROM
             front_leader_name leader
-        where leader.id=#{leaderId} and leader.is_delete='false'
+            LEFT JOIN front_city city ON leader.city_id = city.id
+        WHERE
+            leader.id=#{leaderId} and leader.is_delete = 'false'
     </select>
 
     <select id="findAll" resultType="map">

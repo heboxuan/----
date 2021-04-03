@@ -56,23 +56,12 @@
 
                     <div class="col-md-1 title">区域</div>
                     <div class="col-md-5 data">
-                        <select class="form-control"  name="cityId">
-                            <option value="">请选择</option>
-                            <c:forEach items="${countyList}" var="item">
-                                <option ${frontLeaderName.cityId == item.id ?'selected':''} value="${item.id}">${item.name}</option>
-                            </c:forEach>
-                        </select>
-
+                        <input type="text" class="form-control" placeholder="区域" name="name" value="${frontLeaderName.name}" readonly="readonly">
                     </div>
 
                     <div class="col-md-1 title">职位</div>
                     <div class="col-md-5 data">
-                        <select class="form-control" name="isMayor">
-                            <option value="">请选择</option>
-                            <c:forEach items="${jobList}" var="item">
-                                <option ${frontLeaderName.isMayor == item.key ?'selected':''} value="${item.key}">${item.value}</option>
-                            </c:forEach>
-                        </select>
+                        <input type="text" class="form-control" placeholder="职位" name="job" value="${frontLeaderName.job}" readonly="readonly">
                     </div>
 
                     <div class="col-md-1 title">其它职位</div>
