@@ -22,7 +22,7 @@
     </select>
 
     <select id="loginform" parameterType="String" resultType="String">
-        select password1 from front_user_message where email=#{email}
+        select password1 from front_user_message where email=#{email} and is_delete="false"
     </select>
 
     <select id="findUserByEmail" parameterType="String" resultType="com.he.domain.front.FrontUserMessage">
@@ -30,7 +30,7 @@
     </select>
 
     <select id="loginByPhone" parameterType="String" resultType="com.he.domain.front.FrontUserMessage">
-        select * from front_user_message where phone=#{telephone}
+        select * from front_user_message where phone=#{telephone} and is_delete="false"
     </select>
 
     <update id="updateByUserId">
@@ -55,9 +55,16 @@
                 extra_message=#{extraMessage},
             </if>
             <if test="trueUsername !=null and trueUsername!=''">
-                true_username=#{trueUsername}
+                true_username=#{trueUsername},
+            </if>
+            <if test="isDelete !=null and isDelete!=''">
+                is_delete=#{isDelete}
             </if>
         </set>
         where id=#{id}
     </update>
+
+    <select id="userBlackList" resultType="map">
+
+    </select>
 </mapper>

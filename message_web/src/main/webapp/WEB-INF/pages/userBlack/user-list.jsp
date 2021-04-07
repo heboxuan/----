@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="../../base.jsp"%>
+<%@ include file="../base.jsp"%>
 <!DOCTYPE html>
 <html>
 
@@ -108,7 +108,7 @@
             </div>
         </div>
         <div class="box-footer">
-            <jsp:include page="../../common/page.jsp">
+            <jsp:include page="../common/page.jsp">
                 <jsp:param value="${ctx}/system/user/list.do" name="pageUrl"/>
             </jsp:include>
         </div>

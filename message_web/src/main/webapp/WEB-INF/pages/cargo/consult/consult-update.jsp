@@ -37,6 +37,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">咨询留言详情</div>
             <form id="editForm" action="${ctx}/cargo/consult/edit.do" method="post">
+
                 <input type="hidden" name="id" value="${leftMessageDetail.id}">
                 <div class="row data-type" style="margin: 0px">
 
@@ -62,9 +63,14 @@
         </div>
         <!--订单信息/-->
 
+        <form id="userBlackAdd" action="${ctx}/userBlack/toAdd.do" method="get">
+            <input type="hidden" name="userId" value="${leftMessageDetail.userId}">
+        </form>
+
         <!--工具栏-->
         <div class="box-tools text-center">
             <button type="button" onclick='document.getElementById("editForm").submit()' class="btn bg-maroon">保存</button>
+                <button type="submit" onclick='document.getElementById("userBlackAdd").submit()'  class="btn bg-maroon">加入黑名单</button>
             <button type="button" class="btn bg-default" onclick="history.back(-1);">返回</button>
         </div>
         <!--工具栏/-->

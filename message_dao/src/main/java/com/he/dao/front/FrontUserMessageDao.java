@@ -2,6 +2,9 @@ package com.he.dao.front;
 
 import com.he.domain.front.FrontUserMessage;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * @Author: heboxuan
  * @Date: Created in 15:32 2021/2/27
@@ -22,4 +25,6 @@ public interface FrontUserMessageDao {
     public abstract FrontUserMessage loginByPhone(String telephone);
 
     public abstract void updateByUserId(FrontUserMessage frontUserMessage);
+
+    public abstract List<Map<String, Object>> userBlackList();
 }

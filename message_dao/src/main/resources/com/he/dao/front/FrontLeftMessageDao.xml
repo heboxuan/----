@@ -104,6 +104,7 @@
     <select id="findLeftMessageById" resultType="map">
         SELECT
             leftMessage.id id,
+            user.id userId,
             user.username,
             leftMessage.field field,
             leftMessage.title title,

@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@ include file="../../base.jsp"%>
+<%@ include file="../base.jsp"%>
 <!DOCTYPE html>
 <html>
 
@@ -39,8 +39,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">用户信息</div>
             <form id="editForm" action="${ctx}/system/user/edit.do" method="post">
-                <input type="hidden" id="id" name="id" value="${user.id}">
-                <input type="hidden" id="deptName" name="deptName" value="${user.deptName}">
+                <input type="text" id="deptName" name="deptName" value="${user.deptName}">
                 <div class="row data-type" style="margin: 0px">
                     <div class="col-md-1 title">用户名称</div>
                     <div class="col-md-5 data">
