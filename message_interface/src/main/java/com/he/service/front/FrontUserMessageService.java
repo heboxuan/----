@@ -18,7 +18,7 @@ public interface FrontUserMessageService {
 
     public abstract boolean checkEmail(String email);
 
-    public abstract boolean loginform(String email, String password);
+    public abstract Map<String,String> loginform(String email, String password);
 
     public abstract FrontUserMessage findUserByEmail(String email);
 

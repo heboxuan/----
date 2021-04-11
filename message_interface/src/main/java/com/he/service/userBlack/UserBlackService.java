@@ -1,5 +1,7 @@
 package com.he.service.userBlack;
 
+import com.github.pagehelper.PageInfo;
+
 import java.util.List;
 import java.util.Map;
 
@@ -10,6 +12,7 @@ import java.util.Map;
 public interface UserBlackService {
     public abstract void userBlackAdd(String userId);
 
-    public abstract List<Map<String, Object>> userBlackList();
+    public abstract PageInfo userBlackList(int page, int size,
+                                           String findByParam);
 
 }

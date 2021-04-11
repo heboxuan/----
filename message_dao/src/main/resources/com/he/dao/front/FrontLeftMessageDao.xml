@@ -87,6 +87,9 @@
                 `front_left_message` leftMessage
                 LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
             WHERE
+
+                USER.is_delete='false' and
+
                 leftMessage.type_id = #{typeId} and leftMessage.is_process='false'
 
                 AND leftMessage.leader_id = #{leaderId}
@@ -141,6 +144,7 @@
         `front_left_message` leftMessage
         LEFT JOIN front_user_message USER ON leftMessage.user_id = USER.id
         WHERE
+        USER.is_delete='false' and
         leftMessage.type_id = #{typeId} and leftMessage.is_process='true'
 
         AND leftMessage.leader_id = #{leaderId}

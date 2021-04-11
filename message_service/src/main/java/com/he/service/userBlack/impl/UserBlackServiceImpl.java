@@ -1,6 +1,8 @@
 package com.he.service.userBlack.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.he.dao.front.FrontUserMessageDao;
 import com.he.domain.front.FrontUserMessage;
 import com.he.service.userBlack.UserBlackService;
@@ -28,8 +30,9 @@ public class UserBlackServiceImpl implements UserBlackService {
     }
 
     @Override
-    public List<Map<String, Object>> userBlackList() {
-        List<Map<String, Object>> list=frontUserMessageDao.userBlackList();
-        return list;
+    public PageInfo userBlackList(int page, int size, String findByParam) {
+        PageHelper.startPage(page,size);
+        List<Map<String, Object>> list=frontUserMessageDao.userBlackList(findByParam);
+        return new PageInfo(list);
     }
 }

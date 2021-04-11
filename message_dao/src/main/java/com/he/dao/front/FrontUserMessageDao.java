@@ -1,6 +1,7 @@
 package com.he.dao.front;
 
 import com.he.domain.front.FrontUserMessage;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ public interface FrontUserMessageDao {
 
     public abstract String checkEmail(String email);
 
-    public abstract String loginform(String email);
+    public abstract Map<String,String> loginform(String email);
 
     public abstract FrontUserMessage findUserByEmail(String email);
 
@@ -26,5 +27,5 @@ public interface FrontUserMessageDao {
 
     public abstract void updateByUserId(FrontUserMessage frontUserMessage);
 
-    public abstract List<Map<String, Object>> userBlackList();
+    public abstract List<Map<String, Object>> userBlackList(@Param("findByParam") String findByParam);
 }

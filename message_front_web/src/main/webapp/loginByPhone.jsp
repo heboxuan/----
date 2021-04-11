@@ -80,7 +80,17 @@
                 <i><a href="login.jsp" target="_self">账户密码登录</a></i>
             </li>
         </ul>
-        <div class="input01"><input name="" id="submit_btn" type="submit" value="登 录" /></div>
+        <div class="input01"><input name="" id="submit_btn" type="submit" value="登 录" disabled="disabled"/></div>
+        <%
+            String message=(String)request.getAttribute("message");
+            if (message!=null) {
+        %>
+        <script>
+            alert("${requestScope.message}");
+        </script>
+        <%
+            }
+        %>
         <div class="box03 clearfix" style="font-size: 16px;text-align: center">还没有账号？<i class="red"><a href="regUser.jsp" >注册新账号</a></i></div>
     </form>
 </div>

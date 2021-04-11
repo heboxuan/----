@@ -21,8 +21,8 @@
         select email from front_user_message where email=#{email}
     </select>
 
-    <select id="loginform" parameterType="String" resultType="String">
-        select password1 from front_user_message where email=#{email} and is_delete="false"
+    <select id="loginform" parameterType="String" resultType="map">
+        select password1,is_delete from front_user_message where email=#{email}
     </select>
 
     <select id="findUserByEmail" parameterType="String" resultType="com.he.domain.front.FrontUserMessage">
@@ -30,7 +30,19 @@
     </select>
 
     <select id="loginByPhone" parameterType="String" resultType="com.he.domain.front.FrontUserMessage">
-        select * from front_user_message where phone=#{telephone} and is_delete="false"
+        select
+         id id,
+         username,
+         phone phone,
+         email email,
+         password1 password1,
+         password2 password2,
+         is_delete isDelete,
+         message_phone messagePhone,
+         extra_message extraMessage,
+         true_username trueUsername
+
+         from front_user_message where phone=#{telephone}
     </select>
 
     <update id="updateByUserId">
@@ -65,6 +77,25 @@
     </update>
 
     <select id="userBlackList" resultType="map">
-        select * from front_user_message where is_delete='true'
+        SELECT
+            *
+        FROM
+            (
+            SELECT
+                username,
+                phone,
+                email,
+                password1,
+                CONCAT( username, phone, email, password1 ) AS "findByParam"
+            FROM
+                front_user_message
+            WHERE
+            is_delete = 'true'
+            ) AS temp
+            <where>
+                <if test="findByParam!=null and findByParam!=''">
+                    temp.findByParam like concat('%',#{findByParam},'%')
+                </if>
+            </where>
     </select>
 </mapper>

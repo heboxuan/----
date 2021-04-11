@@ -38,35 +38,6 @@ public class PasswordController extends BaseController {
     @Reference
     private UserService userService;
 
-
-    //@RequestMapping("/list")
-    //public String list(
-    //        @RequestParam(defaultValue = "1")int page,
-    //        @RequestParam(defaultValue = "10")int size
-    //) {
-    //    PageInfo info=frontLeaderNameService.findAll(page,size);
-    //    request.setAttribute("page",info);
-    //    return "system/frontLeaderName/frontLeaderName-list";
-    //}
-
-    //@RequestMapping("/toAdd")
-    //public String toAdd() {
-    //
-    //    //各个区域集合
-    //    PageInfo list = countyService.findAll(1, 100);
-    //    List countyList = list.getList();
-    //
-    //    //职位集合
-    //    Map<String,String> jobList=new HashMap<>();
-    //    jobList.put("false","书记");
-    //    jobList.put("true","区长");
-    //    jobList.put("truetrue","市长");
-    //
-    //    request.setAttribute("countyList",countyList);
-    //    request.setAttribute("jobList",jobList);
-    //    return "system/frontLeaderName/frontLeaderName-add";
-    //}
-
     @RequestMapping("/toUpdate")
     public String toUpdate() {
 

@@ -1,11 +1,13 @@
 package com.he.web.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.he.common.utils.Encrypt;
 import com.he.domain.front.FrontUserMessage;
 import com.he.service.front.FrontUserMessageService;
 import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -73,19 +75,39 @@ public class FrontUserMessageController {
 
     @PostMapping("/loginform")
     public String loginform(String email,String password) {
-        boolean flag=frontUserMessageService.loginform(email,password);
-        if (!flag) {
+        Map<String,String> check=frontUserMessageService.loginform(email,password);
+
+        if (!StringUtils.isEmpty(check)) {
+            String answer = Encrypt.md5(password, email);
+
+            if ("true".equals(check.get("is_delete"))) {
+                request.setAttribute("message","您已被拉入黑名单");
+                return "login";
+            }else{
+                if (!(answer.equals(check.get("password1")))) {
+                    request.setAttribute("message","邮箱或者密码错误");
+                    return "login";
+                }else{
+                    FrontUserMessage userInfo=frontUserMessageService.findUserByEmail(email);
+                    session.setAttribute("userInfo",userInfo);
+                    return "redirect:/index.jsp";
+                }
+            }
+
+        }else{
             request.setAttribute("message","邮箱或者密码错误");
             return "login";
         }
-        FrontUserMessage userInfo=frontUserMessageService.findUserByEmail(email);
-        session.setAttribute("userInfo",userInfo);
-        return "redirect:/index.jsp";
     }
 
     @PostMapping("/loginByPhone")
     public String loginByPhone(String telephone) {
         FrontUserMessage userInfo=frontUserMessageService.loginByPhone(telephone);
+
+        if ("true".equals(userInfo.getIsDelete())) {
+            request.setAttribute("message","您已被拉入黑名单");
+            return "loginByPhone";
+        }
         session.setAttribute("userInfo",userInfo);
         return "redirect:/index.jsp";
     }

@@ -65,7 +65,7 @@
                 </div>
                 <div class="box-tools pull-right">
                     <div class="has-feedback" >
-                        <form method="get" href="${pageContext.request.contextPath}/system/frontLeaderName/list.do">
+                        <form method="get" href="${pageContext.request.contextPath}/userBlack/toList.do">
                             <input style="display:inline-block;width:100px"  type="text" class="form-control input-sm" name="findByParam" placeholder="搜索"><button name="搜索">搜索</button>
                         </form>
                     </div>
@@ -78,13 +78,13 @@
                         </th>
                         <th class="sorting">序号</th>
                         <th class="sorting">用户名</th>
-                        <th class="sorting">部门</th>
+                        <th class="sorting">电话</th>
                         <th class="sorting">邮箱</th>
-                        <th class="sorting">联系电话</th>
-                        <th class="sorting">性别</th>
-                        <th class="sorting">职位</th>
-                        <th class="sorting">状态</th>
-                        <th class="text-center">操作</th>
+                        <th class="sorting">密码</th>
+<%--                        <th class="sorting">性别</th>--%>
+<%--                        <th class="sorting">职位</th>--%>
+<%--                        <th class="sorting">状态</th>--%>
+<%--                        <th class="text-center">操作</th>--%>
                     </tr>
                     </thead>
                     <tbody>
@@ -92,23 +92,24 @@
                         <tr>
                             <td><input name="ids" value="${item.id}" type="checkbox" ></td>
                             <td>${status.index+1}</td>
-                            <td><a href="${ctx}/system/frontLeaderName/toUpdate.do?id=${item.id}">${item.leaderName}</a></td>
-                            <td>${item.gender ==0?'男':'女'}</td>
-                            <td>${item.name }${item.isMayor}</td>
-                            <c:choose>
-                                <c:when test="${empty item.otherJob}">
-                                    <td>无</td>
-                                </c:when>
-                                <c:otherwise>
-                                    <td>${item.otherJob }</td>
-                                </c:otherwise>
-                            </c:choose>
-                            <td>${item.email }</td>
-                            <td>${item.password }</td>
-                            <td>${item.telephone }</td>
-                            <th class="text-center">
-                                <button type="button" class="btn bg-olive btn-xs" onclick='location.href="${ctx}/system/frontLeaderName/toUpdate.do?id=${item.id}"'>编辑</button>
-                            </th>
+                            <td>${item.username}</td>
+                            <td>${item.phone}</td>
+                            <td>${item.email}</td>
+                            <td>${item.password1}</td>
+<%--                            <c:choose>--%>
+<%--                                <c:when test="${empty item.otherJob}">--%>
+<%--                                    <td>无</td>--%>
+<%--                                </c:when>--%>
+<%--                                <c:otherwise>--%>
+<%--                                    <td>${item.otherJob }</td>--%>
+<%--                                </c:otherwise>--%>
+<%--                            </c:choose>--%>
+<%--                            <td>${item.email }</td>--%>
+<%--                            <td>${item.password }</td>--%>
+<%--                            <td>${item.telephone }</td>--%>
+<%--                            <th class="text-center">--%>
+<%--                                <button type="button" class="btn bg-olive btn-xs" onclick='location.href="${ctx}/system/frontLeaderName/toUpdate.do?id=${item.id}"'>编辑</button>--%>
+<%--                            </th>--%>
                         </tr>
                     </c:forEach>
                     </tbody>

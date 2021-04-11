@@ -68,16 +68,9 @@ public class FrontUserMessageServiceImpl implements FrontUserMessageService {
     }
 
     @Override
-    public boolean loginform(String email, String password) {
-        boolean flag=false;
-        String check=frontUserMessageDao.loginform(email);
-        if (!StringUtils.isEmpty(check)) {
-            String answer = Encrypt.md5(password, email);
-            if (answer.equals(check)) {
-                flag=true;
-            }
-        }
-        return flag;
+    public Map<String,String> loginform(String email, String password) {
+        Map<String,String> check=frontUserMessageDao.loginform(email);
+        return check;
     }
 
     @Override
@@ -94,16 +87,16 @@ public class FrontUserMessageServiceImpl implements FrontUserMessageService {
         String templateCode="SMS_202810495";
         //拼接验证码参数
         String param="{\"code\":"+smsCode+"}";
-        try {
-            SendSmsResponse smsResponse = SmsUtils.sendSms(telephone, sigName, templateCode, param);
-            if (smsResponse.getCode().equals("OK")) {
-                //发送成功
-                return true;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
+        //try {
+        //    SendSmsResponse smsResponse = SmsUtils.sendSms(telephone, sigName, templateCode, param);
+        //    if (smsResponse.getCode().equals("OK")) {
+        //        //发送成功
+        //        return true;
+        //    }
+        //} catch (Exception e) {
+        //    e.printStackTrace();
+        //}
+        return true;
     }
 
     @Override
