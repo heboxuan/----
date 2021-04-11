@@ -65,6 +65,6 @@
     </update>
 
     <select id="userBlackList" resultType="map">
-
+        select * from front_user_message where is_delete='true'
     </select>
 </mapper>

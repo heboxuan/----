@@ -2,9 +2,12 @@ package com.he.web.controller.userBlack;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.he.service.userBlack.UserBlackService;
+import com.he.web.controller.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 import java.util.Map;
@@ -15,7 +18,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/userBlack")
-public class UserBlackController {
+public class UserBlackController extends BaseController {
 
     @Reference
     private UserBlackService userBlackService;
@@ -26,10 +29,11 @@ public class UserBlackController {
         return "redirect:/userBlack/toList.do";
     }
 
-    @GetMapping("/toList")
+    @RequestMapping(value = "/toList",method = {RequestMethod.GET,RequestMethod.POST})
     public String userBlackList() {
         List<Map<String,Object>> list=userBlackService.userBlackList();
-        return null;
+        request.setAttribute("list",list);
+        return "userBlack/userBlack-list";
     }
 
 

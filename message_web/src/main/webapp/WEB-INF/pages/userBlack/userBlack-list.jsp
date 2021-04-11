@@ -39,7 +39,7 @@
 <div id="frameContent" class="content-wrapper" style="margin-left:0px;">
 <section class="content-header">
     <h1>
-        系统管理
+        黑名单管理
         <small>用户管理</small>
     </h1>
     <ol class="breadcrumb">
@@ -56,17 +56,18 @@
                 <div class="pull-left">
                     <div class="form-group form-inline">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-default" title="新建" onclick='location.href="${ctx}/system/user/toAdd.do"'><i class="fa fa-file-o"></i> 新建</button>
-                            <button type="button" class="btn btn-default" title="删除" onclick='deleteById()'><i class="fa fa-trash-o"></i> 删除</button>
+<%--                            <button type="button" class="btn btn-default" title="新建" onclick='location.href="${ctx}/system/user/toAdd.do"'><i class="fa fa-file-o"></i> 新建</button>--%>
+<%--                            <button type="button" class="btn btn-default" title="删除" onclick='deleteById()'><i class="fa fa-trash-o"></i> 删除</button>--%>
                             <button type="button" class="btn btn-default" title="刷新" onclick="window.location.reload();"><i class="fa fa-refresh"></i> 刷新</button>
-                            <button type="button" class="btn btn-default" title="角色" onclick="roleList()"><i class="fa fa-user-circle-o"></i> 角色</button>
+<%--                            <button type="button" class="btn btn-default" title="角色" onclick="roleList()"><i class="fa fa-user-circle-o"></i> 角色</button>--%>
                         </div>
                     </div>
                 </div>
                 <div class="box-tools pull-right">
-                    <div class="has-feedback">
-                        <input type="text" class="form-control input-sm" placeholder="搜索">
-                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                    <div class="has-feedback" >
+                        <form method="get" href="${pageContext.request.contextPath}/system/frontLeaderName/list.do">
+                            <input style="display:inline-block;width:100px"  type="text" class="form-control input-sm" name="findByParam" placeholder="搜索"><button name="搜索">搜索</button>
+                        </form>
                     </div>
                 </div>
                 <table id="dataList" class="table table-bordered table-striped table-hover dataTable">
@@ -87,21 +88,28 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${page.list}" var="item">
-                    <tr>
-                        <td><input name="ids" value="${item.id}" type="checkbox"></td>
-                        <td>${status.index+1}</td>
-                        <td><a href="${ctx}/system/user/toUpdate.do?id=${o.id}">${item.userName}</a></td>
-                        <td>${item.deptName }</td>
-                        <td>${item.email }</td>
-                        <td>${item.telephone }</td>
-                        <td>${item.gender ==0?'男':'女'}</td>
-                        <td>${item.station }</td>
-                        <td>${item.state  ==0?'停用':'启用'}</td>
-                        <th class="text-center">
-                            <button type="button" class="btn bg-olive btn-xs" onclick='location.href="${ctx}/system/user/toUpdate.do?id=${item.id}"'>编辑</button>
-                        </th>
-                    </tr>
+                    <c:forEach items="${page.list}" var="item" varStatus="status">
+                        <tr>
+                            <td><input name="ids" value="${item.id}" type="checkbox" ></td>
+                            <td>${status.index+1}</td>
+                            <td><a href="${ctx}/system/frontLeaderName/toUpdate.do?id=${item.id}">${item.leaderName}</a></td>
+                            <td>${item.gender ==0?'男':'女'}</td>
+                            <td>${item.name }${item.isMayor}</td>
+                            <c:choose>
+                                <c:when test="${empty item.otherJob}">
+                                    <td>无</td>
+                                </c:when>
+                                <c:otherwise>
+                                    <td>${item.otherJob }</td>
+                                </c:otherwise>
+                            </c:choose>
+                            <td>${item.email }</td>
+                            <td>${item.password }</td>
+                            <td>${item.telephone }</td>
+                            <th class="text-center">
+                                <button type="button" class="btn bg-olive btn-xs" onclick='location.href="${ctx}/system/frontLeaderName/toUpdate.do?id=${item.id}"'>编辑</button>
+                            </th>
+                        </tr>
                     </c:forEach>
                     </tbody>
                 </table>
