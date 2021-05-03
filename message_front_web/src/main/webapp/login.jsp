@@ -72,7 +72,7 @@
                 <i class="fr"><a href=""  target="_blank">忘记登录密码？</a></i>
             </li>
         </ul>
-        <div class="input01"><input name="" id="submit_btn" type="submit" value="登 录" disabled="disabled"/></div>
+        <div class="input01"><input name="" id="submit_btn" type="submit" value="登 录"/></div>
         <div class="box03 clearfix" style="font-size: 16px;text-align: center">还没有账号？<i class="red"><a href="regUser.jsp" >注册新账号</a></i></div>
     </form>
 </div>
