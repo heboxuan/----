@@ -1,0 +1,3 @@
+此项目的数据库名是message
+此项目的数据库sql文件为message.sql
+message.sql中没有提供创建数据库的sql语句，必须手动创建数据库，然后运行message.sql
