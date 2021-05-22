@@ -69,7 +69,7 @@
             </li>
             <li class="clearfix">
                 <i><a href="loginByPhone.jsp" target="_self">手机号快速登录</a></i>
-                <i class="fr"><a href=""  target="_blank">忘记登录密码？</a></i>
+                <i class="fr"><a href="loginByPhone.jsp"  target="_blank">忘记登录密码？</a></i>
             </li>
         </ul>
         <div class="input01"><input name="" id="submit_btn" type="submit" value="登 录"/></div>

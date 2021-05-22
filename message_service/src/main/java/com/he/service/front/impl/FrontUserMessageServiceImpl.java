@@ -87,15 +87,15 @@ public class FrontUserMessageServiceImpl implements FrontUserMessageService {
         String templateCode="SMS_202810495";
         //拼接验证码参数
         String param="{\"code\":"+smsCode+"}";
-        //try {
-        //    SendSmsResponse smsResponse = SmsUtils.sendSms(telephone, sigName, templateCode, param);
-        //    if (smsResponse.getCode().equals("OK")) {
-        //        //发送成功
-        //        return true;
-        //    }
-        //} catch (Exception e) {
-        //    e.printStackTrace();
-        //}
+        try {
+            SendSmsResponse smsResponse = SmsUtils.sendSms(telephone, sigName, templateCode, param);
+            if (smsResponse.getCode().equals("OK")) {
+                //发送成功
+                return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return true;
     }
 
